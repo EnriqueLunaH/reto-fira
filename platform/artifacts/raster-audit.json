@@ -1,0 +1,2192 @@
+[
+  {
+    "file": "data\\fira\\INEGI-topography\\Elevacion_INEGI_CEM4_120m.tif",
+    "feature": "elevation_m",
+    "crs": "EPSG:6372",
+    "resolution": [
+      120.0,
+      120.0
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.7593801503373847,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 1,
+    "min_pixels": 1,
+    "max_pixels": 61
+  },
+  {
+    "file": "data\\fira\\INEGI-topography\\Pendiente_INEGI_CEM4_120m_grados.tif",
+    "feature": "slope_deg",
+    "crs": "EPSG:6372",
+    "resolution": [
+      120.0,
+      120.0
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.020968967816181197,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 4,
+    "min_pixels": 1,
+    "max_pixels": 61
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_01.tif",
+    "feature": "PREC_2022_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_02.tif",
+    "feature": "PREC_2022_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_03.tif",
+    "feature": "PREC_2022_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_04.tif",
+    "feature": "PREC_2022_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_05.tif",
+    "feature": "PREC_2022_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_06.tif",
+    "feature": "PREC_2022_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_07.tif",
+    "feature": "PREC_2022_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_08.tif",
+    "feature": "PREC_2022_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_09.tif",
+    "feature": "PREC_2022_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_10.tif",
+    "feature": "PREC_2022_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_11.tif",
+    "feature": "PREC_2022_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_12.tif",
+    "feature": "PREC_2022_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_01.tif",
+    "feature": "PREC_2023_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_02.tif",
+    "feature": "PREC_2023_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_03.tif",
+    "feature": "PREC_2023_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_04.tif",
+    "feature": "PREC_2023_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_05.tif",
+    "feature": "PREC_2023_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_06.tif",
+    "feature": "PREC_2023_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_07.tif",
+    "feature": "PREC_2023_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_08.tif",
+    "feature": "PREC_2023_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_09.tif",
+    "feature": "PREC_2023_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_10.tif",
+    "feature": "PREC_2023_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_11.tif",
+    "feature": "PREC_2023_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_12.tif",
+    "feature": "PREC_2023_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_01.tif",
+    "feature": "PREC_2024_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_02.tif",
+    "feature": "PREC_2024_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_03.tif",
+    "feature": "PREC_2024_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_04.tif",
+    "feature": "PREC_2024_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_05.tif",
+    "feature": "PREC_2024_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_06.tif",
+    "feature": "PREC_2024_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_07.tif",
+    "feature": "PREC_2024_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_08.tif",
+    "feature": "PREC_2024_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_09.tif",
+    "feature": "PREC_2024_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_10.tif",
+    "feature": "PREC_2024_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_11.tif",
+    "feature": "PREC_2024_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_12.tif",
+    "feature": "PREC_2024_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_01.tif",
+    "feature": "PREC_2025_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_02.tif",
+    "feature": "PREC_2025_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_03.tif",
+    "feature": "PREC_2025_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_04.tif",
+    "feature": "PREC_2025_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_05.tif",
+    "feature": "PREC_2025_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_06.tif",
+    "feature": "PREC_2025_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_07.tif",
+    "feature": "PREC_2025_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_08.tif",
+    "feature": "PREC_2025_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_09.tif",
+    "feature": "PREC_2025_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_10.tif",
+    "feature": "PREC_2025_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_11.tif",
+    "feature": "PREC_2025_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_12.tif",
+    "feature": "PREC_2025_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952971306015,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_01.tif",
+    "feature": "Tmax_2022_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_02.tif",
+    "feature": "Tmax_2022_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_03.tif",
+    "feature": "Tmax_2022_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_04.tif",
+    "feature": "Tmax_2022_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_05.tif",
+    "feature": "Tmax_2022_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_06.tif",
+    "feature": "Tmax_2022_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_07.tif",
+    "feature": "Tmax_2022_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_08.tif",
+    "feature": "Tmax_2022_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_09.tif",
+    "feature": "Tmax_2022_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_10.tif",
+    "feature": "Tmax_2022_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_11.tif",
+    "feature": "Tmax_2022_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_12.tif",
+    "feature": "Tmax_2022_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_01.tif",
+    "feature": "Tmax_2023_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_02.tif",
+    "feature": "Tmax_2023_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_03.tif",
+    "feature": "Tmax_2023_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_04.tif",
+    "feature": "Tmax_2023_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_05.tif",
+    "feature": "Tmax_2023_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_06.tif",
+    "feature": "Tmax_2023_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_07.tif",
+    "feature": "Tmax_2023_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_08.tif",
+    "feature": "Tmax_2023_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_09.tif",
+    "feature": "Tmax_2023_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_10.tif",
+    "feature": "Tmax_2023_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_11.tif",
+    "feature": "Tmax_2023_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_12.tif",
+    "feature": "Tmax_2023_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_01.tif",
+    "feature": "Tmax_2024_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_02.tif",
+    "feature": "Tmax_2024_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_03.tif",
+    "feature": "Tmax_2024_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_04.tif",
+    "feature": "Tmax_2024_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_05.tif",
+    "feature": "Tmax_2024_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_06.tif",
+    "feature": "Tmax_2024_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_07.tif",
+    "feature": "Tmax_2024_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_08.tif",
+    "feature": "Tmax_2024_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_09.tif",
+    "feature": "Tmax_2024_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_10.tif",
+    "feature": "Tmax_2024_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_11.tif",
+    "feature": "Tmax_2024_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_12.tif",
+    "feature": "Tmax_2024_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_01.tif",
+    "feature": "Tmax_2025_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_02.tif",
+    "feature": "Tmax_2025_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_03.tif",
+    "feature": "Tmax_2025_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_04.tif",
+    "feature": "Tmax_2025_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_05.tif",
+    "feature": "Tmax_2025_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_06.tif",
+    "feature": "Tmax_2025_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_07.tif",
+    "feature": "Tmax_2025_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_08.tif",
+    "feature": "Tmax_2025_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_09.tif",
+    "feature": "Tmax_2025_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_10.tif",
+    "feature": "Tmax_2025_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_11.tif",
+    "feature": "Tmax_2025_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_12.tif",
+    "feature": "Tmax_2025_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_01.tif",
+    "feature": "Tmin_2022_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_02.tif",
+    "feature": "Tmin_2022_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_03.tif",
+    "feature": "Tmin_2022_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_04.tif",
+    "feature": "Tmin_2022_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_05.tif",
+    "feature": "Tmin_2022_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_06.tif",
+    "feature": "Tmin_2022_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_07.tif",
+    "feature": "Tmin_2022_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_08.tif",
+    "feature": "Tmin_2022_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_09.tif",
+    "feature": "Tmin_2022_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_10.tif",
+    "feature": "Tmin_2022_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_11.tif",
+    "feature": "Tmin_2022_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_12.tif",
+    "feature": "Tmin_2022_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_01.tif",
+    "feature": "Tmin_2023_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_02.tif",
+    "feature": "Tmin_2023_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_03.tif",
+    "feature": "Tmin_2023_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_04.tif",
+    "feature": "Tmin_2023_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_05.tif",
+    "feature": "Tmin_2023_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_06.tif",
+    "feature": "Tmin_2023_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_07.tif",
+    "feature": "Tmin_2023_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_08.tif",
+    "feature": "Tmin_2023_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_09.tif",
+    "feature": "Tmin_2023_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_10.tif",
+    "feature": "Tmin_2023_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_11.tif",
+    "feature": "Tmin_2023_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_12.tif",
+    "feature": "Tmin_2023_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_01.tif",
+    "feature": "Tmin_2024_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_02.tif",
+    "feature": "Tmin_2024_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_03.tif",
+    "feature": "Tmin_2024_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_04.tif",
+    "feature": "Tmin_2024_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_05.tif",
+    "feature": "Tmin_2024_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_06.tif",
+    "feature": "Tmin_2024_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_07.tif",
+    "feature": "Tmin_2024_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_08.tif",
+    "feature": "Tmin_2024_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_09.tif",
+    "feature": "Tmin_2024_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_10.tif",
+    "feature": "Tmin_2024_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_11.tif",
+    "feature": "Tmin_2024_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_12.tif",
+    "feature": "Tmin_2024_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_01.tif",
+    "feature": "Tmin_2025_01",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_02.tif",
+    "feature": "Tmin_2025_02",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_03.tif",
+    "feature": "Tmin_2025_03",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_04.tif",
+    "feature": "Tmin_2025_04",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_05.tif",
+    "feature": "Tmin_2025_05",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_06.tif",
+    "feature": "Tmin_2025_06",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_07.tif",
+    "feature": "Tmin_2025_07",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_08.tif",
+    "feature": "Tmin_2025_08",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_09.tif",
+    "feature": "Tmin_2025_09",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_10.tif",
+    "feature": "Tmin_2025_10",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_11.tif",
+    "feature": "Tmin_2025_11",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  },
+  {
+    "file": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_12.tif",
+    "feature": "Tmin_2025_12",
+    "crs": "EPSG:4326",
+    "resolution": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "nodata": -9999.0,
+    "min_coverage": 0.9999952965099445,
+    "missing_parcels": 0,
+    "below_80pct_coverage": 0,
+    "min_pixels": 1,
+    "max_pixels": 3
+  }
+]

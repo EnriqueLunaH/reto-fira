@@ -1,0 +1,40 @@
+{% extends '_account_layout.html' %}
+{% set editing = profile is not none %}
+{% set submitted = request.method == 'POST' %}
+{% set mode = request.form.get('access_mode', 'none') if submitted else (profile.access_mode if editing else 'none') %}
+{% block title %}{{ 'Editar' if editing else 'Crear' }} productor · NAS{% endblock %}
+{% block account_content %}
+<header class="accounts-heading"><div><p class="eyebrow">PRODUCTORES</p><h1>{{ 'Editar productor' if editing else 'Crear productor' }}</h1><p>{{ profile.email if editing else 'Crea su cuenta y asigna las parcelas que podrá consultar.' }}</p></div><a class="button secondary" href="{{ url_for('accounts.index') }}">Volver a usuarios</a></header>
+{% if error %}<p class="accounts-notice accounts-error" role="alert">{{ error }}</p>{% endif %}
+<form method="post" class="accounts-card accounts-form" id="producer-account-form">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <h2>Datos del productor</h2>
+  <div class="accounts-fields">
+    <div><label for="name">Nombre completo</label><input id="name" name="name" value="{{ request.form.get('name', '') if submitted else (profile.name if editing else '') }}" maxlength="120" required autocomplete="name"></div>
+    <div><label for="phone">Teléfono <span class="muted">(opcional)</span></label><input id="phone" name="phone" type="tel" maxlength="40" autocomplete="tel" value="{{ request.form.get('phone', '') if submitted else (profile.phone if editing else '') }}"></div>
+    {% if not editing %}
+    <div><label for="email">Correo de acceso</label><input id="email" name="email" type="email" maxlength="254" required autocomplete="off" value="{{ request.form.get('email', '') }}"></div>
+    <div><label for="password">Contraseña inicial</label><input id="password" name="password" type="password" required minlength="12" maxlength="128" autocomplete="new-password" aria-describedby="password-help"><small id="password-help">De 12 a 128 caracteres, con mayúscula, minúscula, número y símbolo. Compártela con el productor por un canal privado.</small></div>
+    {% endif %}
+  </div>
+  <label class="accounts-check"><input type="checkbox" name="active" value="yes"{% if (submitted and request.form.get('active') == 'yes') or (not submitted and (not editing or profile.active)) %} checked{% endif %}><span>Cuenta activa<small>Al suspenderla, el productor pierde el acceso y sus sesiones dejan de ser válidas.</small></span></label>
+  <fieldset class="accounts-access"><legend>Acceso a parcelas</legend><p>Estas asignaciones controlan qué información ve el productor.</p>
+    <div class="accounts-modes">
+      {% for value, label, help in [('none','Sin parcelas','La cuenta ingresa, pero no tiene parcelas disponibles.'), ('selected','Parcelas específicas','Selecciona una o varias parcelas.'), ('municipalities','Municipios completos','Incluye todas las parcelas disponibles de los municipios elegidos.'), ('all','Todas las parcelas','Permite consultar todas las parcelas disponibles.')] %}
+      <label class="accounts-mode"><input type="radio" name="access_mode" value="{{ value }}"{% if mode == value %} checked{% endif %} required><span><strong>{{ label }}</strong><small>{{ help }}</small></span></label>
+      {% endfor %}
+    </div>
+    <section class="accounts-selection" data-access-panel="selected" aria-labelledby="parcel-assignment-title"><h3 id="parcel-assignment-title">Seleccionar parcelas</h3><label for="parcel-filter">Filtrar por código, municipio o estado</label><input id="parcel-filter" type="search" placeholder="Buscar en el catálogo" autocomplete="off"><div class="accounts-selection-actions"><button class="button secondary" type="button" data-parcel-action="select">Marcar visibles</button><button class="button secondary" type="button" data-parcel-action="clear">Desmarcar todas</button><span id="assignment-count" role="status" aria-live="polite"></span></div><div class="accounts-options" id="parcel-options">
+      {% for parcel in parcels %}<label class="accounts-check" data-parcel-option><input type="checkbox" name="parcel_ids" value="{{ parcel.id }}"{% if parcel.id in selected_ids %} checked{% endif %}><span><strong>{{ parcel.id }}</strong><small>{{ parcel.municipality }} · {{ parcel.state }}</small></span></label>{% endfor %}
+    </div><p id="no-parcel-matches" hidden>No hay parcelas que coincidan con la búsqueda.</p></section>
+    <section class="accounts-selection" data-access-panel="municipalities" aria-labelledby="municipality-assignment-title"><h3 id="municipality-assignment-title">Seleccionar municipios</h3><p>El estado permite distinguir municipios con el mismo nombre.</p><div class="accounts-options">
+      {% for key, place in places %}<label class="accounts-check"><input type="checkbox" name="municipalities" value="{{ key }}"{% if key in selected_places %} checked{% endif %}><span><strong>{{ place.municipality }}</strong><small>{{ place.state }}</small></span></label>{% endfor %}
+    </div></section>
+  </fieldset>
+  <div class="accounts-submit"><button class="button primary" type="submit">{{ 'Guardar datos y parcelas' if editing else 'Crear productor' }}</button><a href="{{ url_for('accounts.index') }}" class="button secondary">Cancelar</a></div>
+</form>
+{% if editing %}
+<section class="accounts-card accounts-form" aria-labelledby="credentials-title"><h2 id="credentials-title">Credenciales de acceso</h2><p>Al guardar, se cerrarán las sesiones anteriores. El perfil y las asignaciones se guardan en el formulario de arriba.</p><form method="post" action="{{ url_for('accounts.credentials', uid=profile.id) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><div class="accounts-fields"><div><label for="access-email">Correo de acceso</label><input id="access-email" name="email" type="email" maxlength="254" value="{{ profile.email }}" required autocomplete="off"></div><div><label for="access-password">Nueva contraseña <span class="muted">(opcional)</span></label><input id="access-password" name="password" type="password" minlength="12" maxlength="128" autocomplete="new-password" aria-describedby="access-password-help"><small id="access-password-help">Déjala vacía para conservarla. Si la cambias: mínimo 12 caracteres, mayúscula, minúscula, número y símbolo.</small></div></div><button class="button secondary" type="submit">Actualizar credenciales</button></form></section>
+<section class="accounts-card accounts-form accounts-danger" aria-labelledby="delete-title"><h2 id="delete-title">Eliminar productor</h2><p>Elimina su cuenta y sus asignaciones. Esta acción no se puede deshacer.</p><form method="post" action="{{ url_for('accounts.delete', uid=profile.id) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><label for="confirm-email">Escribe {{ profile.email }} para confirmar</label><input id="confirm-email" type="email" name="confirm_email" required autocomplete="off"><button class="button secondary accounts-delete" type="submit">Eliminar productor</button></form></section>
+{% endif %}
+{% endblock %}

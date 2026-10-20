@@ -1,0 +1,40 @@
+{
+  "procedure": "point_extended",
+  "selection": {
+    "id": "blend_ridge_0.5",
+    "recipe": "blend",
+    "name": "ridge_rf_blend",
+    "family": "blend",
+    "members": [
+      "original_c60_ridge_10",
+      "water_temporal_c60_random_forest"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "mae": 0.3620115783667541,
+    "rmse": 0.5133990059442238,
+    "r2": 0.6335241580679035,
+    "n": 138,
+    "bias": 0.0195828215156132
+  },
+  "interval": {
+    "method": "not_estimated",
+    "nominal_coverage": null,
+    "radius_t_ha": null,
+    "calibration_n": 0,
+    "reason": "Predictor puntual ajustado con las 138 etiquetas. No se trasladan los intervalos del modelo anterior."
+  },
+  "files": {
+    "dashboard.json": "70fca47c8dc1894e8956a24f471eec67d977c9f40285c8f4843ef2288a194a77",
+    "features-cloud-all.csv": "c41e4c3a25751d16c759e3a392dd4c3c7c1b891e020cd6d6b9ec83a1dc777280",
+    "metrics.json": "5e13f3571b66f314bc26e44f5a8e96a16beeaa03b8cc72f326a28ee9f89c95f8",
+    "model.joblib": "3caa6f40d1203732b34a1c1c995e19cccebc21e23d1cb1ea65f92d10ec3c6865",
+    "predicciones_59.csv": "3391c573da2588cbc6eb6c939e66513c8794df8a0b0a45c275bda3705357687b",
+    "validation-parcel.csv": "5699de44a4dd12a2b6799f4d20c5120583f517b03d2f0d81cf9342603baf385d",
+    "validation-spatial.csv": "266f62594a5f7b3cd1f7b4a5d412c59f5138599c5e66910fe1b048e6c468c074"
+  },
+  "comparisons_before_sha256": "53b1b2fe8f46c66814a12d036826bca80e5a5c4cbdd529a43358cef83ce665ff",
+  "verified_model_csv_tolerance": 5e-05
+}

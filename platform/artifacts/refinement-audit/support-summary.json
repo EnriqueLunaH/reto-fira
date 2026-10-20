@@ -1,0 +1,43 @@
+{
+  "n_features": 181,
+  "n_climate_features": 40,
+  "n_climate_unique_training_patterns": 43,
+  "hidden_climate_pattern_unseen_n": 10,
+  "nearest_labelled_centroid_distance_m_quantiles": {
+    "min": 66.54746914413772,
+    "median": 349.27668067737267,
+    "p90": 1072.7995186772941,
+    "max": 1909.302763990501
+  },
+  "n_training_feature_pairs_abs_corr_gt_098": 85,
+  "spatial_20km_blocks_all": {
+    "144_43": 82,
+    "144_44": 40,
+    "143_42": 31,
+    "143_44": 23,
+    "142_42": 19,
+    "143_43": 2
+  },
+  "spatial_20km_blocks_training": {
+    "144_43": 58,
+    "144_44": 27,
+    "143_42": 21,
+    "143_44": 16,
+    "142_42": 14,
+    "143_43": 2
+  },
+  "state_median_oof": {
+    "mae": 0.4322101449275362,
+    "rmse": 0.6175214893872703,
+    "r2": 0.4698003274955628,
+    "n": 138,
+    "bias": -0.03083333333333335
+  },
+  "global_median_oof": {
+    "mae": 0.7244202898550725,
+    "rmse": 0.9118972100731148,
+    "r2": -0.15618432829387352,
+    "n": 138,
+    "bias": 0.34999999999999987
+  }
+}

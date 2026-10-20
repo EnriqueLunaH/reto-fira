@@ -1,0 +1,24 @@
+{
+  "status": "exploratory_after_initial_audit_not_blind",
+  "primary_metric": "MAE; RMSE and spatial transfer are guardrails",
+  "seeds": [
+    20261013,
+    20261014
+  ],
+  "original": "18 existing cloud/model candidates; original fit/calibration split",
+  "refinement": "same 18 candidates plus Ridge alpha=10/100 on climate only; all climate columns, selected only inside inner CV",
+  "unchanged": [
+    "target",
+    "features extraction",
+    "cloud variants",
+    "outer folds",
+    "fit/calibration split",
+    "nonnegative predictions"
+  ],
+  "promotion_rule": "No automatic promotion. Require lower MAE on both seeds, no higher RMSE on either, no material spatial deterioration, and paired parcel and block bootstrap MAE upper limits below zero on both random seeds. These are conservative exploratory screens, not proof of generalization.",
+  "forbidden": [
+    "tuning against hidden predictions",
+    "refitting conformal model on calibration labels",
+    "post-hoc bias correction"
+  ]
+}

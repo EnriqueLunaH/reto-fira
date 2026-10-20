@@ -1,0 +1,867 @@
+[
+  {
+    "path": "data\\fira\\context\\Descripcion_general_variables_DataSet.docx",
+    "bytes": 148153,
+    "sha256": "9fe996d3634eeedec1596aab0c187856d81047e10dcb78663fd8f69bb21ca1f7"
+  },
+  {
+    "path": "data\\fira\\context\\Diccionario_de_indices_satelitales.docx",
+    "bytes": 147776,
+    "sha256": "f6b5aed4036295343d1927e0cff40d5e960a85c58622626812e98455c1442cc3"
+  },
+  {
+    "path": "data\\fira\\context\\Ecuaciones_indices_AgroCebada_FIRA_2026.pdf",
+    "bytes": 176083,
+    "sha256": "a5a8b71872439a5f98f9106d3b115f36bd35a5cfba34fcb316c34c17989540be"
+  },
+  {
+    "path": "data\\fira\\context\\Segunda_Sesion_Preguntas_Reto.docx",
+    "bytes": 585520,
+    "sha256": "b02fff056877e104fe0a8c3b9e7cca8a48a490154cf3a762b6d66d878c40f731"
+  },
+  {
+    "path": "data\\fira\\CSV-files\\Conjunto_datos_BASICO_AgroCebada2026.csv",
+    "bytes": 33668409,
+    "sha256": "96d68040d954d0903d761fd8ceed0dcd4a08e3842915a3ca44517d60e8bee4ef"
+  },
+  {
+    "path": "data\\fira\\CSV-files\\Conjunto_datos_PRO_AgroCebada.csv",
+    "bytes": 5000244,
+    "sha256": "91697f8f8d4ad5e59f766acbce2ef76f3c405eb02b41c1de92d62a07e8321888"
+  },
+  {
+    "path": "data\\fira\\CSV-files\\ID_area_rendimiento_70_30_Reto_AgroCebada.csv",
+    "bytes": 6241,
+    "sha256": "ec07b7ede0ae692109d91b3e941b1a353fe7f89410507db9bfbe6d7c112590ef"
+  },
+  {
+    "path": "data\\fira\\INEGI-topography\\Elevacion_INEGI_CEM4_120m.tif",
+    "bytes": 4488499,
+    "sha256": "2f9b0a3deeb28089ef3253303b0fed1b67b3cac6e452a2d3d75c913d87fcc408"
+  },
+  {
+    "path": "data\\fira\\INEGI-topography\\inventario_topografia.csv",
+    "bytes": 295,
+    "sha256": "43fe5e40fb824b123a121b5c99f9f4e1eec94f5db9c459eedd96ea092f27f589"
+  },
+  {
+    "path": "data\\fira\\INEGI-topography\\LEEME.txt",
+    "bytes": 737,
+    "sha256": "00f4486f428a23e1f4e1c0f027ed7b06c3ebcb2f37cc94489568d7b48935cf96"
+  },
+  {
+    "path": "data\\fira\\INEGI-topography\\Pendiente_INEGI_CEM4_120m_grados.tif",
+    "bytes": 13405501,
+    "sha256": "f0fa8b07e06873d40d3741a8e5f2bba8f652be810fea21fa0f6fe13f8dc48d45"
+  },
+  {
+    "path": "data\\fira\\plots\\Parcelas_Reto_AGC_CONJUNTO.cpg",
+    "bytes": 5,
+    "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+  },
+  {
+    "path": "data\\fira\\plots\\Parcelas_Reto_AGC_CONJUNTO.dbf",
+    "bytes": 83951,
+    "sha256": "9b7d9e06beb70c688c59d4c2e4227ef851596e3382af7d5566b9c669dc35debb"
+  },
+  {
+    "path": "data\\fira\\plots\\Parcelas_Reto_AGC_CONJUNTO.prj",
+    "bytes": 145,
+    "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+  },
+  {
+    "path": "data\\fira\\plots\\Parcelas_Reto_AGC_CONJUNTO.shp",
+    "bytes": 168628,
+    "sha256": "8f8001a4bc4da00c2fcc0797536e94183d1abc88e4a797a7c63bcd2b65f29f29"
+  },
+  {
+    "path": "data\\fira\\plots\\Parcelas_Reto_AGC_CONJUNTO.shx",
+    "bytes": 1676,
+    "sha256": "b03e99bc1c619fd9351693091558f549e0b75220f41e1c3b6343dbc41cb7d1f7"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual-precipitation-inventory.csv",
+    "bytes": 7728,
+    "sha256": "606a947a9235efc11e19ba8acfa5728ab822348cbb725e14e82f4dd295412c19"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_01.tif",
+    "bytes": 11276,
+    "sha256": "06f85174131dfc395539a42f2c12d7e9c6f39d9e6074beeef4da609d7c874ecf"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_02.tif",
+    "bytes": 8174,
+    "sha256": "485fd7b951f1f7ec7ab2b2ea4230e76c8843f2bd28f3f20c3bacbdee3b5d1d95"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_03.tif",
+    "bytes": 9630,
+    "sha256": "5088681887b915f039cc2f494d3a412627334c108e89845374a3ea57e2758cd8"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_04.tif",
+    "bytes": 11174,
+    "sha256": "4e36afb12a7046e22428fb20bf94d681b1f545ecc5e40a2d9b6d9cd0868e0b4a"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_05.tif",
+    "bytes": 11032,
+    "sha256": "38fb4c72ae87380d41ee74721550b08a766c16550bb2511f2135fae40033f420"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_06.tif",
+    "bytes": 11260,
+    "sha256": "3e6f3199c84898db47f56cd2c120ace5cd751a7d62878c526e015a3853806a31"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_07.tif",
+    "bytes": 11374,
+    "sha256": "6bd0eb26b90030b05ed1402ae7f5d5a4c84c57885ef864d9befb0b4c89626318"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_08.tif",
+    "bytes": 11108,
+    "sha256": "cd8ee9246d1e1b46500b548abb98b22f0046976c1b45d3299325ece895c893c9"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_09.tif",
+    "bytes": 11264,
+    "sha256": "dcaab473e389895dbd99168e5ca69abae01b4d831d016a1f4322ae52ee2250ab"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_10.tif",
+    "bytes": 11214,
+    "sha256": "353eb8b0dddb76eceddabff59775cba2c1d1b800ba50379ad2ae14676186bdc1"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_11.tif",
+    "bytes": 11270,
+    "sha256": "cc33b2bd30021965fcc7a5d1b3a48adc2cef743c90324191b3d440f91b9ed2a1"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2022\\PREC_2022_12.tif",
+    "bytes": 10020,
+    "sha256": "a71a6a89211c76d33a4ffa20ff828ffed338c8a3815ba5bdbf7746cdf6d920bd"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_01.tif",
+    "bytes": 7040,
+    "sha256": "c514ca0e15701376a152389061763d18e651c6901ea86a0e90e166da86370b38"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_02.tif",
+    "bytes": 6236,
+    "sha256": "a38755960e7d734f1fac797208586d1299896edbab61d36f246564673721168c"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_03.tif",
+    "bytes": 10166,
+    "sha256": "89d02ea8cb042eec27fd1a7dad6623eaabe3cb32286c7c5ac0a05ca7b909d1b2"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_04.tif",
+    "bytes": 11222,
+    "sha256": "d635edcbd2ae6363ea16238a2d6e00be25d13ee6a06e3829d004c5d7f94fd69d"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_05.tif",
+    "bytes": 10998,
+    "sha256": "30c39b76b25f4ce9d2ef4ffc49215691a4509eb1d5c5e091bce8b54929f85fbb"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_06.tif",
+    "bytes": 11178,
+    "sha256": "91215d214f47dba0d2ea1b2b309e041f604c4191e62955713e4ef2c1b12d896b"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_07.tif",
+    "bytes": 11246,
+    "sha256": "3aabbdcb76463dfcc3c0c9ad302f4aad2a100831fc273d6464142c33e19fb219"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_08.tif",
+    "bytes": 11122,
+    "sha256": "453bc39a7d7e1cac0f868035bdc5ee1b38367671e37e96b113ee792f36fef909"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_09.tif",
+    "bytes": 11250,
+    "sha256": "3e770f9c72b933590d68cdf9e08385c6dde71a5bb8dad06d0f1073a7f29767a9"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_10.tif",
+    "bytes": 11282,
+    "sha256": "36400b13307a01fa1cbd5f9d5b5bb2420d8b43cfb01fdacbb9310250c2ae8cd7"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_11.tif",
+    "bytes": 11468,
+    "sha256": "9bf7def6ac184a32cab4d78af8cae93b753dbe8aa381a3e9da0e58cd57cfb504"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2023\\PREC_2023_12.tif",
+    "bytes": 11294,
+    "sha256": "fa1ff5fb6fa5ea05799a7c49e7d9da97eb46eef27c60b46fdcc80bf4ef43bc2e"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_01.tif",
+    "bytes": 10824,
+    "sha256": "11a9a0f4122df34b6da812bcd67e81120bf8dfe15c0abc3aa28c981027137786"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_02.tif",
+    "bytes": 10726,
+    "sha256": "6274a2945a563dbf7de85258c18f2f897cb6a474134de0bd44d6ddb20a5e48b1"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_03.tif",
+    "bytes": 8752,
+    "sha256": "dfede235082841675605f6bd3fce9c1f1810a82f816d4811a8014fd538e86382"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_04.tif",
+    "bytes": 11310,
+    "sha256": "7ce5c6577839513e682328585e526013cde4d855a48beded2a0b6b98f4783163"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_05.tif",
+    "bytes": 11074,
+    "sha256": "d3e03c46b0b7a5b36e2820896d0803b426cac894808eb052951be65dc2c0cd43"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_06.tif",
+    "bytes": 11022,
+    "sha256": "5386b1ccac56edd7d9f9bda49bb2eae6f3ca0a25e02b1c3bef8a07b20b8a7db5"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_07.tif",
+    "bytes": 11150,
+    "sha256": "20db9ea665ad22aa797803a29977e1cfdabf93bdae1fca6a082976a3a952837d"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_08.tif",
+    "bytes": 11310,
+    "sha256": "5aae14ade1dc7868204a38013814a464d6a635f98d04d60e6e2366babf3e8a44"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_09.tif",
+    "bytes": 11082,
+    "sha256": "9d1ac05d867c6ff6c0a84ced457ed1c0b9f5d013ad6a7780ee6e6fb5e5a65a0f"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_10.tif",
+    "bytes": 11254,
+    "sha256": "16967fe8406f02dc2cf55595847f1b2202861d37617f95f1e708eee074236757"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_11.tif",
+    "bytes": 11276,
+    "sha256": "e177d288e325f1691123bc3986d4f56940f501656709a3b1bed6074ad5b747b2"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2024\\PREC_2024_12.tif",
+    "bytes": 11170,
+    "sha256": "beb4a2c05b60d2160aeae96ed98635bb68cb545d136300011563d63914fef6e3"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_01.tif",
+    "bytes": 11276,
+    "sha256": "cd89371ed6423dae50ed60dd94d5f32ffa682c81b82efcbad34f2680643b4b12"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_02.tif",
+    "bytes": 11420,
+    "sha256": "3a54302d30b1a98cb67f5d0046ffca1260651dae83af624d16434ec9b44625ac"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_03.tif",
+    "bytes": 10104,
+    "sha256": "b8a5348bbce93f403aa6730c9405e2a6e4455a67c9e9ef9e145a7008601b7429"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_04.tif",
+    "bytes": 10696,
+    "sha256": "b8e4680d72c37ac665c5ec99e1bef9a8f0894bcee9927e4dbc5879a8bbdd3da5"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_05.tif",
+    "bytes": 10992,
+    "sha256": "fc6fc816ec0151bfc1456b78d778b81d22372a7ce89dad0713e4b80baa07d059"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_06.tif",
+    "bytes": 10998,
+    "sha256": "3ec5a4f8df88570e974db9d8149066850b92a31f42e37b06915f33efe4e24374"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_07.tif",
+    "bytes": 11132,
+    "sha256": "737c46d9781ea3ca42fbb17eaa58db2e042c067a24f6bc730f4dcff3aa68ef9e"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_08.tif",
+    "bytes": 11302,
+    "sha256": "8900d81da1bb24d4c6506dafaf9946f93f6916f7f8ceefe4d40dd9340385d2f0"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_09.tif",
+    "bytes": 11178,
+    "sha256": "f5d59631ff4c5b1da3cd103060852c45432c4d99f90f17157db5415a2b22cb22"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_10.tif",
+    "bytes": 11180,
+    "sha256": "70731b415658c475f85a10c5e054d44dccc877f77c9d08cd15d3b892c3895ffc"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_11.tif",
+    "bytes": 11504,
+    "sha256": "f1c7089a9ae4262c7edfedbc848d660fa760f2a7e52c3b1659f88fb443d9ac5e"
+  },
+  {
+    "path": "data\\fira\\precipitation\\annual_precipitation\\2025\\PREC_2025_12.tif",
+    "bytes": 10202,
+    "sha256": "5a0dd770c3cc90dbe37e80d5ba305be7e32dce75bc1d570383fe20958274e3a4"
+  },
+  {
+    "path": "data\\fira\\precipitation\\LEEME.txt",
+    "bytes": 935,
+    "sha256": "225ac26348fba0a35d103adb438680ffb06e0e65e1c7f826325a9f1060fc6cd6"
+  },
+  {
+    "path": "data\\fira\\temperatures\\inventario_temperatura_2022_2025.csv",
+    "bytes": 13905,
+    "sha256": "5c9f860590fe4abd3286c37f14fced7f7d5ea89f5a2cac688f4672d1d3e88442"
+  },
+  {
+    "path": "data\\fira\\temperatures\\LEEME_.txt",
+    "bytes": 1185,
+    "sha256": "30731954ee54d30056591549d63543df4204ea8acb193a5c104dad08b8aa8864"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_01.tif",
+    "bytes": 13860,
+    "sha256": "c3706e9da31d74e4734c2545e5b2e1d2fa00ec0ed222a355926112e252290095"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_02.tif",
+    "bytes": 13568,
+    "sha256": "03810020d3ee83d112c687f92ebdeba394d36f5e50f8ca7d811b863b68f408af"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_03.tif",
+    "bytes": 13354,
+    "sha256": "3edcdc574c978b690238ac3e5b910e7861ccc29318c36f5db3b5be450b1a80cd"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_04.tif",
+    "bytes": 13744,
+    "sha256": "d26c7bcaec420eda48671b9db7b7a5ba4a878e598f1839948584a49438845149"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_05.tif",
+    "bytes": 14070,
+    "sha256": "9a77b78dada35bc26b669a25794fd2f47fb01285c8558880b94bca1bd4a02d62"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_06.tif",
+    "bytes": 14428,
+    "sha256": "2d53472ce229bbe16274046642b423c4feac0ab00c3a64c80a1e3baa6a9f5b00"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_07.tif",
+    "bytes": 14544,
+    "sha256": "783b5693d2aa809df15bca47a34030c1e790b630bd9dd618bde25944ffcf1a7b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_08.tif",
+    "bytes": 14552,
+    "sha256": "e8aae753ef277e7d113c49be4ea24e313d41ee52125e25f8456a9686b3ef2ad8"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_09.tif",
+    "bytes": 14512,
+    "sha256": "a1851974afa1e57907a65ec7065a3d5edbb1c5ce5724bd5d0715fd3b3b87ff13"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_10.tif",
+    "bytes": 14372,
+    "sha256": "9f2203a69aa29a01601c7f0cea34fedad2d257c8f0f094150a1a9b235e4b3ac2"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_11.tif",
+    "bytes": 14258,
+    "sha256": "c6fae57ef6ab09c6e3acb56ac09a623cb366ad31221fafc91e2a1e65f70d7a75"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2022\\Tmax_2022_12.tif",
+    "bytes": 14040,
+    "sha256": "fc057dad5b54f4435284084c46d8506cb53dcf3834eb0065d4c813c62b521b10"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_01.tif",
+    "bytes": 13882,
+    "sha256": "b4f5595492b3a109ab746487f9e0049e886cb16ba137da250f954ff690ccb92b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_02.tif",
+    "bytes": 13566,
+    "sha256": "6ca822f3ca0ce7660ab97cf3acb65ab7fc79c4f01137c0b36ae7129364df9a02"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_03.tif",
+    "bytes": 13368,
+    "sha256": "31601ad130c47456823988d06312d4bc654085a37efd1050bf4443f127d87aae"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_04.tif",
+    "bytes": 13710,
+    "sha256": "be05b5ae31de1b3e57c1f8d91db905adafc9264fac210bb87fbcaab0a4d0fc1b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_05.tif",
+    "bytes": 14130,
+    "sha256": "954b03475fde55817ba5340c1df0945368506fe6a8bf99089f0ecacb36ac65f0"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_06.tif",
+    "bytes": 14604,
+    "sha256": "a0ac900c7296f47ddb3c949d810e01cb5257f6f3d971421fcc9c81d76bd826a6"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_07.tif",
+    "bytes": 14506,
+    "sha256": "db9d4fcd260be8afe907203b4aa0059e34dffe2ebb0a7ddb62dcdbb93ff54f0b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_08.tif",
+    "bytes": 14544,
+    "sha256": "10c16776ef95432554c2e1d35c711d8f3b69794a4cbae637490a18b9d4e2ae38"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_09.tif",
+    "bytes": 14508,
+    "sha256": "132899efde3c6bb88077339bad736d74c510537bd0c186e8473a5bfef234d7d1"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_10.tif",
+    "bytes": 14468,
+    "sha256": "52b7caee82fbf4c08ba8f00d7856fd1af7e54d274c90196bd72a37a4930c7101"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_11.tif",
+    "bytes": 14256,
+    "sha256": "537a467ac2aa101c5c3f16ee4d64fcd7b83b8cc2556b8cd77ab1fa25d7896030"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2023\\Tmax_2023_12.tif",
+    "bytes": 14034,
+    "sha256": "42911802c15e510a61d800875299acfa1587c0632b34750bf76f87c1eecd537a"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_01.tif",
+    "bytes": 13864,
+    "sha256": "585f5b8e3ef124eb4b0a040d2e5b4fb7b1f53b3cb069761216ecb0454b62d632"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_02.tif",
+    "bytes": 13556,
+    "sha256": "01bd152bd104ef5ac287e61feb0d067b2f508e01c18e3a807d571c4e6352d9b1"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_03.tif",
+    "bytes": 13310,
+    "sha256": "a1d2ad83fede38e6098295ff5e384a746b3823025ddabc6e290c4c75ad819558"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_04.tif",
+    "bytes": 13690,
+    "sha256": "26d55cf257922f4413ae20da606d3bd31ecf28b3e97212f3ec2313cedef817de"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_05.tif",
+    "bytes": 13818,
+    "sha256": "588f52e5bc40ddb29a640801938f06c8207edf18486cde2e822d3e3c93e82e13"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_06.tif",
+    "bytes": 14616,
+    "sha256": "5e1ff0254db176bbf692aa89004f35ff4d006a47c1174fd732c5ae2e26657f8b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_07.tif",
+    "bytes": 14502,
+    "sha256": "2eba68e99f710247ae7a94683eb959dbfe88e6da08d53e04131ea46478493a74"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_08.tif",
+    "bytes": 14546,
+    "sha256": "64d83c82bfe8f6fbfbd14fb4a684bf2d5bcee1ddead384f0bcbff3bf60a80574"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_09.tif",
+    "bytes": 14488,
+    "sha256": "065a63f07834c8b274c379e8be515ac76b0d7748c15ed61b07ae47ce004a2e40"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_10.tif",
+    "bytes": 14422,
+    "sha256": "8cc1d7fb500310ccbc2fb10094348990b59c81a98a5d635166a7979dcce1443b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_11.tif",
+    "bytes": 14308,
+    "sha256": "85a338033da1d1a4504f3f9c93ba558b841f0bea878f3b82d82cff15300fe46c"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2024\\Tmax_2024_12.tif",
+    "bytes": 14058,
+    "sha256": "4a7c0150576657dcc3ba7c78b44ec7ac58a1de8d9328d013009eaa4f8006718d"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_01.tif",
+    "bytes": 13890,
+    "sha256": "f9910fcd3f2d3b494fe7595f0da6ae36cf17ee769c3850a2ada237a67cb4dbbc"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_02.tif",
+    "bytes": 13574,
+    "sha256": "2e2f2533708db01c6c21cdfda89dd67288ff5289f602a805be32e1d2b3ab4e5b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_03.tif",
+    "bytes": 13400,
+    "sha256": "15fc5928587a57345295c3ef9a8c5be505f64dda13407cfc1d59d4bc4aa5bfdf"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_04.tif",
+    "bytes": 13738,
+    "sha256": "c0ea57dae5537a5059aced115e091bea7fb47a06b18e84036b0498ddbdfa1766"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_05.tif",
+    "bytes": 14092,
+    "sha256": "c6a4ae2325d9029cbf65e8367e999047dda81b59e64e269b08211e07409eb948"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_06.tif",
+    "bytes": 14434,
+    "sha256": "d95914018d556637d78977f2be992508af698aa8efce58105e51e427a2cc48e9"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_07.tif",
+    "bytes": 14526,
+    "sha256": "a2971fd48e5630508ae3b3341f17c4520dfacb311cd92e747117c4a074f55832"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_08.tif",
+    "bytes": 14556,
+    "sha256": "c8b11343aebf2231814dbd6b8563df4502f11931f8d976cedf3b4dbd11cb406e"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_09.tif",
+    "bytes": 14492,
+    "sha256": "e4cac34dd88ad488dd2f805f7bd163c5a34154d53990201d6a96e44ed49f8da7"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_10.tif",
+    "bytes": 14418,
+    "sha256": "97992dfdd0e922fc5e274489b0fe2718ed865f940ee2a2dddd188d34dea77c94"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_11.tif",
+    "bytes": 14298,
+    "sha256": "0c8d5f70d2d035d964a2041759d54dddf3ad928d57f212537e018b392b1cb15e"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmax\\2025\\Tmax_2025_12.tif",
+    "bytes": 14058,
+    "sha256": "e9251719a9b62484b4cdd85f2d0c47100f7f8b818e97933f6cbef3ac27d304f8"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_01.tif",
+    "bytes": 14758,
+    "sha256": "9bd67e1d0389e1fa73f4621636c1257ab43c6fece0ade747983e1d5a4561b38b"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_02.tif",
+    "bytes": 14550,
+    "sha256": "3e27fe70e4542fa1ec9f4b0c64edc436457b6833f5d3690463b9ecf89140e64f"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_03.tif",
+    "bytes": 14132,
+    "sha256": "5e4bc7caf921bf5cb164d2796d97ee5dc5f8a6de2778fa456c5fdf0f2f6cc3f9"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_04.tif",
+    "bytes": 14114,
+    "sha256": "2ec9bae48e36270e15c835f119d4796e946406341fbbad8922e1ae21985d474c"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_05.tif",
+    "bytes": 14294,
+    "sha256": "8b98e47d6a404f63f03b2b5af63e11666677c9b1e253fc5b92257359d677c3ad"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_06.tif",
+    "bytes": 14556,
+    "sha256": "55fed20f57be81dc3cd3a2c75b92615f6a03467306bffdc18749e3bb34813d0e"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_07.tif",
+    "bytes": 14630,
+    "sha256": "ee81aa377539268a2f32dfd64492bda4c35ea6fc430f60c1d17bcecbcbffac9c"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_08.tif",
+    "bytes": 14654,
+    "sha256": "110d3e21baaaabd9dd10daeed06589f4ec2f3afe5008caa14e5fcff729014697"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_09.tif",
+    "bytes": 14630,
+    "sha256": "59517c9f4dbc2c7d9b9cc3e9a5d0873cf328be2eea1aca396d61dcee72ca8577"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_10.tif",
+    "bytes": 14626,
+    "sha256": "f29c1b3db04ac0a9f9641900613dd7efd18c802343189091cc910ef14ddb5cf8"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_11.tif",
+    "bytes": 14612,
+    "sha256": "f6a7d1144af523983994abf462065be3b89f8b279438055bc8afef074dec24cc"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2022\\Tmin_2022_12.tif",
+    "bytes": 14802,
+    "sha256": "c45fd99c60b63b7bfa9b16c34d8f2dc50eeb626cb02909b4e8cff777a354b63e"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_01.tif",
+    "bytes": 14734,
+    "sha256": "006daa93d8953a88eb21b26803e1564429c368262875ab82acdaa8b3f554ea13"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_02.tif",
+    "bytes": 14518,
+    "sha256": "9f08fe48ea20268c7a3980c52d45a2881d91ed3cf4730007ee737a58033ef698"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_03.tif",
+    "bytes": 14028,
+    "sha256": "891d8d11e4a725669ec7f6f2b35891092c476a94b78cddf02aaad36c60d54857"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_04.tif",
+    "bytes": 14114,
+    "sha256": "8b734fae66c8d669e7905a8e37dc65d5389d8eb4904fe77f65da50f10a127d17"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_05.tif",
+    "bytes": 14300,
+    "sha256": "f53abf07d8e8ca6b9b5ac09d7fba63a25c3275f0ba3b3756d0ed5cdd0bfb09de"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_06.tif",
+    "bytes": 14556,
+    "sha256": "0553716c33d2d1d7d2cac7f34d2e82f7b27c13620a8e73fb5c9f6cd1234905a1"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_07.tif",
+    "bytes": 14662,
+    "sha256": "e8e8c3e1ff0e9335252f00eb320bc1dd214f597e3c05c37ea4431ad2865f10fc"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_08.tif",
+    "bytes": 14648,
+    "sha256": "8c2494d4cd454915d77535a7d8ab1c91dd42e8b0d7c63c8f37e7aa4854452042"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_09.tif",
+    "bytes": 14658,
+    "sha256": "3be3e9300d1e28e5c8acbc476a448b71ac74de64f32c655177d152a445130f62"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_10.tif",
+    "bytes": 14584,
+    "sha256": "fa3d3791772ccee185eccdf3296aad5341803d959c88fc5f3b424997267e3a5e"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_11.tif",
+    "bytes": 14590,
+    "sha256": "bdc6900bded72ce4abd5140096d5ae98084bb8693c96b737a96d2880676ff9dc"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2023\\Tmin_2023_12.tif",
+    "bytes": 14620,
+    "sha256": "2c9b11f08dbaa438f1042418f3f6c17b4fdcab52b52ab6b64de1fd391f4ea92c"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_01.tif",
+    "bytes": 14616,
+    "sha256": "53b5cce45e25acbbc366d9d6afad0f5db77574269095305d7b3255e73d1a7a78"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_02.tif",
+    "bytes": 14478,
+    "sha256": "69fbd0bc2a2ede8ec2e3d1440693349d5a3ef2fcff8386d285472d6920e97a51"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_03.tif",
+    "bytes": 14028,
+    "sha256": "038207c1ea6e9eac31952b28a105c052c1c5b140fd0f8d601608ca6a103d330e"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_04.tif",
+    "bytes": 14136,
+    "sha256": "2bf039b6f1a16ec0fe46fc6aa970acf52d383e0aff001552edfcd20b90eccb69"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_05.tif",
+    "bytes": 14242,
+    "sha256": "50855c742b0207e799584d9647e92946458e285946384af7a49eee96d53a7e4a"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_06.tif",
+    "bytes": 14540,
+    "sha256": "f1e3dcac6321f016e11080309c88553587c2f5f8261171601c6ce67290d51534"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_07.tif",
+    "bytes": 14598,
+    "sha256": "925bfb63e4872114d4f7d922d2aa2d5a717a7e2dbfa4b9f52d9a87a499834536"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_08.tif",
+    "bytes": 14666,
+    "sha256": "3ebcbd0b12c902d5b9824ce56f50996dc572df93b80e87bc89e14ef46cbd07d3"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_09.tif",
+    "bytes": 14602,
+    "sha256": "8846185b7dfaf55c9786e1e39b44a70eaf805f7d400b6918d38316574e9e1007"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_10.tif",
+    "bytes": 14628,
+    "sha256": "3d379095f62390beb785edaa9bfd2cb8006ef84cd456372b50d5d2e97c1e294c"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_11.tif",
+    "bytes": 14810,
+    "sha256": "273eb9a5752cec23f27b3e4e0c791653b2976cc608f49f4691768ea8b977051c"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2024\\Tmin_2024_12.tif",
+    "bytes": 14796,
+    "sha256": "927205a83e3f06d0147edae9cb2e7257488313cc91fe64417ad4b56f76c187ba"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_01.tif",
+    "bytes": 14684,
+    "sha256": "48959287251fd0f4e4587b7628429dc9f659298af7d41d7f7734739f741a2e1e"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_02.tif",
+    "bytes": 14206,
+    "sha256": "0d858376c01b409d374a2be10612f3ddbb5f83747e657e7bf885f7614e54238c"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_03.tif",
+    "bytes": 14024,
+    "sha256": "89626d02bd1759184481d218c320799382c15e81394e94bfd2f1e255ac60a0dd"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_04.tif",
+    "bytes": 14188,
+    "sha256": "d8cd29cbe7a2e8545a77f1d114cf2f6977fe2403ebd8e2313e6e1c13ae1cc7bd"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_05.tif",
+    "bytes": 14258,
+    "sha256": "c7333f00f9a4bc37e54655991906e016cdd0d13e154d12334468ba67766fc3c1"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_06.tif",
+    "bytes": 14504,
+    "sha256": "9c21f79fa1baccc27f5bba6b803455027dffe68f74b87004be2fd19f44e5beb8"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_07.tif",
+    "bytes": 14628,
+    "sha256": "d02fe8bb9191be62fcc992b53447db3fa8c403a0cf1c481d515c60f58ad1c7e0"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_08.tif",
+    "bytes": 14644,
+    "sha256": "0fabecfbcc7c28b179c10e08277c5abc9471257ac73b9159f9ffbcfa28563e05"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_09.tif",
+    "bytes": 14606,
+    "sha256": "a99ef1c3401fb386a7887090c857e6813e4bbfe80344c0d76cb9fbfbc06b0439"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_10.tif",
+    "bytes": 14650,
+    "sha256": "00e89272a06a7bcc431035baa0cdaad6cc471cb1cb88a1ee908a78727a05bb99"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_11.tif",
+    "bytes": 14878,
+    "sha256": "28e72f1961decb5b5c7a8a70eaa3d9a292e126f4d4c508e298b1e5601681045a"
+  },
+  {
+    "path": "data\\fira\\temperatures\\Tmin\\2025\\Tmin_2025_12.tif",
+    "bytes": 14566,
+    "sha256": "6d0585bee3c6ef8bb74b363af8fdf1d756ab5dfec41de2f0f4b9c681ebdc5a9c"
+  },
+  {
+    "path": "data\\libros\\02.pdf",
+    "bytes": 3898461,
+    "sha256": "1e558046880e259f7b033ebbed5769ef9ab8dcde1e156ac7bc0aebda1fa63d09"
+  },
+  {
+    "path": "data\\libros\\An Introduction to Statistical Learning with Applications in Python.pdf",
+    "bytes": 20053984,
+    "sha256": "278d3bdd49a8a480c2ff8e03245822caad8a3a48e81afd6d039c52c8fc13ad60"
+  },
+  {
+    "path": "data\\libros\\Geographic Data Science with Python.pdf",
+    "bytes": 28580862,
+    "sha256": "12f5b3b68de4b6cd1c39b202a3cde2b49a99ef968182e2bf564fca1190e9559b"
+  },
+  {
+    "path": "data\\libros\\Interpretable Machine Learning - Christoph Molnar.pdf",
+    "bytes": 15397029,
+    "sha256": "22778912b37bfe0d65fde43b6deddd9dde679feb74a6e7ef1f07c1a31c6941fe"
+  },
+  {
+    "path": "data\\libros\\Introduction to Data Mining.pdf",
+    "bytes": 48388614,
+    "sha256": "63a36f7785a0649f0522d20636119ba58b3a1af71f281760f6d99d405ada51bf"
+  },
+  {
+    "path": "data\\libros\\last.pdf",
+    "bytes": 1176568,
+    "sha256": "eee55fd754ae1363b91d5154a5eb6accce9106acfe519cb6574c23557e727a3a"
+  },
+  {
+    "path": "data\\libros\\Python-for-Data-Analysis.pdf",
+    "bytes": 9384476,
+    "sha256": "f4e88a0d412831491c0cd456a91dd385800dd8ecd87914e2b4d48f3ccbbb4d08"
+  },
+  {
+    "path": "data\\libros\\Python_Datascience.pdf",
+    "bytes": 22321280,
+    "sha256": "63a4997a643bab37598085c2786f849d40cc972d6508e1f9b0ca6b4b17e887b0"
+  },
+  {
+    "path": "data\\libros\\The Elements of Statistical Learning.pdf",
+    "bytes": 13303613,
+    "sha256": "1da55e44889d3c45c0e0068b8b953ba71a95a85784485b0d14f52f34bb7f9eca"
+  }
+]

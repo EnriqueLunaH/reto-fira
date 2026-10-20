@@ -1,0 +1,28 @@
+{
+  "source": "C:/dev/osbi-v1/src/js",
+  "package": "osbi",
+  "version": "1.0.0",
+  "copied_without_modifications": true,
+  "files": [
+    {
+      "file": "src/constants/breakpoints.js",
+      "sha256": "ecf0d167531a2c481846a2698b837d2fef15109821e209fbfc7d4dae502a7032"
+    },
+    {
+      "file": "src/constants/drawer.js",
+      "sha256": "d08f8eae17eb762f5e058ecb6841fa6fa62bb1f20c83a050932d8fbe50d71d72"
+    },
+    {
+      "file": "src/core/FloatingManager.js",
+      "sha256": "fe064a7ae0d947526fdf4f093583154befcc4e56629678b877b637e36af51cf4"
+    },
+    {
+      "file": "src/modules/Drawer/Drawer.js",
+      "sha256": "918bbb8018f26edb559eba9b275328da8b003e718610fe42b62b956c4d14b076"
+    },
+    {
+      "file": "src/modules/SelectMenu/SelectMenu.js",
+      "sha256": "0e33f13ce7d6bc00a43df6c0302f98a196cde36c6954cacb8129b78e48000c1a"
+    }
+  ]
+}

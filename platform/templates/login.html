@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% from 'osbi/components.html' import field, button %}
+{% block title %}{{ 'Acceso de agricultores' if role == 'productor' else 'Acceso técnico' }} · NAS{% endblock %}
+{% block content %}
+<section class="nas-login">
+  <div class="nas-login-intro">
+    <p class="eyebrow">{{ 'ESPACIO DEL AGRICULTOR' if role == 'productor' else 'ESPACIO TÉCNICO' }}</p>
+    <h1>{{ 'Tu parcela.' if role == 'productor' else 'Más contexto.' }}<br>{{ 'Con más claridad.' if role == 'productor' else 'Mejores preguntas.' }}</h1>
+    <p>{{ 'Una lectura clara del rendimiento estimado, la vegetación y el contexto de tu cultivo.' if role == 'productor' else 'Explora las parcelas, entiende la evidencia del modelo y compara escenarios económicos.' }}</p>
+    <div class="nas-login-badge">{{ icon('leaf' if role == 'productor' else 'layers',17) }} Cebada de temporal · Ciclo 2025</div>
+    <p><a class="nas-login-back" href="/">← Volver a NAS</a></p>
+  </div>
+  <form class="nas-login-form" method="post">
+    <h2>Bienvenido a NAS</h2>
+    <p>Ingresa a tu {{ 'espacio de agricultor' if role == 'productor' else 'espacio técnico' }}.</p>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    {% if error %}<p class="error-message" role="alert">{{ error }}</p>{% endif %}
+    {{ field('email','Correo electrónico',id='email',type='email',value=request.form.get('email',''),required=true,placeholder='tu@correo.com',class_name='nas-login-field',attrs={'autocomplete':'username'}) }}
+    <div class="nas-login-field"><label for="password">Contraseña <span aria-hidden="true">*</span></label><div class="nas-password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Tu contraseña"><button id="nas-password-toggle" class="nas-password-toggle" type="button" aria-label="Mostrar contraseña" aria-controls="password" aria-pressed="false">Mostrar</button></div></div>
+    {% call button(type='submit',class_name='button primary nas-login-submit') %}Entrar al espacio {{ icon('arrow',17) }}{% endcall %}
+    <p class="nas-login-security">{{ icon('lock',15) }}<span>Acceso con tu cuenta personal. Si necesitas una cuenta o recuperar tu acceso, contacta al staff.</span></p>
+  </form>
+</section>
+{% endblock %}
+

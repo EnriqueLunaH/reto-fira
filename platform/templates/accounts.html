@@ -1,0 +1,16 @@
+{% extends '_account_layout.html' %}
+{% block title %}Usuarios · NAS{% endblock %}
+{% block account_content %}
+<header class="accounts-heading"><div><p class="eyebrow">ADMINISTRACIÓN</p><h1>Usuarios y parcelas</h1><p>Gestiona los productores y decide qué parcelas puede consultar cada uno.</p></div><a class="button primary" href="{{ url_for('accounts.create') }}">Crear productor {{ icon('arrow',17) }}</a></header>
+<section class="accounts-card" aria-labelledby="users-title">
+  <div class="accounts-card-heading"><h2 id="users-title">Staff y productores</h2><p>Las cuentas de staff se muestran para consulta.</p></div>
+  <div class="accounts-table-scroll" role="region" aria-label="Lista de usuarios" tabindex="0">
+    <table class="accounts-table"><caption class="sr-only">Usuarios registrados y acceso a parcelas</caption><thead><tr><th scope="col">Usuario</th><th scope="col">Rol</th><th scope="col">Estado</th><th scope="col">Parcelas</th><th scope="col">Acciones</th></tr></thead><tbody>
+    {% for user in profiles %}
+      <tr><th scope="row"><span class="accounts-name">{{ user.name }}</span><span class="accounts-email">{{ user.email }}</span>{% if user.phone %}<span class="accounts-email">{{ user.phone }}</span>{% endif %}</th><td>{{ 'Staff' if user.role == 'staff' else 'Productor' }}</td><td><span class="accounts-badge {{ 'is-active' if user.active else '' }}">{{ 'Activo' if user.active else 'Suspendido' }}</span></td><td><strong>{{ user.parcel_count }}</strong><span class="accounts-email">{{ 'Todas' if user.role == 'staff' or user.access_mode == 'all' else {'none':'Sin asignación','selected':'Selección individual','municipalities':'Por municipio'}[user.access_mode] }}</span></td><td>{% if user.role == 'productor' %}<a class="button secondary" href="{{ url_for('accounts.edit', uid=user.id) }}">Editar<span class="sr-only"> a {{ user.name }}</span></a>{% else %}<span class="muted">Solo consulta</span>{% endif %}</td></tr>
+    {% else %}<tr><td colspan="5">No hay usuarios en esta página.</td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+  <nav class="accounts-pagination" aria-label="Páginas de usuarios">{% if current_page > 1 %}<a class="button secondary" href="{{ url_for('accounts.index', pagina=current_page - 1) }}">Anterior</a>{% endif %}<span>Página {{ current_page }}</span>{% if has_next %}<a class="button secondary" href="{{ url_for('accounts.index', pagina=current_page + 1) }}">Siguiente</a>{% endif %}</nav>
+</section>
+{% endblock %}

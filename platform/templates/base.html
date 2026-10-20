@@ -1,0 +1,43 @@
+{% from '_icons.html' import icon %}
+{% from '_theme_picker.html' import theme_picker %}
+{% set is_workspace = session.role and request.endpoint not in ['landing', 'timeline', 'login'] %}
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="NAS · New Agro Speed. Rendimiento por parcela, evidencia y escenarios económicos para ver el campo con más claridad.">
+  <meta name="color-scheme" content="dark light">
+  <title>{% block title %}NAS · New Agro Speed{% endblock %}</title>
+  <script src="{{ url_for('static',filename='js/theme-init.js') }}"></script>
+  {{ osbi_css() }}
+  <link rel="icon" href="{{ url_for('static',filename='img/nas-mark.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  {% block scripts %}{% endblock %}
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/nas.css') }}">
+  {% block page_styles %}{% endblock %}
+  <script src="{{ url_for('static',filename='js/ui.js') }}" defer></script>
+</head>
+<body class="ff-inter" data-page="{{ page|default('public') }}" data-view="{{ request.endpoint }}">
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+{% block header %}<header class="nas-header" id="nas-header">
+  <div class="nas-nav-surface d-flex ai-center jc-between">
+    <a class="nas-brand d-inline-flex ai-center" href="/" aria-label="NAS · New Agro Speed, inicio"><span class="nas-brand-mark" aria-hidden="true">N<span>↗</span></span><span>NAS<span class="nas-brand-full">NEW AGRO SPEED</span></span></a>
+    {% if is_workspace %}<div class="nas-workspace-label"><span class="nas-divider">/</span>{{ 'Agricultor' if session.role == 'productor' else 'Espacio técnico' }}</div>
+    {% else %}
+    <nav class="nas-desktop-links" aria-label="Navegación principal"><a href="/#propuesta">El proyecto</a><a href="https://www.fira.gob.mx/Nd/Agrocostos.jsp" target="_blank" rel="noopener">Agrocostos {{ icon('external',14) }}</a><a href="https://www.fira.gob.mx/Nd/index.jsp" target="_blank" rel="noopener">FIRA {{ icon('external',14) }}</a><a href="/timeline"{% if request.endpoint == 'timeline' %} aria-current="page"{% endif %}>Timeline</a></nav>
+    {% endif %}
+    <div class="nas-nav-actions d-flex ai-center gap-sm">
+      {{ theme_picker() }}
+      {% if is_workspace %}<form method="post" action="/logout"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="nas-logout" aria-label="Cerrar sesión">{{ icon('logout',17) }}<span>Cerrar sesión</span></button></form>
+      {% else %}<a class="button secondary nas-nav-cta" href="/login/staff">Acceso técnico</a><a class="button primary nas-nav-cta" href="/login/productor">Soy agricultor {{ icon('arrow',15) }}</a><button class="nas-menu-toggle" id="nas-menu-toggle" type="button" aria-expanded="false" aria-controls="nas-mobile-nav" aria-label="Abrir navegación">{{ icon('menu',22) }}</button>{% endif %}
+    </div>
+  </div>
+  {% if not is_workspace %}<nav id="nas-mobile-nav" class="nas-mobile-nav" aria-label="Navegación móvil" hidden><a href="/#propuesta">El proyecto {{ icon('arrow',16) }}</a><a href="https://www.fira.gob.mx/Nd/Agrocostos.jsp" target="_blank" rel="noopener">Agrocostos de FIRA {{ icon('external',16) }}</a><a href="https://www.fira.gob.mx/Nd/index.jsp" target="_blank" rel="noopener">Conoce FIRA {{ icon('external',16) }}</a><a href="/timeline">Timeline {{ icon('arrow',16) }}</a><div class="nas-mobile-ctas"><a class="button secondary" href="/login/staff">Acceso técnico</a><a class="button primary" href="/login/productor">Soy agricultor {{ icon('arrow',16) }}</a></div></nav>{% endif %}
+</header>{% endblock %}
+{% block layout %}<main id="main-content" tabindex="-1">{% block content %}{% endblock %}</main>{% endblock %}
+{% block footer %}<footer class="nas-footer"><a class="nas-footer-brand" href="/">NAS<span>New Agro Speed</span></a><p>Una mirada más clara al campo.</p><span>Cebada de temporal · Ciclo 2025</span></footer>{% endblock %}
+{{ osbi_js() }}
+</body>
+</html>
+
+

@@ -1,0 +1,14 @@
+{% from '_icons.html' import icon %}
+{% macro theme_picker(show_label=false) %}
+<details class="nas-theme-picker" id="theme-picker">
+  <summary aria-label="Elegir apariencia" title="Elegir apariencia">
+    <span class="nas-theme-icon-dark">{{ icon('moon',18) }}</span><span class="nas-theme-icon-light">{{ icon('sun',18) }}</span>
+    {% if show_label %}<span class="staff-appearance-label">Apariencia</span>{% endif %}{{ icon('chevron',12) }}
+  </summary>
+  <fieldset class="nas-theme-options"><legend>Apariencia</legend>
+    {% for value,label,glyph in [('light','Claro','sun'),('dark','Oscuro','moon'),('system','Sistema','monitor')] %}
+    <label><input type="radio" name="nas-theme" aria-label="{{ label }}" value="{{ value }}"{% if value == 'dark' %} checked{% endif %}>{{ icon(glyph,17) }}<span>{{ label }}</span><span class="nas-theme-check">{{ icon('check',15) }}</span></label>
+    {% endfor %}
+  </fieldset>
+</details>
+{% endmacro %}

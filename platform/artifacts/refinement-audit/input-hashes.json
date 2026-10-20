@@ -1,0 +1,8 @@
+{
+  "pipeline\\train.py": "9ad1ff6fd195cca62c1f37d5837894f3865eeee99712f3e8f34904dc5899b144",
+  "scripts\\evaluate_refinements.py": "95d58c708d2ffd0a6b0e9f52d4b193f8dff3d6badab2698608d90d8a6f71c3eb",
+  "artifacts\\parcels.csv": "05320f11d166f9dcb74f02e6d1bbd972008c2c2bf92dfb1851d387746162c5a8",
+  "artifacts\\features-cloud-20.csv": "2ca5ded7250a23adbfff072d12a6e2d6c6157b566a69f1abd64a815f08ef3908",
+  "artifacts\\features-cloud-40.csv": "a99dc064b198da32ef75276bb6cae560260567fd7951458cf7d97c0a3557ebdb",
+  "artifacts\\features-cloud-60.csv": "f1bb876ba66a387ac0de10789be363561c0da1814a0bec3799fccd6ed65eed6e"
+}

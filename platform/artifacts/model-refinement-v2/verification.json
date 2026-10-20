@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "folds_verified": 35,
+  "oof_rows": 966,
+  "unique_labelled_plots": 138,
+  "hidden_label_use": false,
+  "metric_rows_verified": 84,
+  "maximum_metric_difference": 4.440892098500626e-16,
+  "grouped_splits_verified": true,
+  "frozen_inputs_unchanged": true,
+  "incumbent_backup_unchanged": true,
+  "limitations": "Arithmetic and partition verification; does not establish independence or hidden accuracy."
+}

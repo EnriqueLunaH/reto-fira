@@ -1,0 +1,12 @@
+{
+  "decision": "retain_original",
+  "gates": {
+    "lower_parcel_mae_on_both_seeds": false,
+    "no_higher_parcel_rmse_on_either_seed": false,
+    "parcel_bootstrap_upper_limits_below_zero": false,
+    "block_bootstrap_upper_limits_below_zero": false,
+    "no_higher_spatial_mae_or_rmse": false
+  },
+  "production_mutated_by_script": false,
+  "interpretation": "Exploratory sensitivity on reused labels; no superiority claim for the 59 hidden yields."
+}

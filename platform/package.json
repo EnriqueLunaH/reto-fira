@@ -1,0 +1,13 @@
+{
+  "name": "nas-interface",
+  "private": true,
+  "description": "Local interface assets for the NAS Flask application",
+  "scripts": {
+    "build:ui": "node scripts/copy-ui-assets.cjs && node scripts/build-staff-ui.cjs"
+  },
+  "dependencies": {
+    "gsap": "3.15.0",
+    "@floating-ui/dom": "1.7.4"
+  },
+  "devDependencies": { "esbuild": "0.25.8" }
+}

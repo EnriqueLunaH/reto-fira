@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% from 'osbi/components.html' import accordion, accordion_item %}
+{% block scripts %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/landing.css') }}">
+<script src="{{ url_for('static',filename='vendor/gsap/gsap.min.js') }}" defer></script>
+<script src="{{ url_for('static',filename='vendor/gsap/ScrollTrigger.min.js') }}" defer></script>
+<script src="{{ url_for('static',filename='js/landing.js') }}" defer></script>
+{% endblock %}
+{% block content %}
+<div class="nas-scroll-progress" aria-hidden="true"></div>
+<section class="nas-hero nas-container" aria-labelledby="hero-title">
+  <div class="nas-hero-copy">
+    <p class="nas-overline nas-hero-enter"><span class="nas-live-dot"></span> NUEVA PERSPECTIVA. MISMO CAMPO.</p>
+    <h1 id="hero-title"><span class="nas-title-line">El campo cambia.</span><span class="nas-title-line">Tu forma de verlo,</span><span class="nas-title-line nas-title-soft">también.</span></h1>
+    <p class="nas-hero-description nas-hero-enter">De las señales del campo a decisiones con contexto. Rendimiento por parcela, evidencia del modelo y escenarios económicos, en un mismo lugar.</p>
+    <div class="nas-hero-actions nas-hero-enter"><a class="button primary" href="/login/staff">Explorar como técnico {{ icon('arrow',17) }}</a><a class="nas-text-link" href="#propuesta">Descubre NAS <span aria-hidden="true">↓</span></a></div>
+    <div class="nas-hero-foot nas-hero-enter"><span class="nas-small-mark">FIRA <span>×</span> NAS</span><span>Una propuesta para el<br> Reto AgroCebada 2026</span></div>
+  </div>
+  <div class="nas-hero-art" aria-hidden="true">
+    <div class="nas-art-halo"></div>
+    <div class="nas-art-coordinate nas-coordinate-top">DEL TERRITORIO A LA EVIDENCIA</div>
+    <div class="nas-glass-stack">
+      <div class="nas-glass-sheet nas-glass-back"><div class="nas-glass-grid"></div><span>01 / OBSERVAR</span></div>
+      <div class="nas-glass-sheet nas-glass-mid"><div class="nas-contour-rings"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>02 / COMPRENDER</span></div>
+      <div class="nas-glass-sheet nas-glass-front"><svg viewBox="0 0 340 340" fill="none"><defs><pattern id="nas-field" width="15" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><path d="M0 0V15" stroke="currentColor" stroke-width="2"/></pattern></defs><path d="m65 99 153-40 76 102-52 123-156-37-42-87Z" fill="url(#nas-field)" stroke="currentColor" stroke-width="1.5"/><path d="m65 99 177 185M44 160l250 1M86 247 218 59" stroke="currentColor" stroke-width="1"/><circle cx="170" cy="169" r="5" fill="currentColor"/><circle cx="170" cy="169" r="16" stroke="currentColor" stroke-dasharray="2 5"/></svg><span>03 / DECIDIR</span><div class="nas-scan-beam"></div></div>
+    </div>
+    <div class="nas-art-label"><span class="nas-live-dot"></span>Una nueva capa de claridad.<small>Ilustración conceptual de las capas de información</small></div>
+    <div class="nas-art-coordinate nas-coordinate-bottom"><span>NEW AGRO SPEED</span><span>EST. 2026</span></div>
+  </div>
+</section>
+<div class="nas-evidence-strip nas-container"><p>Una solución construida<br> <strong>desde el contexto del campo.</strong></p><div><strong>59</strong><span>parcelas con estimación</span></div><div><strong>3</strong><span>estados del altiplano</span></div><div><strong>2025</strong><span>ciclo observado</span></div><a href="https://www.fira.gob.mx/Nd/Convocatoria-2026.html" target="_blank" rel="noopener" aria-label="Conocer el Reto AgroCebada en FIRA">RETO AGROCEBADA {{ icon('external',16) }}</a></div>
+<section id="propuesta" class="nas-introduction nas-container">
+  <p class="nas-overline nas-native-reveal">01 / LA PIEZA QUE CONECTA</p>
+  <div class="nas-intro-grid"><h2 class="nas-section-title nas-reveal">La información existe.<br> <span>La claridad hace<br> la diferencia.</span></h2><div class="nas-intro-copy nas-reveal"><p>FIRA impulsa el desarrollo del campo con financiamiento, garantías y conocimiento. Entre ese impulso y cada parcela hay una oportunidad: acercar la evidencia a quienes toman las decisiones.</p><p>NAS conecta las señales del cultivo con una lectura accesible de su rendimiento y su contexto económico. Una nueva perspectiva para el mismo propósito: un campo con más posibilidades.</p><a class="nas-text-link" href="https://www.fira.gob.mx/Nd/AcercadeNosotros.jsp" target="_blank" rel="noopener">Conoce la misión de FIRA {{ icon('external',16) }}</a></div></div>
+</section>
+<section class="nas-story nas-container" aria-labelledby="story-title">
+  <div class="nas-story-stage">
+    <p class="nas-overline">02 / DEL DATO A LA DECISIÓN</p>
+    <h2 id="story-title" class="nas-section-title">Menos distancia.<br> <span>Más perspectiva.</span></h2>
+    <div class="nas-story-diagram" aria-hidden="true"><div class="nas-story-orbit"></div><div class="nas-story-core">NAS<span>NEW AGRO SPEED</span></div><div class="nas-story-node nas-node-one">{{ icon('layers',22) }}<span>Datos del campo</span></div><div class="nas-story-node nas-node-two">{{ icon('leaf',22) }}<span>Rendimiento</span></div><div class="nas-story-node nas-node-three">{{ icon('chart',22) }}<span>Contexto económico</span></div><span class="nas-story-line nas-line-one"></span><span class="nas-story-line nas-line-two"></span><span class="nas-story-line nas-line-three"></span></div>
+    <p class="nas-stage-caption">Un recorrido, tres formas de ver más.</p>
+  </div>
+  <div class="nas-story-chapters">
+    <article class="nas-chapter" data-chapter="0"><span class="nas-chapter-index">01 — OBSERVAR</span><h3>Los datos dispersos<br> no cuentan toda la historia.</h3><p>Vegetación, lluvia y terreno adquieren sentido cuando se reúnen alrededor de una parcela. NAS organiza las señales para que puedas empezar por lo que importa.</p><span class="nas-chapter-tag">Una parcela. Su contexto.</span></article>
+    <article class="nas-chapter" data-chapter="1"><span class="nas-chapter-index">02 — COMPRENDER</span><h3>Una estimación merece<br> más que una cifra.</h3><p>Consulta el rendimiento junto a su rango, la validación del modelo y sus límites. La confianza empieza al entender qué nos dicen los datos y hasta dónde llegan.</p><span class="nas-chapter-tag">Rendimiento con evidencia.</span></article>
+    <article class="nas-chapter" data-chapter="2"><span class="nas-chapter-index">03 — DECIDIR</span><h3>No todas las toneladas<br> dejan el mismo margen.</h3><p>El personal técnico puede explorar cómo cambian los márgenes al ajustar precio, costos y renta. Escenarios económicos transparentes para hacer mejores preguntas.</p><span class="nas-chapter-tag">Supuestos visibles. Más contexto.</span></article>
+  </div>
+</section>
+<section class="nas-workspace-section nas-container" aria-labelledby="workspace-title">
+  <div class="nas-section-heading"><div><p class="nas-overline">03 / TU FORMA DE TRABAJAR</p><h2 id="workspace-title" class="nas-section-title nas-reveal">La complejidad, resuelta.<br> <span>El campo, en primer plano.</span></h2></div><p class="nas-reveal">Una experiencia para explorar.<br> Otra para entender tu parcela.<br> La misma evidencia detrás.</p></div>
+  <div class="nas-workspace-preview nas-native-reveal">
+    <div class="nas-preview-sidebar"><span class="nas-preview-brand">NAS <small>WORKSPACE</small></span><span class="nas-preview-nav is-active">{{ icon('grid',16) }} Vista general</span><span class="nas-preview-nav">{{ icon('table',16) }} Parcelas</span><span class="nas-preview-nav">{{ icon('chart',16) }} Riesgo económico</span><span class="nas-preview-nav">{{ icon('check',16) }} Validación</span><div class="nas-preview-sidebar-foot">El campo, con contexto.<span>Reto AgroCebada 2026</span></div></div>
+    <div class="nas-preview-content"><div class="nas-preview-breadcrumb">Espacio técnico <span>/</span> Una vista, más posibilidades</div><h3>De una parcela<br> a una mejor pregunta.</h3><div class="nas-preview-cells"><div>{{ icon('leaf',22) }}<span>Rendimiento</span><strong>¿Cuánto grano<br> se estima?</strong></div><div>{{ icon('chart',22) }}<span>Escenarios</span><strong>¿Qué sostiene<br> el margen?</strong></div><div>{{ icon('check',22) }}<span>Evidencia</span><strong>¿Qué tan bien<br> funciona el modelo?</strong></div></div><div class="nas-preview-bottom"><span class="nas-live-dot"></span>Información conectada. Lectura sencilla.<span class="nas-preview-note">Vista conceptual de la experiencia</span></div></div>
+  </div>
+  <div class="nas-role-grid"><a href="/login/staff" class="nas-role-link nas-reveal"><div>{{ icon('layers',24) }}<h3>Para personal técnico</h3><p>Compara parcelas, revisa la evidencia y explora escenarios económicos.</p></div><span>Entrar al espacio técnico {{ icon('arrow',20) }}</span></a><a href="/login/productor" class="nas-role-link nas-reveal"><div>{{ icon('leaf',24) }}<h3>Para agricultores</h3><p>Consulta la estimación de tu parcela y conoce las señales de tu cultivo.</p></div><span>Consultar como agricultor {{ icon('arrow',20) }}</span></a></div>
+</section>
+<section class="nas-connection" aria-labelledby="connection-title"><div class="nas-container"><p class="nas-overline nas-native-reveal">04 / UN PROPÓSITO COMPARTIDO</p><div class="nas-connection-wordmark" aria-hidden="true"><span>FIRA</span><span class="nas-connection-x">×</span><span>NAS</span></div><div class="nas-connection-grid"><h2 id="connection-title" class="nas-section-title nas-reveal">El impulso de siempre.<br> <span>La perspectiva<br> que sigue.</span></h2><div class="nas-connection-copy nas-reveal"><p>El financiamiento abre oportunidades. La información ayuda a comprenderlas.</p><p>NAS complementa las herramientas de FIRA al conectar estimaciones por parcela, evidencia del modelo y presupuestos de referencia en una experiencia clara y explorable.</p><div class="nas-official-links"><a href="https://www.fira.gob.mx/Nd/FondeoFira.jsp" target="_blank" rel="noopener">Financiamiento FIRA {{ icon('external',16) }}</a><a href="https://www.fira.gob.mx/Nd/Agrocostos.jsp" target="_blank" rel="noopener">Presupuestos Agrocostos {{ icon('external',16) }}</a></div></div></div></div></section>
+<section class="nas-faq nas-container" aria-labelledby="faq-title"><div><p class="nas-overline">ANTES DE EXPLORAR</p><h2 id="faq-title" class="nas-section-title">Claridad, desde<br> <span>el principio.</span></h2></div><div>{% call accordion(label='Acerca de NAS', class_name='nas-faq-accordion') %}
+  {{ accordion_item('¿Qué puedo consultar en NAS?', 'Estimaciones del rendimiento de cebada para las 59 parcelas del conjunto de predicción, su contexto y sus rangos. El espacio técnico también reúne validación, factores del modelo y escenarios de margen económico.',id='faq-capabilities') }}
+  {{ accordion_item('¿De qué periodo son los datos?', 'Las estimaciones describen el ciclo abril–octubre de 2025. Son retrospectivas: no son un pronóstico disponible al sembrar ni una predicción de la campaña 2026.',id='faq-season') }}
+  {{ accordion_item('¿Los escenarios económicos deciden un crédito?', 'No. Permiten explorar márgenes bajo supuestos visibles de precio, costos y renta. Son ejercicios experimentales para apoyar una revisión técnica, no probabilidades calibradas de impago ni dictámenes de crédito.',id='faq-risk') }}
+  {{ accordion_item('¿Cómo se relaciona con FIRA?', 'NAS es una propuesta desarrollada para el Reto AgroCebada FIRA 2026. Aprovecha los datos del reto y presupuestos de referencia de Agrocostos; los servicios financieros se consultan en los canales oficiales de FIRA.',id='faq-fira') }}
+{% endcall %}</div></section>
+<section class="nas-final-cta nas-container"><p class="nas-overline">NEW AGRO SPEED</p><h2 class="nas-reveal">Otra forma de ver el campo.<br> <span>Empieza aquí.</span></h2><div class="d-flex ai-center jc-center gap-md fwx-wrap"><a href="/login/staff" class="button primary">Acceso técnico {{ icon('arrow',18) }}</a><a href="/login/productor" class="button secondary">Soy agricultor {{ icon('arrow',18) }}</a></div></section>
+{% endblock %}
+{% block footer %}<footer class="nas-footer nas-landing-footer"><a class="nas-footer-brand" href="/">NAS<span>New Agro Speed</span></a><div><span>Construido para mirar más allá.</span><small>Propuesta para el Reto AgroCebada FIRA 2026.</small></div><a href="/timeline">Conoce nuestro proceso {{ icon('arrow',16) }}</a></footer>{% endblock %}
+

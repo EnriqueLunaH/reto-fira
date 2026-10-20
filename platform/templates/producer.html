@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% from 'osbi/components.html' import accordion, accordion_item %}
+{% block title %}Cosecha estimada · Agricultores · NAS{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{{ url_for('static',filename='css/producer.css') }}">{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static',filename='js/charts.js') }}" defer></script>
+<script src="{{ url_for('static',filename='js/producer.js') }}" defer></script>
+{% endblock %}
+{% block content %}
+<div class="dashboard-shell producer-page">
+  <header class="producer-heading d-flex ai-center jc-between fwx-wrap gap-lg">
+    <div><p class="eyebrow">ESPACIO DEL AGRICULTOR</p><h1>Conoce la cosecha estimada</h1><p class="producer-muted">Consulta una parcela y entiende sus resultados.</p></div>
+    <div class="producer-season"><span>{{ icon('leaf',18) }} Cebada de temporal</span><strong>Abril–octubre 2025</strong><span>Ciclo concluido</span></div>
+  </header>
+  <section class="producer-account d-grid gap-lg p-xl mb-xl border-1 border-solid border-subtle rounded-lg bg-surface" aria-labelledby="producer-account-title">
+    <h2 id="producer-account-title">Tu cuenta</h2>
+    <dl class="w-p100 d-grid grid-cols-1 md-grid-cols-2 gap-lg m-0">
+      <div class="min-w-0"><dt class="fs-sm text-muted mb-xs">Nombre</dt><dd id="producer-account-name" class="m-0 fw-600 overflow-wrap-anywhere">{{ g.account.name }}</dd></div>
+      <div class="min-w-0"><dt class="fs-sm text-muted mb-xs">Correo electrónico</dt><dd id="producer-account-email" class="m-0 overflow-wrap-anywhere">{{ g.account.email }}</dd></div>
+    </dl>
+  </section>
+  <section class="producer-picker p-xl border-1 border-solid border-subtle rounded-lg" aria-labelledby="picker-title">
+    <div class="d-flex ai-center jc-between fwx-wrap gap-sm"><h2 id="picker-title">Encuentra la parcela</h2><span id="parcel-count" class="producer-muted">Cargando listado…</span></div>
+    <div class="producer-fields d-grid gap-lg">
+      <div class="min-w-0"><label for="producer-state">Estado</label><select id="producer-state" disabled><option value="">Todos los estados</option></select></div>
+      <div class="min-w-0"><label for="parcel-search">Buscar código o municipio</label><input id="parcel-search" class="w-p100 px-md py-sm border-1 border-solid border-subtle rounded-lg bg-base outline-2 outline-solid outline-transparent outline-offset-2 focus-visible-outline-primary" placeholder="Ej. AGC_003 o Singuilucan" type="search" autocomplete="off" disabled></div>
+      <div class="min-w-0"><label for="parcel-select">Parcela que quieres consultar</label><select id="parcel-select" aria-describedby="selection-help" disabled><option value="">Cargando…</option></select></div>
+    </div>
+    <div class="producer-picker-foot d-flex ai-center jc-between fwx-wrap gap-sm"><p id="selection-help">Solo se muestran las parcelas que el staff ha asignado a tu cuenta. Si falta alguna, contacta al staff.</p><button id="clear-filters" type="button" class="producer-text-button" hidden>Limpiar búsqueda y filtros</button></div>
+    <a id="view-result" class="producer-jump producer-action d-inline-flex ai-center jc-center gap-sm px-lg py-sm rounded-lg" href="#producer-result" hidden>Ver estimación {{ icon('arrow',16) }}</a>
+  </section>
+  <div id="producer-status" role="status" aria-live="polite" aria-atomic="true">Cargando parcelas…</div>
+  <div id="producer-recovery" class="producer-recovery" hidden><button id="producer-retry" type="button" class="producer-action bg-primary text-inverse fw-600 border-0 px-lg py-sm rounded-lg cursor-pointer outline-2 outline-solid outline-transparent outline-offset-2 focus-visible-outline-primary">Volver a intentar</button><a href="{{ url_for('login',role='productor') }}" class="producer-text-button">Volver al acceso</a></div>
+  <noscript><p class="producer-guidance">Activa JavaScript en tu navegador para consultar las parcelas.</p></noscript>
+  <div id="producer-content" hidden>
+    <section id="producer-result" aria-labelledby="parcel-title" class="producer-result" data-producer-reveal>
+      <div class="producer-parcel-heading d-flex ai-center jc-between fwx-wrap gap-md">
+        <div class="producer-parcel-name d-flex ai-center fwx-wrap gap-md"><h2 id="parcel-title"></h2><p id="parcel-location" class="producer-muted"></p></div>
+        <a class="producer-text-button d-inline-flex ai-center gap-sm" href="#producer-details">Ver datos del ciclo {{ icon('chevron',16) }}</a>
+      </div>
+      <div class="producer-summary d-grid gap-xl">
+        <div class="producer-harvest p-xl rounded-lg">
+          <p class="producer-kicker">ESTIMACIÓN PARA TODA LA PARCELA</p>
+          <p class="producer-total"><span id="total-value"></span><span>toneladas de grano</span></p>
+          <p id="total-explanation" class="producer-muted"></p>
+          <dl class="producer-measures d-grid grid-cols-1 sm-grid-cols-2 gap-lg">
+            <div><dt>Por cada hectárea</dt><dd><strong id="yield-value"></strong> <span>toneladas</span><p id="yield-plain" class="producer-muted"></p></dd></div>
+            <div><dt>Superficie registrada</dt><dd><strong id="area-value"></strong> <span>hectáreas</span><p class="producer-muted">Usada para estimar el total</p></dd></div>
+          </dl>
+          <div class="producer-estimate-note d-flex gap-sm">{{ icon('info',19) }}<div><strong>Es una estimación, no una cosecha confirmada.</strong><p id="yield-range-note">La cantidad real puede ser mayor o menor.</p><p id="yield-range" hidden></p></div></div>
+        </div>
+        <aside class="producer-parcel-shape p-xl border-1 border-solid border-subtle rounded-lg" aria-labelledby="shape-title">
+          <h3 id="shape-title">Reconoce la parcela</h3><p class="producer-muted">Forma del terreno registrado</p><div id="parcel-map" class="map-container"></div><p class="producer-caption">Confirma el código, el municipio y la superficie. Este dibujo muestra el límite registrado; no es un mapa para llegar al lugar.</p>
+        </aside>
+      </div>
+      <div class="producer-guidance d-flex gap-md"><span class="producer-guidance-icon">{{ icon('check',20) }}</span><div><h3>¿Cómo usar esta información?</h3><p>Úsala como referencia del ciclo 2025 y compárala con tus registros de cosecha. Si algo no coincide, revísalo con tu asesor técnico.</p><p id="producer-notice"></p></div></div>
+    </section>
+    <section id="producer-details" class="producer-details" aria-labelledby="details-title" data-producer-reveal>
+      <div class="producer-section-heading"><p class="producer-kicker">SI QUIERES SABER MÁS</p><h2 id="details-title">Los datos detrás de la estimación</h2><p class="producer-muted">Abre solo lo que te interese consultar.</p></div>
+      {% call accordion(id='producer-guide', label='Datos y ayuda de la parcela', multiple=true, class_name='producer-accordion') %}
+        {% call accordion_item('¿Cómo se veía la vegetación durante el ciclo?', id='producer-vegetation') %}
+          <p>Los satélites observaron la vegetación entre abril y octubre de 2025. Una línea más alta indica una mayor señal de vegetación verde; por sí sola no indica cuántos granos se cosecharon.</p>
+          <p class="producer-caption">Índice de vegetación (NDVI). Dos satélites, dos series: Sentinel-2 (línea continua) y Planet (línea discontinua). Los meses sin medición quedan vacíos.</p>
+          <div id="vegetation-chart" class="chart" aria-describedby="vegetation-coverage"></div><p id="vegetation-coverage" class="producer-caption"></p>
+          <details class="producer-data-table"><summary>Ver las mediciones en una tabla</summary><div class="producer-table-scroll"><table><caption>Índice de vegetación por mes · 2025</caption><thead><tr><th scope="col">Mes</th><th scope="col">Sentinel-2</th><th scope="col">Planet</th></tr></thead><tbody id="vegetation-values"></tbody></table></div></details>
+        {% endcall %}
+        {% call accordion_item('¿Qué lluvia y terreno se registraron?', id='producer-context') %}
+          <dl class="producer-context d-grid grid-cols-1 md-grid-cols-3 gap-xl"><div><dt>Lluvia acumulada del ciclo</dt><dd><span id="rain-value"></span><p>Milímetros entre abril y octubre de 2025. No es un pronóstico del tiempo.</p></dd></div><div><dt>Altitud promedio</dt><dd><span id="elevation-value"></span><p>Metros sobre el nivel del mar.</p></dd></div><div><dt>Inclinación promedio del terreno</dt><dd><span id="slope-value"></span><p>Medida en grados. Un valor mayor indica más inclinación.</p></dd></div></dl>
+          <p class="producer-caption">Estos datos describen la parcela y el ciclo. No permiten recomendar por sí solos riego, fertilizante u otra práctica.</p>
+        {% endcall %}
+        {% call accordion_item('¿Cómo se obtiene la estimación y qué límites tiene?', id='producer-method') %}
+          <div class="producer-method d-grid md-grid-cols-2 gap-xl"><div><h4>Una referencia basada en datos</h4><p>El cálculo relaciona datos de satélite, clima y terreno con cosechas conocidas de otras parcelas. La estimación por hectárea se multiplica por la superficie registrada para obtener el total.</p><p>Una tonelada equivale a 1,000 kilogramos. La abreviatura «t/ha» significa toneladas por hectárea.</p></div><div><h4>Lo que conviene tener presente</h4><p>Los datos llegan hasta octubre de 2025. Este resultado describe un ciclo concluido; no anticipa la cosecha de un ciclo nuevo.</p><p id="method-uncertainty"></p><p>La vegetación verde y la lluvia aportan contexto, pero no son una medición directa del grano cosechado.</p></div></div>
+        {% endcall %}
+      {% endcall %}
+    </section>
+  </div>
+</div>
+{% endblock %}

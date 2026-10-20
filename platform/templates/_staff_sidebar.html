@@ -1,0 +1,21 @@
+<aside class="staff-sidebar-backdrop opacity-0 visibility-hidden pointer-events-none" data-drawer-backdrop aria-label="Panel técnico">
+ <div id="staff-navigation-panel" class="staff-sidebar d-flex fd-col h-p100 overflow-y-auto overscroll-contain pointer-events-auto transform translate-x--100" data-drawer>
+  <div class="staff-sidebar-brand">
+    <a class="nas-brand d-inline-flex ai-center" href="/" aria-label="NAS · New Agro Speed, inicio"><span class="nas-brand-mark" aria-hidden="true">N<span>↗</span></span><span>NAS<span class="nas-brand-full">NEW AGRO SPEED</span></span></a>
+    <button type="button" class="staff-close-navigation" data-drawer-close aria-label="Cerrar navegación">{{ icon('menu',20) }}</button>
+  </div>
+  <div class="staff-workspace"><span class="staff-workspace-icon">{{ icon('layers',17) }}</span><span>Espacio técnico<small>Análisis por parcela</small></span></div>
+  <p class="eyebrow" id="staff-navigation-title">EXPLORAR</p>
+  <nav class="staff-navigation" aria-label="Secciones del panel técnico">
+    {% for section, label in [('resumen', 'Resumen'), ('predicciones', 'Predicciones'), ('riesgo', 'Riesgo económico'), ('validacion', 'Validación'), ('factores', 'Factores del modelo'), ('metodologia', 'Metodología')] %}
+    <a href="{{ url_for('staff') if section == 'resumen' else url_for('staff', section=section) }}"{% if staff_section|default('') == section %} aria-current="page"{% endif %}>{{ icon({'resumen':'grid','predicciones':'table','riesgo':'chart','validacion':'check','factores':'layers','metodologia':'book'}[section],17) }}{{ label }}</a>
+    {% endfor %}
+    <a href="{{ url_for('accounts.index') }}"{% if request.blueprint == 'accounts' %} aria-current="page"{% endif %}>{{ icon('users',17) }}Usuarios y parcelas</a>
+  </nav>
+  <footer class="staff-sidebar-footer">
+    <p class="staff-sidebar-caption">NEW AGRO SPEED<span>Una mirada más clara al campo.</span></p>
+    {{ theme_picker(true) }}
+    <form method="post" action="/logout"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="nas-logout" aria-label="Cerrar sesión">{{ icon('logout',17) }}<span>Cerrar sesión</span></button></form>
+  </footer>
+ </div>
+</aside>

@@ -1,0 +1,34 @@
+{% from 'osbi/components.html' import accordion, accordion_item %}
+<section class="card factors-analysis" id="factors-analysis" aria-labelledby="factors-chart-title" aria-busy="true">
+  <div class="factors-analysis-heading d-flex ai-center jc-between fwx-wrap">
+    <div><p class="factors-overline">LECTURA DEL MODELO</p><h2 id="factors-chart-title">Importancia de los grupos de información</h2></div>
+    <span class="factors-unit">Δ MAE · t/ha</span>
+  </div>
+  <div class="factors-analysis-grid d-grid">
+    <div class="factors-chart-panel min-w-0">
+      <p class="factors-chart-caption">Cambio en el error absoluto medio al permutar cada grupo.</p>
+      <div id="importance-chart" class="chart" aria-describedby="factors-zero-note factors-scope-note"></div>
+      <p class="factors-zero-note d-flex ai-center" id="factors-zero-note"><i aria-hidden="true"></i>Línea de referencia: Δ MAE = 0</p>
+    </div>
+    <div class="factors-guide-panel" aria-labelledby="factors-guide-title">
+      <h3 id="factors-guide-title">Cómo leer la gráfica</h3>
+      <dl class="factors-sign-guide d-grid">
+        <div><dt><span aria-hidden="true">+</span>Valor positivo</dt><dd>El error aumenta al permutar el grupo: el modelo utiliza esa información en esta muestra.</dd></div>
+        <div><dt><span aria-hidden="true">≈</span>Cercano a cero</dt><dd>El error apenas cambia. Los valores se muestran con tres decimales.</dd></div>
+        <div><dt><span aria-hidden="true">−</span>Valor negativo</dt><dd>No se observó utilidad del grupo en esta muestra.</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="factors-scope-note d-flex" id="factors-scope-note">{{ icon('info',17) }}<p><strong id="importance-scope">Evaluación global fuera de muestra.</strong> Sin filtro geográfico. La importancia no mide causalidad.</p></div>
+</section>
+<section class="factors-details" aria-label="Método y alcance de la importancia">
+  {% call accordion(id='factors-guide', label='Método y alcance de la importancia', class_name='factors-accordion') %}
+    {% call accordion_item('Método y límites de esta lectura', id='factors-method', class_name='factors-accordion-item') %}
+    <div class="factors-method-grid d-grid md-grid-cols-2">
+      <div><h3>Qué se compara</h3><p id="importance-method">La gráfica muestra cuánto cambia el MAE, medido en t/ha, al permutar cada grupo de información en parcelas que quedaron fuera del ajuste evaluado.</p></div>
+      <div><h3>Qué alcance tiene</h3><p>Es una lectura global del modelo en esta muestra, sin filtro por estado o parcela. Los valores negativos indican que no se observó utilidad; no describen una relación de causa y efecto en el cultivo.</p></div>
+    </div>
+    <a class="factors-validation-link d-inline-flex ai-center" href="{{ url_for('staff', section='validacion') }}">Consultar la calidad de predicción {{ icon('arrow',15) }}</a>
+    {% endcall %}
+  {% endcall %}
+</section>

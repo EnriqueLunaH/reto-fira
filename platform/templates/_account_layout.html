@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% set page = 'staff' %}
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block page_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/staff.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/accounts.css') }}">
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/staff-ui.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/accounts.js') }}" defer></script>
+{% endblock %}
+{% block layout %}
+<div class="staff-layout min-h-0 overflow-hidden">
+  {% include '_staff_sidebar.html' %}
+  <main class="staff-main min-w-0 overflow-y-auto overscroll-contain" id="main-content" tabindex="-1">
+  {% include '_staff_toolbar.html' %}
+<div class="dashboard-shell accounts-page">
+  <nav class="accounts-breadcrumb" aria-label="Ubicación"><a href="{{ url_for('staff') }}">Espacio técnico</a><span aria-hidden="true">/</span><a href="{{ url_for('accounts.index') }}"{% if request.endpoint == 'accounts.index' %} aria-current="page"{% endif %}>Usuarios</a></nav>
+  {% for category, message in get_flashed_messages(with_categories=true) %}<p class="accounts-notice {{ 'accounts-error' if category == 'error' else '' }}" role="{{ 'alert' if category == 'error' else 'status' }}">{{ message }}</p>{% endfor %}
+  {% block account_content %}{% endblock %}
+</div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% from 'osbi/components.html' import accordion, accordion_item %}
+<section aria-labelledby="validation-metrics-title">
+  <div class="validation-section-heading"><h2 id="validation-metrics-title">Errores por parcela</h2><span>Validación anidada · 5 particiones</span></div>
+  <div id="quality-kpis" class="kpi-grid" aria-label="Métricas de la muestra seleccionada"></div>
+</section>
+<div class="validation-charts d-grid">
+  <section class="card validation-plot-card" aria-labelledby="validation-scatter-title">
+    <p class="validation-overline">01 / VALIDACIÓN POR PARCELA</p>
+    <div class="card-heading"><h2 id="validation-scatter-title">Observado frente a estimado</h2><span class="validation-unit">t/ha</span></div>
+    <div id="validation-chart" class="chart"></div>
+    <div class="validation-chart-foot"><span class="validation-diagonal-key"><i aria-hidden="true"></i>Coincidencia exacta</span><p>Predicciones fuera de muestra de validación anidada por parcela. La diagonal indica coincidencia exacta; no es un ajuste a los puntos.</p></div>
+  </section>
+  <section class="card validation-plot-card" aria-labelledby="validation-spatial-title">
+    <p class="validation-overline">02 / VALIDACIÓN POR BLOQUES</p>
+    <div class="card-heading"><h2 id="validation-spatial-title">Transferencia espacial</h2><span class="validation-unit">MAE · t/ha</span></div>
+    <div id="spatial-chart" class="chart"></div>
+    <div class="validation-chart-foot validation-spatial-foot">{{ icon('info',16) }}<p>Se separan bloques completos de 20 km del ajuste. Una diferencia grande frente a la validación aleatoria indica dificultad para transferir el modelo a otras zonas.</p></div>
+  </section>
+</div>
+<section class="validation-reading" aria-labelledby="validation-reading-title">
+  <div class="validation-section-heading"><h2 id="validation-reading-title">Interpreta la evaluación</h2><span>Definiciones y alcance</span></div>
+  {% call accordion(id='validation-guide', label='Guía de lectura de la evaluación', multiple=true, class_name='validation-guide') %}
+    {% call accordion_item('Qué significa cada indicador', id='validation-metrics-guide', class_name='validation-guide-item') %}
+    <dl class="validation-definitions d-grid md-grid-cols-2">
+      <div><dt>MAE</dt><dd>Error absoluto medio, en t/ha. Menor es mejor.</dd></div>
+      <div><dt>RMSE</dt><dd>Da mayor peso a los errores grandes. Menor es mejor.</dd></div>
+      <div><dt>R²</dt><dd>Comparación con la media observada. Puede ser negativo cuando el modelo generaliza mal.</dd></div>
+      <div><dt>Referencia</dt><dd>Predicción constante con la mediana del entrenamiento de cada partición.</dd></div>
+    </dl>
+    {% endcall %}
+    {% call accordion_item('Qué alcance tiene esta evaluación', id='validation-scope-guide', class_name='validation-guide-item') %}
+    <div class="validation-scope-copy"><p>El conjunto contiene 138 parcelas etiquetadas. Las predicciones de validación son fuera de muestra; el filtro permite consultar cada estado.</p><p>La información corresponde al ciclo abril–octubre de 2025. Esta evaluación no mide generalización entre años. La prueba espacial separa bloques geográficos para examinar la transferencia a otras zonas.</p><a href="{{ url_for('staff', section='metodologia') }}">Consultar fuentes y metodología {{ icon('arrow',14) }}</a></div>
+    {% endcall %}
+  {% endcall %}
+</section>

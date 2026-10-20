@@ -1,0 +1,57 @@
+{% from 'osbi/components.html' import accordion, accordion_item %}
+<nav class="methodology-index d-grid grid-cols-2 md-grid-cols-4" aria-label="En esta página">
+  <a href="#methodology-sources"><span>01</span>Fuentes {{ icon('arrow',14) }}</a>
+  <a href="#methodology-metrics"><span>02</span>Métricas {{ icon('arrow',14) }}</a>
+  <a href="#methodology-fitting"><span>03</span>Ajuste {{ icon('arrow',14) }}</a>
+  <a href="#methodology-limits"><span>04</span>Límites {{ icon('arrow',14) }}</a>
+</nav>
+<div class="methodology-sections d-flex fd-col">
+  <section class="card methodology-section" id="methodology-sources" aria-labelledby="methodology-sources-title" tabindex="-1">
+    <div class="methodology-section-heading d-flex ai-center"><span class="methodology-section-number" aria-hidden="true">01</span><div><p class="methodology-overline">ORIGEN DE LA INFORMACIÓN</p><h2 id="methodology-sources-title">Fuentes de datos</h2></div></div>
+    <dl class="methodology-sources-grid d-grid md-grid-cols-2">
+      <div><dt>{{ icon('table',17) }}Datos de parcela</dt><dd>Archivos CSV Básico, PRO y rendimientos del reto.</dd></div>
+      <div><dt>{{ icon('layers',17) }}Geometrías</dt><dd><span class="methodology-source-name">Parcelas_Reto_AGC_CONJUNTO</span></dd></div>
+      <div><dt>{{ icon('chart',17) }}Clima</dt><dd><strong>48 capas CHIRPS</strong> y <strong>96 CHIRTS-ERA5</strong>.</dd></div>
+      <div><dt>{{ icon('leaf',17) }}Topografía</dt><dd>Dos capas topográficas INEGI.</dd></div>
+    </dl>
+    <div class="methodology-section-note d-flex">{{ icon('info',17) }}<p>Promedios por parcela ponderados por área de intersección con cada píxel.</p></div>
+  </section>
+
+  <section class="card methodology-section" id="methodology-metrics" aria-labelledby="methodology-metrics-title" tabindex="-1">
+    <div class="methodology-section-heading d-flex ai-center"><span class="methodology-section-number" aria-hidden="true">02</span><div><p class="methodology-overline">LECTURA DE LOS RESULTADOS</p><h2 id="methodology-metrics-title">Cómo se agregan las estimaciones</h2></div></div>
+    <dl class="methodology-formulas d-grid md-grid-cols-2">
+      <div><dt>Rendimiento ponderado <span>t/ha</span></dt><dd>Σ(estimación × ha) / Σha</dd></div>
+      <div><dt>Toneladas estimadas <span>t</span></dt><dd>Σ(estimación × ha)</dd></div>
+    </dl>
+    <div class="methodology-section-note d-flex">{{ icon('info',17) }}<p>La incertidumbre individual no se suma para construir un intervalo regional.</p></div>
+  </section>
+
+  <section class="card methodology-section" id="methodology-fitting" aria-labelledby="methodology-fitting-title" tabindex="-1">
+    <div class="methodology-section-heading d-flex ai-center"><span class="methodology-section-number" aria-hidden="true">03</span><div><p class="methodology-overline">PROCESO DEL MODELO</p><h2 id="methodology-fitting-title">Ajuste y validación</h2></div></div>
+    <ol class="methodology-process d-grid md-grid-cols-3 list-none">
+      <li><span class="methodology-process-step">SELECCIÓN</span><h3>Validación interna</h3><p>Selección de sensor, filtro de nubes y modelo mediante validación interna.</p></li>
+      <li><span class="methodology-process-step">PREPARACIÓN</span><h3>Dentro de cada ajuste</h3><p>Imputación, escalado y selección de variables aprendidos dentro de cada ajuste.</p></li>
+      <li><span class="methodology-process-step">MODELO FINAL</span><h3>Ajuste de la predicción</h3><p id="final-fitting-note">La configuración vigente y el uso de las parcelas se muestran a continuación.</p></li>
+    </ol>
+    <div class="methodology-model-report" id="methodology-model-report" aria-busy="true">
+      <h3>Configuración y alcance de la evaluación</h3>
+      <p id="model-note"></p>
+    </div>
+  </section>
+
+  <section class="card methodology-section" id="methodology-limits" aria-labelledby="methodology-limits-title" tabindex="-1">
+    <div class="methodology-section-heading d-flex ai-center"><span class="methodology-section-number" aria-hidden="true">04</span><div><p class="methodology-overline">ALCANCE DE LA EVALUACIÓN</p><h2 id="methodology-limits-title">Límites para interpretar los resultados</h2></div></div>
+    <div class="methodology-limits-lead d-flex">{{ icon('info',18) }}<p>La información termina en <strong>octubre de 2025</strong>. No es un pronóstico anticipado ni una validación entre años.</p></div>
+    <dl class="methodology-limit-details d-grid md-grid-cols-2">
+      <div><dt>Información no disponible</dt><dd>Faltan fechas exactas de siembra, suelo, variedad, manejo y registros de siniestros por parcela.</dd></div>
+      <div><dt>Dependencia espacial</dt><dd>Las parcelas próximas comparten información. La validación espacial evalúa la transferencia a zonas apartadas.</dd></div>
+    </dl>
+  </section>
+</div>
+<div class="methodology-records">
+  {% call accordion(id='methodology-records', label='Documentación técnica del proyecto', class_name='methodology-accordion') %}
+    {% call accordion_item('Dónde consultar el detalle técnico', id='methodology-records-detail', class_name='methodology-accordion-item') %}
+    <p>La metodología, citas de los libros, huellas de archivos y resultados reproducibles se encuentran en <code>technical-documentation.md</code> y <code>artifacts</code>.</p>
+    {% endcall %}
+  {% endcall %}
+</div>
