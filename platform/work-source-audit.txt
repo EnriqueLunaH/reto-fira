@@ -1,0 +1,154 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+Ecuaciones_indices_AgroCebada_FIRA_2026.pdf 2 pages 2169 characters
+02.pdf 22 pages 79922 characters
+An Introduction to Statistical Learning with Applications in Python.pdf 613 pages 1470517 characters
+Geographic Data Science with Python.pdf 411 pages 686752 characters
+Interpretable Machine Learning - Christoph Molnar.pdf 421 pages 658787 characters
+Introduction to Data Mining.pdf 868 pages 1806715 characters
+last.pdf 17 pages 106543 characters
+Python-for-Data-Analysis.pdf 582 pages 947525 characters
+Python_Datascience.pdf 548 pages 907743 characters
+The Elements of Statistical Learning.pdf 764 pages 1868306 characters
+Descripcion_general_variables_DataSet.docx 
+Reto AgroCebada 2026
+Descripción general del conjunto de datos
+La información disponible integra datos espaciales de las parcelas, variables de percepción remota, información climática mensual y características topográficas. Sin embargo, los concursantes podrán utilizar cualquier otra información de acceso público que consideren pertinente, siempre que documenten su fuente y la forma en que fue incorporada a su metodología. A continuación, se describen los principales insumos que integra este dataset.
+1. Parcelas de cultivo
+Se proporciona una capa vectorial en formato Shapefile (.shp) que contiene las 197 parcelas consideradas en el reto. Cada parcela cuenta con un identificador único, desde AGC_001 hasta AGC_197, que permitirá relacionar espacialmente la información contenida en los diferentes conjuntos de datos. La capa incluye el área de cada parcela y un campo denominado CONJUNTO, que identifica si corresponde a ENTRENAMIENTO o PREDICCION. 
+De manera complementaria, se entrega un archivo .csv con el identificador de parcela, el área y el rendimiento. El rendimiento estará disponible para 138 parcelas del conjunto de ENTRENAMIENTO, mientras que, para las 59 parcelas del conjunto de PREDICCION permanecerá oculto. Estas 59 parcelas corresponden a los casos para los que cada equipo deberá generar su estimación final. Es importante señalar que el rendimiento proporcionado corresponde al ciclo de producción de abril - octubre de 2025.
+2. Información satelital
+Se proporcionan también, dos archivos .csv con información proveniente del monitoreo satelital de cada parcela:
+Dataset Básico: contiene observaciones de Sentinel-2 y Landsat para el periodo 2022 a 2025. 
+Dataset PRO: corresponde a información obtenida mediante Planet para el año 2025.
+Ambos conjuntos contienen información de distintos índices de vegetación para los cuales, se incluye un Diccionario de índices satelitales con la explicación general de los índices del dataset. 
+Asimismo, encontrarán información del porcentaje de nubosidad, de modo que cada equipo pueda establecer sus propios criterios de filtrado y tratamiento de datos faltantes.
+La selección de periodos, sensores, índices, criterios de nubosidad y la construcción de estadísticas, tendencias o indicadores derivados, formará parte del trabajo metodológico de cada equipo. 
+3. Variables climáticas
+Se proporciona información climática mensual en formato raster (.tif) para los años de 2022 a 2025 para los estados de Hidalgo, Puebla y Tlaxcala. Las variables disponibles serán:
+• Precipitación mensual acumulada (CHIRPS). Representa la suma de la precipitación registrada durante cada mes y permite caracterizar la disponibilidad y distribución temporal de la lluvia a lo largo del año.
+• Temperatura mínima mensual (CHIRTS-ERA5). Corresponde al promedio mensual de la temperatura mínima y permite caracterizar las condiciones térmicas más bajas presentes durante cada periodo.
+• Temperatura máxima mensual (CHIRTS-ERA5). Corresponde al promedio mensual de la temperatura máxima y permite identificar diferencias térmicas entre meses y zonas de estudio.
+Los rasters (.tif) se entregan por mes y cada archivo contiene los tres estados. Cada equipo podrá extraer, resumir o combinar esta información con las parcelas y construir indicadores adicionales, como temperatura media, amplitud térmica, acumulados por periodos específicos u otras variables climáticas derivadas.
+
+4. Variables topográficas
+Se proporcionan dos variables estáticas en formato raster (.tif), derivadas de información topográfica del Continuo de Elevaciones Mexicano (CEM) de INEGI:
+• Elevación. Representa la altitud del terreno y puede contribuir a caracterizar diferencias ambientales y topográficas entre las parcelas.
+• Pendiente. Representa la inclinación del terreno y puede utilizarse como una variable complementaria para describir las condiciones topográficas y climáticas de cada parcela.
+Resumen de información proporcionada
+Consideraciones para los participantes
+Los participantes deberán considerar las diferencias en la resolución espacial y temporal de las distintas fuentes de información, así como documentar los criterios de filtrado, extracción, agregación, reproyección o integración que utilicen.
+Fuentes:
+CHIRPS (precipitación): Funk, C., Peterson, P., Landsfeld, M., Pedreros, D., Verdin, J., Shukla, S., Husak, G., Rowland, J., Harrison, L., Hoell, A., & Michaelsen, J. (2015). The climate hazards infrared precipitation with stations—A new environmental record for monitoring extremes. Scientific Data, 2, 150066. https://doi.org/10.1038/sdata.2015.66 
+CHIRTS-ERA5 (temperatura mínima y máxima): Climate Hazards Center (CHC). (2025). CHIRTS-ERA5 Data Repository. University of California, Santa Barbara. https://doi.org/10.15780/G2F08J. Datos consultados en 2026. Esta es precisamente la forma de citación recomendada por el propio Climate Hazards Center. 
+INEGI – elevación: Instituto Nacional de Estadística y Geografía (INEGI). (2025). Continuo de Elevaciones Mexicano 4.0 (CEM 4.0). Resolución espacial de 15 m. Aguascalientes, México: INEGI.
+El conjunto de datos proporcionado tiene como finalidad servir como insumo para desarrollar modelos orientados a la predicción del rendimiento del cultivo de cebada. El objetivo es que cada equipo aproveche los datos disponibles para diseñar una estrategia propia de análisis y desarrollar un modelo sólido, reproducible y técnicamente fundamentado para la estimación del rendimiento de cebada.
+# | Componente | Fuente | Cobertura | Descripción
+1 | Datos Básicos (.csv) | Sentinel-2 y Landsat | 2022–2025 | Índices por parcela y fecha; ambos sensores permanecen en registros separados.
+2 | Datos PRO (.csv) | Planet | 2025 | NDVI, EVI, LAI y MSAVI por parcela y fecha.
+3 | ID, área y rendimiento (.csv) | Datos del reto | 197 parcelas | Área para todas; rendimiento (t/ha) visible en 138 y oculto en 59 de PREDICCION.
+4 | Parcelas (.shp) | Geometrías del reto | 197 parcelas | ID, área y CONJUNTO: ENTRENAMIENTO o PREDICCION.
+5 | Tmin mensual | CHIRTS-ERA5 | 2022–2025 | Promedio mensual de temperatura mínima para Hidalgo, Puebla y Tlaxcala.
+6 | Tmax mensual | CHIRTS-ERA5 | 2022–2025 | Promedio mensual de temperatura máxima para Hidalgo, Puebla y Tlaxcala.
+7 | Precipitación mensual | CHIRPS | 2022–2025 | Precipitación acumulada mensual para Hidalgo, Puebla y Tlaxcala.
+8 | Elevación | INEGI – CEM | Estática | Raster de elevación del terreno.
+9 | Pendiente | Derivada del CEM | Estática | Raster de inclinación del terreno.
+Diccionario_de_indices_satelitales.docx Diccionario de índices satelitales
+Objetivo. Este documento ofrece una descripción breve y orientativa de los índices y variables satelitales incluidos en los conjuntos de datos Básico y PRO. 
+
+En cada fecha de observación, varios índices se presentan mediante estadísticos básicos calculados para la parcela:
+promedio: valor medio del índice para la observación de la parcela;
+std: desviación estándar, útil como medida de variabilidad espacial dentro de la parcela;
+max: valor máximo observado;
+min: valor mínimo observado.
+El porcentaje de nubosidad se conserva como variable de calidad.
+Dataset Básico
+El Dataset Básico combina observaciones de Sentinel-2 para la mayor parte de los índices y una variable derivada de Landsat (VI6T). Las variables están asociadas por identificador de parcela y fecha de captura.
+Dataset PRO
+El Dataset PRO contiene observaciones derivadas de Planet e incluye NDVI, EVI, LAI y MSAVI. Aunque algunos nombres coinciden con el Dataset Básico, los valores provienen de otra fuente y no deben fusionarse automáticamente como si fueran mediciones equivalentes.
+Consideraciones para el análisis
+No existen umbrales universales aplicables a todas las parcelas, fechas y etapas fenológicas. La interpretación debe considerar la evolución temporal del cultivo.
+Una misma variable obtenida de sensores distintos puede presentar diferencias de resolución, respuesta espectral, frecuencia de observación y procesamiento. Se recomienda conservar la identificación del sensor durante el análisis.
+.
+
+Importante: el diccionario es conceptual. Los nombres de los índices se conservan tal como aparecen en los archivos entregados. Para índices con distintas formulaciones publicadas o con implementación específica del proveedor, no debe asumirse una fórmula distinta a la utilizada en la fuente de datos. Los equipos deberán documentar cualquier interpretación o transformación adicional que realicen.
+Índice | Nombre / categoría | ¿Qué representa?
+NDVI | Normalized Difference Vegetation Index | Indicador general de presencia, vigor y actividad de vegetación verde.
+EVI | Enhanced Vegetation Index | Índice de vigor vegetal diseñado para reducir parte de la influencia del suelo y de efectos atmosféricos.
+CRC | Crop Residue Cover Index | Respuesta espectral asociada con cobertura de residuos de cultivo sobre la superficie.
+MCRC | Modified Crop Residue Cover | Variante modificada de índices orientados a detectar residuos de cultivo.
+NDSVI | Normalized Difference Senescent Vegetation Index | Índice sensible a vegetación senescente y material vegetal no fotosintético.
+SRNDI | Shortwave Red Normalized Difference Index | Contrasta información del infrarrojo de onda corta con la región roja del espectro.
+MRA | MRA (nomenclatura del proveedor) | Variable espectral entregada bajo la abreviatura MRA.
+LAI | Leaf Area Index | Variable biofísica que representa la cantidad de superficie foliar respecto de la superficie del terreno.
+FAPAR | Fraction of Absorbed Photosynthetically Active Radiation | Fracción de la radiación fotosintéticamente activa absorbida por la vegetación.
+SAVI | Soil-Adjusted Vegetation Index | Índice de vegetación que reduce la influencia del brillo del suelo.
+NDTI | Normalized Difference Tillage Index | Índice basado en el infrarrojo de onda corta para caracterizar suelo, residuos y condiciones de labranza.
+STI | Simple Tillage Index | Relación espectral utilizada para caracterizar residuos y condiciones de labranza.
+NDWI | Normalized Difference Water Index | Índice relacionado con agua o humedad a partir del contraste entre bandas espectrales.
+ENDWI | Enhanced Normalized Difference Water Index | Variante “enhanced” de un índice normalizado de agua/humedad.
+MSI | Moisture Stress Index | Índice sensible al contenido de agua de la vegetación y al estrés hídrico.
+EMSI | Enhanced Moisture Stress Index | Variante orientada a ampliar la sensibilidad a cambios de humedad o estrés de la vegetación.
+DSWI2 | Disease-Water Stress Index 2 | Índice espectral desarrollado para detectar cambios relacionados con estrés hídrico y condición vegetal.
+DSWI3 | Disease-Water Stress Index 3 | Variante de la familia Disease-Water Stress Index con distinta combinación de bandas.
+DSWI4 | Disease-Water Stress Index 4 | Índice de la misma familia que utiliza un contraste espectral diferente.
+DSWI5 | Disease-Water Stress Index 5 | Índice multibanda orientado a caracterizar condición vegetal y estrés hídrico.
+NDDI | Normalized Difference Drought Index | Índice que integra información de vegetación y humedad para caracterizar condiciones de sequedad.
+ENDDI | Enhanced Normalized Difference Drought Index | Variante “enhanced” de un índice de sequedad que incorpora una señal hídrica complementaria.
+VI6T | VI6T  | Índice espectral-térmico proporcionado para las observaciones Landsat. Combina información de una banda espectral con información térmica de la superficie. Puede aportar información complementaria sobre cambios en las condiciones espectrales y térmicas de la superficie.
+Índice | Nombre / categoría | ¿Qué representa?
+NDVI | Normalized Difference Vegetation Index | Indicador general de vigor y presencia de vegetación verde.
+EVI | Enhanced Vegetation Index | Indicador de vigor vegetal con ajustes para reducir parte de los efectos del fondo y la atmósfera.
+LAI | Leaf Area Index | Variable biofísica relacionada con la superficie foliar del dosel.
+MSAVI | Modified Soil-Adjusted Vegetation Index | Índice de vegetación diseñado para reducir de forma adaptativa la influencia del suelo.
+Segunda_Sesion_Preguntas_Reto.docx Segunda sesión de preguntas y respuestas
+9 de octubre de 2026
+
+1. En el ciclo de abril a octubre de 2025, ¿la cebada de estas parcelas se cultivó bajo condiciones de temporal?
+Sí. La cebada de las parcelas incluidas en el conjunto de datos se cultivó bajo condiciones de temporal.
+2. ¿Se cuenta con fechas reales de siembra por parcela o con una fecha de referencia?
+No se dispone de la fecha exacta de siembra de cada parcela. Durante la sesión se mencionó como referencia el inicio de la siembra en los primeros días de mayo. Esta referencia puede variar según las condiciones climáticas y las prácticas locales.
+3. ¿Qué se espera del modelo predictivo y podría utilizarse en otras parcelas?
+Se espera que el modelo estime el rendimiento de grano por parcela, expresado en toneladas por hectárea, a partir de la información disponible. Las propuestas ganadoras podrán ser consideradas para futuras colaboraciones académicas, proyectos de investigación aplicada o iniciativas de vinculación con instituciones del sector agrícola.
+4. ¿Existe información sobre la dosis de siembra utilizada en cada parcela, expresada en kilogramos de semilla por hectárea?
+Por el momento no se cuenta con esta información por parcela. En caso de que se obtenga, se notificará a los equipos participantes.
+5. ¿Cómo se obtuvieron los datos de rendimiento y se utilizó la misma fuente en todas las parcelas?
+En la mayoría de las parcelas, el rendimiento fue reportado por la empresa comercializadora a la que el productor vendió su cosecha. En una proporción menor, el dato se obtuvo directamente del productor. 
+6. ¿El rendimiento corresponde a grano o a forraje de cebada?
+Corresponde al rendimiento de grano, expresado en toneladas por hectárea (t/ha).
+7. ¿Se debe entregar una estimación puntual o puede reportarse un intervalo de incertidumbre?
+Para el conjunto de predicción se debe reportar un valor puntual de rendimiento por parcela, expresado en t/ha y con cuatro decimales. Como complemento metodológico, se recomienda explicar la incertidumbre de las predicciones.
+8. ¿Cada dato de rendimiento corresponde específicamente a una parcela?
+Sí. Cada registro de rendimiento corresponde a la parcela con la que está asociado. 
+9. ¿Cómo se seleccionaron las parcelas de entrenamiento?
+Las parcelas se seleccionaron mediante un muestreo aleatorio estratificado. Este procedimiento consiste en dividir el conjunto en grupos o estratos y realizar una selección aleatoria dentro de cada uno.
+10. Entre 2022 y 2024, ¿se cultivó únicamente cebada o hubo rotación de cultivos?
+Por el momento no se cuenta con el historial de cultivos de cada parcela para ese periodo. En caso de que se obtenga, se notificará a los equipos participantes.
+
+11. ¿Cómo se delimitaron los polígonos de las parcelas?
+La delimitación se realizó mediante distintos métodos. Se utilizaron puntos tomados en campo y reportados por el productor, que posteriormente fueron procesados por proveedores externos y validados mediante imágenes satelitales.
+12. ¿Se cuenta con registros de siniestros o pérdidas parciales durante 2025, como granizo, heladas o plagas?
+Por el momento no se cuenta con esta información por parcela. En caso de que se obtenga, se notificará a los equipos participantes.
+13. ¿La aplicación debe mostrar las predicciones o también explicar cómo funciona el modelo?
+Se espera que, además de mostrar la predicción de rendimiento, la aplicación permita identificar de forma sencilla los principales factores que influyen en el resultado y genere información útil para la toma de decisiones oportunas por parte del productor.
+14. ¿Qué variedades de cebada se sembraron en las parcelas?
+Durante el ciclo evaluado se utilizaron principalmente dos variedades de cebada: Josefa, de seis hileras, que fue la variedad predominante, y en menor proporción Voyager, de dos hileras. Sin embargo, no se cuenta con la identificación de la variedad para cada parcela, por lo que esta característica no se incorporó como variable específica en el dataset.
+
+
+
+PLOTS EPSG:4326   Cultivo ID_POLIGON  área_ha              Municipio   Estado       CONJUNTO
+0  Cebada    AGC_196     8.57        Emiliano Zapata  Hidalgo  ENTRENAMIENTO
+1  Cebada    AGC_044     0.68        Emiliano Zapata  Hidalgo  ENTRENAMIENTO
+2  Cebada    AGC_020     8.34        Emiliano Zapata  Hidalgo  ENTRENAMIENTO
+3  CEBADA    AGC_174     6.89  Cuautepec de Hinojosa  Hidalgo     PREDICCION
+4  CEBADA    AGC_083     2.87  Cuautepec de Hinojosa  Hidalgo  ENTRENAMIENTO ['Cultivo', 'ID_POLIGON', 'área_ha', 'Municipio', 'Estado', 'CONJUNTO', 'geometry']
+Conjunto_datos_BASICO_AgroCebada2026.csv (107666, 96) duplicates 0
+DATES 2022-01-01 00:00:00 2025-12-31 00:00:00 SENSORS {'Sentinel-2': 59040, 'Landsat': 48626}
+CLOUDS {'min': {'Landsat': 0.0, 'Sentinel-2': 0.0}, 'max': {'Landsat': 100.0, 'Sentinel-2': 100.0}, 'count': {'Landsat': 45570, 'Sentinel-2': 59040}}
+CLOUD ZERO {'count': {'Landsat': 0, 'Sentinel-2': 36744}, 'mean': {'Landsat': nan, 'Sentinel-2': 0.24272509797517963}}
+CLOUD 100 {'count': {'Landsat': 0, 'Sentinel-2': 0}, 'mean': {'Landsat': nan, 'Sentinel-2': nan}}
+Conjunto_datos_PRO_AgroCebada.csv (47804, 20) duplicates 0
+DATES 2025-01-01 00:00:00 2025-12-30 00:00:00 SENSORS {'Planet': 47804}
+CLOUDS {'min': {'Planet': 0.0}, 'max': {'Planet': 100.0}, 'count': {'Planet': 47804}}
+CLOUD ZERO {'count': {'Planet': 30317}, 'mean': {'Planet': 0.3425665138371211}}
+CLOUD 100 {'count': {'Planet': 0}, 'mean': {'Planet': nan}}
+ID_area_rendimiento_70_30_Reto_AgroCebada.csv (197, 5) duplicates 0
