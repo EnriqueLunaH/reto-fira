@@ -8,10 +8,12 @@ Se retiran los usuarios de demostración embebidos. Sin Supabase configurado no 
 
 ## Configuración inicial
 
-1. Crear un proyecto en Supabase. En Connect copiar Project URL; en Settings → API Keys copiar una Publishable key y una Secret key del servidor.
-2. Copiar `platform/.env.example` a `platform/.env` y completar `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY` y una `SECRET_KEY` aleatoria. También se admiten las claves antiguas en `SUPABASE_ANON_KEY` y `SUPABASE_SERVICE_ROLE_KEY`. Las variables del proceso tienen precedencia sobre `.env`.
-3. Ejecutar **una vez** `platform/supabase/migrations/202610200001_accounts.sql` en SQL Editor del proyecto. Se ejecuta dentro de una transacción. No volver a ejecutarlo sobre tablas ya creadas. No contiene datos ni cambios del Modelo.
-4. En Authentication, desactivar **Allow new users to sign up** y el acceso anónimo. Mantener habilitado el proveedor Email y configurar contraseña de al menos 12 caracteres, mayúscula, minúscula, dígito y símbolo. El administrador crea cuentas con correo confirmado; no se envía correo de invitación. Si se requiere verificar el correo del destinatario, añadir posteriormente un flujo de invitación con SMTP.
+La [guía principal de instalación para FIRA](../../README.md#3-configurar-supabase) detalla la navegación del panel, los valores esperados y la solución de errores. Este es el resumen para administración de cuentas:
+
+1. Crear o seleccionar el proyecto autorizado en Supabase. En **Connect**, copiar **Project URL**; en **Settings → API Keys → Publishable and secret API keys**, copiar una Publishable key (`sb_publishable_...`) y una Secret key del servidor (`sb_secret_...`). **Connection string** corresponde a PostgreSQL y no es la configuración utilizada por esta aplicación.
+2. Copiar `platform/.env.example` a `platform/.env` únicamente si este último no existe, y completar `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY` y una `SECRET_KEY` aleatoria. También se admiten las claves antiguas en `SUPABASE_ANON_KEY` y `SUPABASE_SERVICE_ROLE_KEY`; al usarlas, dejar vacías las dos variables modernas para evitar que los ejemplos tengan prioridad. Las variables del proceso tienen precedencia sobre `.env`. No publicar ni compartir el archivo con sus valores reales.
+3. En **SQL Editor → New query**, pegar el contenido completo de `platform/supabase/migrations/202610200001_accounts.sql` y pulsar **Run**. El resultado esperado es **Success. No rows returned**. Se ejecuta dentro de una transacción y se aplica **una vez por proyecto**; no volver a ejecutarlo sobre tablas ya creadas. No contiene datos ni cambios del Modelo.
+4. En **Authentication → Sign In / Providers**, desactivar **Allow new users to sign up**, guardar con **Save** y dejar **Allow anonymous sign-ins** desactivado. Mantener habilitado el proveedor Email y configurar contraseña de al menos 12 caracteres, mayúscula, minúscula, dígito y símbolo. El administrador crea cuentas con correo confirmado; no se envía correo de invitación. Si se requiere verificar el correo del destinatario, añadir posteriormente un flujo de invitación con SMTP.
 5. Desde `platform`, ejecutar:
 
    ```powershell
@@ -19,7 +21,7 @@ Se retiran los usuarios de demostración embebidos. Sin Supabase configurado no 
    .venv\Scripts\python.exe manage_accounts.py bootstrap
    ```
 
-   `bootstrap` pregunta correos y contraseñas de staff y productor. Las contraseñas no se imprimen. Conserva cuentas existentes con el mismo correo y rol. No usa las contraseñas antiguas de demostración.
+   `check` debe confirmar que la tabla `user_profiles` está disponible y que el registro público está deshabilitado. `bootstrap` pregunta correos y contraseñas de staff y productor; el personal de FIRA debe escribir los correos autorizados en lugar de aceptar los ejemplos. Las contraseñas no se imprimen. Conserva cuentas existentes con el mismo correo y rol. No usa las contraseñas antiguas de demostración.
 
    Para conservar los correos originales y generar contraseñas aleatorias, usar `bootstrap --generate-credentials`. Escribe las credenciales solamente en `.instance/initial-accounts.txt`, excluido del control de versiones; no imprime sus valores. Proteger este archivo y retirarlo cuando las credenciales se hayan guardado en el gestor de contraseñas. El productor inicial no tiene parcelas hasta que el staff las asigne.
 6. Reiniciar el servidor con `.venv\Scripts\python.exe app.py`. Ingresar por `/login/staff` y abrir **Usuarios y parcelas**; acceso de productores por `/login/productor`.

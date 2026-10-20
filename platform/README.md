@@ -4,15 +4,24 @@ Aplicación local en Python, Flask, HTML, CSS y JavaScript para consultar las **
 
 ## Iniciar en Windows
 
-Desde `C:\dev\benchmarks\reto-fira\platform`:
+Para la primera instalación del personal de FIRA, sigue la [guía completa del README principal](../README.md). Incluye descarga del repositorio, Python 3.11 de 64 bits, obtención de las API keys, SQL de Supabase, registro público desactivado y creación de cuentas.
+
+Resumen desde la carpeta `platform` de tu copia del proyecto:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+Completa `platform/.env` y ejecuta la migración de cuentas según los pasos 3 y 4 del README principal. No sobrescribas un `.env` existente ni repitas una migración ya aplicada. Después ejecuta desde `platform`:
+
+```powershell
+.\.venv\Scripts\python.exe manage_accounts.py check
+.\.venv\Scripts\python.exe manage_accounts.py bootstrap
 .\.venv\Scripts\python.exe app.py
 ```
 
-Abrir http://127.0.0.1:5000. Si el entorno ya está instalado, ejecutar solo la última instrucción. `app.py` usa Waitress y no activa el depurador.
+`check` debe confirmar conexión, tabla `user_profiles` y registro público deshabilitado. `bootstrap` solicita los correos y contraseñas iniciales; para FIRA utiliza correos autorizados en lugar de aceptar los ejemplos. Abrir http://127.0.0.1:5000. En los siguientes arranques, ejecutar únicamente `app.py` con el mismo entorno virtual. El servidor usa Waitress y no activa el depurador.
 
 Antes del primer acceso, configurar Supabase y crear las cuentas con [la guía de usuarios](docs/usuarios-supabase.md). Los accesos de demostración embebidos ya no están habilitados. `manage_accounts.py bootstrap` crea el staff y el productor inicial con contraseñas propias; la opción `--generate-credentials` conserva los correos originales y guarda contraseñas aleatorias en el archivo privado `.instance/initial-accounts.txt`.
 
@@ -97,6 +106,6 @@ docker build -f platform/Dockerfile -t agrocebada .
 docker run --rm -p 127.0.0.1:5000:5000 --env-file platform/.env agrocebada
 ```
 
-Ejecutar estas dos órdenes desde la raíz `C:\dev\benchmarks\reto-fira`. El contexto de construcción incluye únicamente los archivos permitidos por `.dockerignore`, incluido el PDF original necesario para el simulador.
+Ejecutar estas dos órdenes desde la raíz de tu copia del repositorio, donde está la carpeta `platform`. El contexto de construcción incluye únicamente los archivos permitidos por `.dockerignore`, incluido el PDF original necesario para el simulador.
 
 El archivo `.env` debe contener las credenciales elegidas y SECRET_KEY y mantenerse fuera del control de versiones. El contenedor sirve los resultados existentes; el entrenamiento se ejecuta en el proyecto con los insumos. El Dockerfile se entrega como opción de portabilidad; revisar en la documentación si se pudo ejecutar en este entorno.
