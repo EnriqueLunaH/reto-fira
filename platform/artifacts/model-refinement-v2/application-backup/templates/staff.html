@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% block title %}{{ staff_title }} · NAS{% endblock %}
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{{ url_for('static',filename='css/staff.css') }}">{% if staff_section == 'predicciones' %}<link rel="stylesheet" href="{{ url_for('static',filename='css/predictions.css') }}">{% elif staff_section == 'riesgo' %}<link rel="stylesheet" href="{{ url_for('static',filename='css/risk.css') }}">{% elif staff_section == 'validacion' %}<link rel="stylesheet" href="{{ url_for('static',filename='css/validation.css') }}">{% elif staff_section == 'factores' %}<link rel="stylesheet" href="{{ url_for('static',filename='css/factors.css') }}">{% elif staff_section == 'metodologia' %}<link rel="stylesheet" href="{{ url_for('static',filename='css/methodology.css') }}">{% endif %}{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static',filename='js/staff-ui.js') }}" defer></script>
+{% if staff_section == 'riesgo' %}
+<script src="{{ url_for('static',filename='js/risk-ui.js') }}" defer></script>
+<script src="{{ url_for('static',filename='js/risk.js') }}" defer></script>
+{% else %}
+<script src="{{ url_for('static',filename='js/charts.js') }}" defer></script>
+<script src="{{ url_for('static',filename='js/staff.js') }}" defer></script>
+{% if staff_section == 'validacion' %}<script src="{{ url_for('static',filename='js/validation-ui.js') }}" defer></script>{% elif staff_section == 'factores' %}<script src="{{ url_for('static',filename='js/factors-ui.js') }}" defer></script>{% elif staff_section == 'metodologia' %}<script src="{{ url_for('static',filename='js/methodology-ui.js') }}" defer></script>{% endif %}
+{% endif %}
+{% endblock %}
+{% block layout %}
+<div class="staff-layout min-h-0 overflow-hidden">
+  <aside class="staff-sidebar-backdrop opacity-0 visibility-hidden pointer-events-none" data-drawer-backdrop aria-label="Panel técnico">
+   <div id="staff-navigation-panel" class="staff-sidebar d-flex fd-col h-p100 overflow-y-auto overscroll-contain pointer-events-auto transform translate-x--100" data-drawer>
+    <div class="staff-sidebar-brand">
+      <a class="nas-brand d-inline-flex ai-center" href="/" aria-label="NAS · New Agro Speed, inicio"><span class="nas-brand-mark" aria-hidden="true">N<span>↗</span></span><span>NAS<span class="nas-brand-full">NEW AGRO SPEED</span></span></a>
+      <button type="button" class="staff-close-navigation" data-drawer-close aria-label="Cerrar navegación">{{ icon('menu',20) }}</button>
+    </div>
+    <div class="staff-workspace"><span class="staff-workspace-icon">{{ icon('layers',17) }}</span><span>Espacio técnico<small>Análisis por parcela</small></span></div>
+    <p class="eyebrow" id="staff-navigation-title">EXPLORAR</p>
+    <nav class="staff-navigation" aria-label="Secciones del panel técnico">
+      {% for section, label in [('resumen', 'Resumen'), ('predicciones', 'Predicciones'), ('riesgo', 'Riesgo económico'), ('validacion', 'Validación'), ('factores', 'Factores del modelo'), ('metodologia', 'Metodología')] %}
+      <a href="{{ url_for('staff') if section == 'resumen' else url_for('staff', section=section) }}"{% if staff_section == section %} aria-current="page"{% endif %}>{{ icon({'resumen':'grid','predicciones':'table','riesgo':'chart','validacion':'check','factores':'layers','metodologia':'book'}[section],17) }}{{ label }}</a>
+      {% endfor %}
+    </nav>
+    <footer class="staff-sidebar-footer">
+      <p class="staff-sidebar-caption">NEW AGRO SPEED<span>Una mirada más clara al campo.</span></p>
+      {{ theme_picker(true) }}
+      <form method="post" action="/logout"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><button class="nas-logout" aria-label="Cerrar sesión">{{ icon('logout',17) }}<span>Cerrar sesión</span></button></form>
+    </footer>
+   </div>
+  </aside>
+  <main class="staff-main min-w-0 overflow-y-auto overscroll-contain" id="main-content" tabindex="-1">
+    <div class="staff-mobile-toolbar">
+      <a class="staff-mobile-brand" href="/" aria-label="NAS, inicio">NAS<span>Espacio técnico</span></a>
+      <button id="staff-menu-open" type="button" data-drawer-trigger aria-controls="staff-navigation-panel" aria-expanded="false" aria-label="Abrir navegación">{{ icon('menu',20) }}<span>Menú</span></button>
+    </div>
+    <div class="dashboard-shell{% if staff_section == 'predicciones' %} predictions-page{% elif staff_section == 'riesgo' %} risk-page{% elif staff_section == 'validacion' %} validation-page{% elif staff_section == 'factores' %} factors-page{% elif staff_section == 'metodologia' %} methodology-page{% endif %}">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">NAS / ESPACIO TÉCNICO</p>
+          <h1>{{ staff_title }}</h1>
+          <p class="muted">{% if staff_section == 'riesgo' %}Explora cómo cambian los márgenes bajo tus supuestos.{% elif staff_section == 'predicciones' %}Explora y compara el rendimiento estimado de cada parcela.{% elif staff_section == 'validacion' %}Compara las estimaciones con los rendimientos observados.{% elif staff_section == 'factores' %}Explora qué grupos de información utiliza el modelo al estimar el rendimiento.{% elif staff_section == 'metodologia' %}Conoce las fuentes, los cálculos y el alcance de las estimaciones.{% else %}Predicciones del ciclo abril–octubre 2025{% endif %}</p>
+          {% if staff_section == 'predicciones' %}<div class="predictions-context d-flex ai-center"><span class="predictions-dataset">Conjunto PREDICCIÓN</span><span>Cebada de temporal</span><span>Abr–oct 2025</span></div>{% endif %}
+          {% if staff_section == 'riesgo' %}<div class="risk-page-context d-flex ai-center"><span class="risk-experimental-badge">Simulación experimental</span><span>Hidalgo · Cebada de temporal</span></div>{% endif %}
+          {% if staff_section == 'validacion' %}<div class="validation-page-context d-flex ai-center"><span class="validation-badge">Evaluación retrospectiva</span><span>Abr–oct 2025 · Cebada de temporal</span></div>{% endif %}
+          {% if staff_section == 'factores' %}<div class="factors-page-context d-flex ai-center fwx-wrap"><span class="factors-badge">Importancia por permutación</span><span>Abr–oct 2025 · Cebada de temporal</span></div>{% endif %}
+          {% if staff_section == 'metodologia' %}<div class="methodology-page-context d-flex ai-center fwx-wrap"><span class="methodology-badge">Guía de lectura</span><span>Abr–oct 2025 · Cebada de temporal</span></div>{% endif %}
+        </div>
+        {% if staff_section == 'predicciones' %}
+        <div class="predictions-export"><a class="button primary d-inline-flex ai-center" id="download" href="{{ url_for('export') }}">{{ icon('download',17) }}Descargar CSV</a><span>Respeta los filtros actuales</span></div>
+        {% elif staff_section == 'riesgo' %}
+        <a class="button secondary risk-header-source" href="{{ url_for('staff', section='riesgo') }}/presupuesto.pdf" target="_blank" rel="noopener">{{ icon('book',17) }}Presupuesto FIRA {{ icon('external',14) }}</a>
+        {% elif staff_section == 'validacion' %}
+        <a class="button secondary validation-method-link" href="{{ url_for('staff', section='metodologia') }}">{{ icon('book',17) }}Ver metodología {{ icon('arrow',15) }}</a>
+        {% elif staff_section == 'factores' %}
+        <a class="button secondary factors-method-link" href="{{ url_for('staff', section='metodologia') }}">{{ icon('book',17) }}Ver metodología {{ icon('arrow',15) }}</a>
+        {% elif staff_section == 'metodologia' %}
+        <a class="button secondary methodology-validation-link" href="{{ url_for('staff', section='validacion') }}">{{ icon('check',17) }}Ver validación {{ icon('arrow',15) }}</a>
+        {% endif %}
+      </div>
+
+      {% if staff_section == 'predicciones' %}
+      <section class="predictions-workbench border-1 border-solid border-subtle rounded-lg" id="predictions-workbench" aria-labelledby="predictions-title" aria-busy="true">
+        <div class="predictions-workbench-heading d-flex ai-center jc-between">
+          <div class="d-flex ai-center gap-sm"><span class="predictions-section-icon">{{ icon('table',18) }}</span><h2 id="predictions-title">Explorador de parcelas</h2></div>
+          <span id="table-count" class="predictions-count" role="status" aria-live="polite" aria-atomic="true">Cargando parcelas…</span>
+        </div>
+      {% endif %}
+      {% if staff_section == 'validacion' %}
+      <section class="validation-scope" id="validation-scope" aria-labelledby="validation-scope-title" aria-busy="true">
+        <div class="validation-scope-heading d-flex ai-center jc-between"><div class="d-flex ai-center gap-sm">{{ icon('layers',18) }}<h2 id="validation-scope-title">Muestra de evaluación</h2></div><span id="validation-count" class="validation-count" role="status" aria-live="polite" aria-atomic="true">Cargando muestra…</span></div>
+      {% endif %}
+      {% if staff_section in ['resumen', 'predicciones', 'validacion'] %}
+      <div class="filter-panel">
+        <div class="grow staff-state-field">
+          <label id="staff-state-label" for="staff-state-open">Estado de las parcelas</label>
+          <div class="staff-state-select position-relative d-inline-flex w-p100">
+            <input id="staff-state" type="hidden" value="">
+            <button id="staff-state-open" type="button" class="staff-select-trigger" data-select-menu-trigger aria-controls="staff-state-popup" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="staff-state-label staff-state-text">
+              <span id="staff-state-text" data-select-menu-text>Todos los estados</span><span data-select-menu-caret>{{ icon('chevron',15) }}</span>
+            </button>
+            <div id="staff-state-popup" class="staff-select-popup position-absolute opacity-0 visibility-hidden pointer-events-none translate-y--2">
+              <ul data-select-menu-list role="listbox" aria-labelledby="staff-state-label" class="list-none m-0 p-xs">
+                {% for value,label in [('', 'Todos los estados'),('Hidalgo','Hidalgo'),('Puebla','Puebla'),('Tlaxcala','Tlaxcala')] %}
+                <li role="presentation"><button type="button" role="option" data-value="{{ value }}" aria-selected="{{ 'true' if value == '' else 'false' }}" tabindex="-1">{{ label }}{{ icon('check',15) }}</button></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% if staff_section != 'validacion' %}
+        <div class="grow"><label for="staff-search">Buscar parcela o municipio</label>{% if staff_section == 'predicciones' %}<div class="predictions-search d-flex ai-center position-relative">{{ icon('search',17) }}<input id="staff-search" type="search" placeholder="Ej. AGC_003 o Singuilucan" autocomplete="off" spellcheck="false"></div>{% else %}<input id="staff-search" type="search" placeholder="Identificador o municipio">{% endif %}</div>
+        {% endif %}
+        {% if staff_section == 'validacion' %}<div class="validation-filter-explainer"><p id="validation-selection">Todos los estados</p><span>El filtro actualiza los indicadores y ambas gráficas.</span></div>{% endif %}
+        <button class="text-button" id="reset-filters">Restablecer filtros</button>
+      </div>
+      {% endif %}
+      {% if staff_section == 'validacion' %}</section>{% endif %}
+
+      <div id="staff-status" role="status" aria-live="polite">{% if staff_section == 'predicciones' %}Cargando las estimaciones por parcela…{% elif staff_section == 'validacion' %}Cargando la evaluación fuera de muestra…{% elif staff_section == 'factores' %}Cargando los factores del modelo…{% elif staff_section == 'metodologia' %}Cargando la configuración y cobertura del modelo…{% endif %}</div>
+      <div id="staff-content"{% if staff_section != 'riesgo' %} hidden{% endif %}>
+        {% if staff_section == 'resumen' %}
+        <section id="kpis" class="kpi-grid" aria-label="Resumen de las parcelas visibles"></section>
+        <div class="two-column">
+          <section class="card"><div class="card-heading"><h2>Rendimiento estimado por estado</h2></div><div id="state-chart" class="chart"></div><p class="small muted">Promedio ponderado por superficie de las parcelas visibles. Estimaciones en t/ha.</p></section>
+          <section class="card"><div class="card-heading"><h2>Ubicación de las parcelas</h2></div><div id="regional-map" class="map-container"></div><p class="small muted">Centros de las parcelas visibles. Selecciona un punto para consultar su estimación.</p></section>
+        </div>
+        {% elif staff_section == 'predicciones' %}
+        <div class="predictions-view-context"><span id="predictions-filter-description">Todos los estados · Sin búsqueda</span><span class="predictions-table-hint" id="predictions-scroll-hint">Desplázate para explorar la tabla {{ icon('arrow',14) }}</span></div>
+        <div class="table-scroll predictions-table-scroll" tabindex="0" role="region" aria-labelledby="predictions-title" aria-describedby="predictions-scroll-hint">
+          <table class="predictions-table">
+            <caption class="sr-only">Predicciones de cebada de temporal del ciclo abril–octubre 2025. Los valores son estimaciones. Ordena por parcela o rendimiento usando los botones de los encabezados.</caption>
+            <thead><tr>
+              <th scope="col" id="prediction-id-heading" aria-sort="ascending"><button type="button" id="sort-id" class="table-sort">Parcela {{ icon('sort',14) }}</button></th>
+              <th scope="col">Ubicación<span class="predictions-unit">Estado / municipio</span></th>
+              <th scope="col" class="predictions-numeric">Superficie<span class="predictions-unit">ha</span></th>
+              <th scope="col" id="prediction-yield-heading" class="predictions-numeric" aria-sort="none"><button type="button" id="sort-yield" class="table-sort">Rendimiento {{ icon('sort',14) }}</button><span class="predictions-unit">Estimado · t/ha</span></th>
+              <th scope="col" class="predictions-numeric">Rango nominal 90%<span class="predictions-unit">t/ha</span></th>
+              <th scope="col" class="predictions-numeric">Cosecha estimada<span class="predictions-unit">t</span></th>
+            </tr></thead>
+            <tbody id="predictions-table"></tbody>
+          </table>
+        </div>
+        <div class="predictions-table-footer"><span id="predictions-results-note"></span><span id="predictions-sort-description">Parcela · Ascendente</span></div>
+        <div class="predictions-notes d-grid md-grid-cols-2">
+          <div class="predictions-note">{{ icon('info',17) }}<div><h3>Lee el rango con contexto</h3><p>El 90% es nominal: expresa incertidumbre y no garantiza el rendimiento de una parcela.</p></div></div>
+          <div class="predictions-note">{{ icon('download',17) }}<div><h3>Exporta la selección actual</h3><p>El CSV respeta los filtros e incluye el identificador y el rendimiento con cuatro decimales. Los rangos se consultan aquí.</p></div></div>
+        </div>
+        {% elif staff_section == 'riesgo' %}
+        {% include 'risk.html' %}
+        {% elif staff_section == 'validacion' %}
+        {% include 'validation.html' %}
+        {% elif staff_section == 'factores' %}
+        {% include 'factors.html' %}
+        {% elif staff_section == 'metodologia' %}
+        {% include 'methodology.html' %}
+        {% endif %}
+      </div>
+      {% if staff_section == 'predicciones' %}</section>{% endif %}
+    </div>
+  </main>
+</div>
+{% endblock %}

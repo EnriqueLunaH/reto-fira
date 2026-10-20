@@ -1,0 +1,167 @@
+{% from 'osbi/components.html' import accordion, accordion_item %}
+{% macro risk_select(id, label, note) %}
+<div class="risk-select-field position-relative" data-risk-select="{{ id }}">
+  <label id="{{ id }}-label" for="{{ id }}">{{ label }}</label>
+  {{ caller() }}
+  <button id="{{ id }}-open" class="risk-select-trigger" type="button" data-select-menu-trigger aria-controls="{{ id }}-popup" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="{{ id }}-label {{ id }}-text" aria-describedby="{{ note }} {{ id }}-error" hidden><span id="{{ id }}-text" data-select-menu-text>Selecciona una opción</span><span data-select-menu-caret>{{ icon('chevron',15) }}</span></button>
+  <div id="{{ id }}-popup" class="risk-select-popup position-absolute opacity-0 visibility-hidden pointer-events-none translate-y--2"><ul data-select-menu-list role="listbox" aria-labelledby="{{ id }}-label" class="list-none m-0 p-0"></ul></div>
+  <template data-risk-option><li role="presentation"><button type="button" role="option" tabindex="-1"><span data-risk-option-label></span>{{ icon('check',15) }}</button></li></template>
+  <p class="risk-field-error" id="{{ id }}-error" role="alert" hidden>Selecciona una opción para continuar.</p>
+</div>
+{% endmacro %}
+<div id="risk-app" aria-busy="true">
+  <div class="risk-intro">
+    {{ icon('info',18) }}<div><h2>Un escenario para explorar, con sus límites a la vista.</h2><p>Compara precio, costos y renta con el presupuesto de referencia. Se combinan estimaciones retrospectivas de 2025 y un presupuesto de 2026: es un ejercicio experimental, no un pronóstico de 2026 ni una probabilidad de incumplimiento crediticio.</p></div>
+  </div>
+  <nav class="risk-progress" aria-label="Pasos para configurar la simulación"><ol class="list-none m-0 p-0 d-flex"><li><a href="#risk-step-one"><span>01</span>Parcela</a></li><li><a href="#risk-step-two"><span>02</span>Referencia</a></li><li><a href="#risk-step-three"><span>03</span>Escenario</a></li></ol></nav>
+
+  <noscript><p class="error-message">Activa JavaScript para cargar las parcelas y solicitar el cálculo al servidor.</p></noscript>
+  <div class="risk-load-status" role="status" aria-live="polite">
+    <p id="risk-status">Cargando parcelas y presupuesto de referencia…</p>
+    <button id="risk-retry" class="button secondary" type="button" hidden>Volver a cargar</button>
+  </div>
+
+  <form id="risk-form" action="/api/risk/simulate" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <fieldset id="risk-controls" disabled>
+      <legend class="risk-sr-only">Configurar la simulación de margen</legend>
+      <div class="risk-setup-grid">
+        <section class="card risk-step" aria-labelledby="risk-step-one">
+          <div class="risk-step-heading"><span class="risk-step-number" aria-hidden="true">01</span><div><h2 id="risk-step-one">Elige una parcela</h2><p class="small muted">Solo Hidalgo. La tecnología del presupuesto debe corresponder a la operación analizada.</p></div></div>
+          <div class="risk-parcel-grid">
+           <div class="risk-parcel-field">
+          {% call risk_select('risk-parcel', 'Parcela y municipio', 'risk-parcel-note') %}
+          <select id="risk-parcel" name="parcel_id" required aria-describedby="risk-parcel-note">
+            <option value="">Selecciona una parcela</option>
+          </select>
+          {% endcall %}
+          <p id="risk-parcel-note" class="small muted">La estimación de rendimiento corresponde al ciclo abril–octubre de 2025.</p>
+           </div>
+          <div class="risk-parcel-placeholder">{{ icon('leaf',22) }}<div><h3>Comienza por la parcela</h3><p>Al elegirla verás su superficie, rendimiento estimado y rango nominal.</p></div></div>
+          <div id="risk-parcel-summary" class="risk-parcel-summary" hidden>
+            <dl class="risk-facts">
+              <div><dt>Superficie</dt><dd id="risk-area">—</dd></div>
+              <div><dt>Estimación puntual 2025</dt><dd id="risk-yield">—</dd></div>
+              <div class="risk-fact-wide"><dt>Rango de rendimiento 90% nominal</dt><dd id="risk-yield-range">—</dd></div>
+            </dl>
+            <p class="small muted">El rango individual no define por sí solo una distribución de probabilidad.</p>
+          </div>
+          </div>
+        </section>
+
+        <section class="card risk-step" aria-labelledby="risk-step-two">
+          <div class="risk-step-heading"><span class="risk-step-number" aria-hidden="true">02</span><div><h2 id="risk-step-two">Revisa la referencia</h2><p class="small muted">El presupuesto y la base de errores que sostienen la comparación.</p></div><span class="risk-reference-tag">FIRA · PV 2026</span></div>
+          <div class="risk-reference-grid">
+           <div class="risk-reference-controls">
+          {% call risk_select('risk-profile', 'Perfil del acreditado', 'risk-profile-note') %}
+          <select id="risk-profile" name="profile" required aria-describedby="risk-profile-note"></select>
+          {% endcall %}
+          <p id="risk-profile-note" class="small muted">El perfil distingue el presupuesto publicado según el importe de financiamiento en UDIS. No se asigna por superficie ni es una recomendación de crédito.</p>
+          {% call risk_select('risk-basis', 'Base de errores de rendimiento', 'risk-basis-note') %}
+          <select id="risk-basis" name="residual_basis" required aria-describedby="risk-basis-note"></select>
+          {% endcall %}
+          <p id="risk-basis-note" class="small muted"></p>
+           </div>
+           <div class="risk-budget-panel"><p class="risk-budget-caption">PRESUPUESTO POR HECTÁREA</p><dl id="risk-budget" class="risk-budget"></dl><p class="small muted">El crédito y la aportación propia describen el financiamiento de referencia; no se suman como costos adicionales.</p></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="card risk-step" aria-labelledby="risk-step-three">
+        <div class="card-heading">
+          <div class="risk-step-heading"><span class="risk-step-number" aria-hidden="true">03</span><div><h2 id="risk-step-three">Define el escenario</h2><p class="small muted">Tus supuestos se comparan con la misma parcela y base de errores.</p></div></div>
+          <span class="risk-reference-tag">Referencia: $7,375/t · Sin renta</span>
+        </div>
+        <p class="small muted risk-scenario-note">La referencia usa los costos publicados del perfil elegido.</p>
+        <div class="risk-input-grid">
+          <div>
+            <label for="risk-price">Precio del grano <span class="risk-sr-only">(MXN/t)</span></label>
+            <div class="risk-value-field"><span aria-hidden="true">$</span>
+            <input id="risk-price" name="price_per_t" type="number" min="0.01" max="100000" step="0.01" inputmode="decimal" required aria-describedby="risk-price-note">
+            <span aria-hidden="true">MXN/t</span></div>
+            <p id="risk-price-note" class="small muted">Precio fijo por escenario. Los $7,375/t de FIRA son base PV 2025; no un precio confirmado de 2026.</p>
+          </div>
+          <div>
+            <label for="risk-cost-change">Cambio en costos directos <span class="risk-sr-only">(%)</span></label>
+            <div class="risk-value-field">
+            <input id="risk-cost-change" name="direct_cost_change_pct" type="number" min="-100" max="300" step="0.1" inputmode="decimal" required aria-describedby="risk-cost-note">
+            <span aria-hidden="true">%</span></div>
+            <p id="risk-cost-note" class="small muted">0% conserva labores e insumos publicados. No modifica el interés.</p>
+          </div>
+          <div>
+            <label for="risk-rent">Renta de la tierra <span class="risk-sr-only">(MXN/ha)</span></label>
+            <div class="risk-value-field"><span aria-hidden="true">$</span>
+            <input id="risk-rent" name="rent_per_ha" type="number" min="0" max="100000" step="0.01" inputmode="decimal" required aria-describedby="risk-rent-note">
+            <span aria-hidden="true">MXN/ha</span></div>
+            <button id="risk-use-rent" class="text-button risk-rent-button" type="button">Usar renta de referencia: $4,893/ha</button>
+            <p id="risk-rent-note" class="small muted">Usa 0 si no corresponde agregar renta.</p>
+          </div>
+        </div>
+        <label class="risk-confirmation" for="risk-applicable">
+          <input id="risk-applicable" name="applicability_confirmed" type="checkbox" value="yes" required>
+          <span>Confirmo que la modalidad y la tecnología del presupuesto de Hidalgo son aplicables a esta parcela.</span>
+        </label>
+        <div class="risk-form-actions">
+          <button id="risk-submit" class="button primary" type="submit">Calcular y comparar <span aria-hidden="true">→</span></button>
+          <button id="risk-reset" class="button secondary" type="button">Restablecer escenario</button>
+          <span id="risk-draws-note" class="small muted"></span>
+        </div>
+      </section>
+    </fieldset>
+  </form>
+
+  <p id="risk-error" class="error-message" role="alert" hidden></p>
+  <section id="risk-results" aria-labelledby="risk-results-heading" hidden>
+    <div class="section-heading risk-results-heading">
+     <div><p class="eyebrow">SIMULACIÓN / RESULTADO EXPERIMENTAL</p>
+      <h2 id="risk-results-heading" tabindex="-1">Margen del escenario</h2>
+      <p id="risk-result-context"></p>
+     </div><a class="button secondary" href="#risk-step-three">Ajustar escenario {{ icon('arrow',15) }}</a>
+    </div>
+    <div id="risk-stale" class="notice" role="status" hidden><p>Cambiaste la configuración. Estos resultados corresponden al último cálculo; pulsa <strong>Calcular y comparar</strong> para actualizarlos.</p></div>
+    <div id="risk-kpis" class="kpi-grid risk-kpis"></div>
+    <p class="small muted risk-output-note">Las frecuencias cuentan escenarios simulados bajo estos supuestos. No representan la frecuencia de siniestros, una probabilidad crediticia ni una garantía individual.</p>
+    <p id="risk-sampling-note" class="small muted"></p>
+
+    <section class="card" aria-labelledby="risk-distribution-heading">
+      <div class="card-heading"><h2 id="risk-distribution-heading">Distribución del margen por hectárea</h2><span class="small muted">MXN/ha</span></div>
+      <div class="risk-chart-legend" aria-hidden="true"><span><i class="risk-legend-scenario"></i>Escenario</span><span><i class="risk-legend-reference"></i>Referencia</span></div>
+      <div id="risk-histogram" class="risk-histogram"></div>
+      <p id="risk-chart-summary" class="small muted"></p>
+      <p class="small muted">El eje horizontal muestra el margen; el vertical, el porcentaje de escenarios por intervalo. Las barras de referencia y escenario se comparan dentro del mismo intervalo. La línea de cero separa pérdida y margen positivo.</p>
+    </section>
+
+    <section class="card" aria-labelledby="risk-comparison-heading">
+      <div class="card-heading"><h2 id="risk-comparison-heading">Escenario frente a referencia</h2><span class="small muted">Misma parcela y mismos sorteos</span></div>
+      <p id="risk-comparison-hint" class="risk-comparison-hint">Desplázate dentro de la tabla para comparar todos los valores. {{ icon('arrow',14) }}</p>
+      <div class="table-scroll risk-comparison-scroll" role="region" aria-label="Comparación de margen y supuestos" aria-describedby="risk-comparison-hint" tabindex="0">
+        <table class="risk-comparison-table">
+          <caption class="risk-sr-only">Supuestos y resultados de la referencia y del escenario. Los montos por hectárea y los totales de parcela se identifican en cada fila.</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col">Referencia</th><th scope="col">Escenario</th></tr></thead>
+          <tbody id="risk-comparison"></tbody>
+        </table>
+      </div>
+      <p id="risk-comparison-note" class="small muted risk-table-note"></p>
+    </section>
+  </section>
+
+  {% call accordion(id='risk-methodology', label='Metodología y fuentes de la simulación', multiple=true, class_name='risk-methodology') %}
+  {% call accordion_item('Cómo se calcula y cómo interpretar el resultado', id='risk-method', class_name='risk-details') %}
+    <div class="risk-details-content">
+      <p><strong>Margen por hectárea = rendimiento simulado × precio − costo total publicado − cambio en costos directos − renta.</strong> El costo total incluye el interés publicado y conserva el redondeo del documento original. El total de la parcela es el margen por hectárea multiplicado por su superficie. No se modelan el calendario de caja ni el servicio completo de la deuda.</p>
+      <p>El servidor remuestrea errores firmados de validación fuera de muestra y los suma a la estimación puntual de rendimiento, con un mínimo de cero t/ha. La referencia y el escenario usan los mismos sorteos; precio, costos e interés permanecen fijos en cada comparación.</p>
+      <p>Los percentiles P10, P50 y P90 describen la distribución simulada. El déficit medio usa cero en los escenarios sin pérdida. El déficit del peor 10% promedia esa pérdida positiva en los escenarios de menor margen; si todos tienen margen positivo, es cero.</p>
+      <p>La base por parcela describe los errores de validación aleatoria. La base espacial usa errores al separar bloques geográficos y funciona como un estrés adicional, no como una probabilidad de traslado a otra región. No estima el efecto causal de cambiar labores, fertilizante o clima.</p>
+      <ul id="risk-limitations" class="risk-limitations"></ul>
+    </div>
+  {% endcall %}
+  {% call accordion_item('Fuentes y presupuesto utilizado', id='risk-sources', class_name='risk-details') %}
+    <div class="risk-details-content">
+      <p>El presupuesto de referencia proviene de <strong>Cebada_TMF_Hidalgo_PV_2026.pdf</strong>. La renta se agrega como supuesto separado; el perfil seleccionado conserva el interés publicado.</p>
+      <div class="risk-source-links"><a id="risk-budget-link" href="/staff/riesgo/presupuesto.pdf" target="_blank" rel="noopener">Consultar presupuesto FIRA (PDF) ↗</a><a id="risk-docs-link" href="/staff/riesgo/documentacion.md" target="_blank" rel="noopener">Consultar metodología y fuentes ↗</a></div>
+      <p>Las estimaciones de rendimiento, superficies y errores provienen de los artefactos auditables de AgroCebada. La precisión histórica del modelo y la incertidumbre de los supuestos condicionan estos resultados.</p>
+      <p id="risk-method-note"></p>
+    </div>
+  {% endcall %}
+  {% endcall %}
+</div>
