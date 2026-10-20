@@ -1,0 +1,4 @@
+a,b,n,mean_signed_difference_a_minus_b_t_ha,mean_absolute_difference_t_ha,root_mean_squared_difference_t_ha,median_absolute_difference_t_ha,max_absolute_difference_t_ha,max_difference_id,pearson_r,spearman_rho
+ours,agrocebada_hidden,59,-0.059825264757,0.0995496780634,0.121556635835,0.0978357079767,0.290709790487,AGC_030,0.987676254289,0.920222092344
+ours,Predicciones_agroceba,59,-0.0121706845763,0.125400552712,0.164659435605,0.09780147,0.42225517,AGC_183,0.972512184911,0.807948568089
+agrocebada_hidden,Predicciones_agroceba,59,0.0476545801807,0.112671848675,0.152094840849,0.0804919254366,0.546046220884,AGC_118,0.979077587323,0.821800116891

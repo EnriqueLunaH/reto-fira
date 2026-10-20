@@ -1,0 +1,13 @@
+{
+  "pipeline\\train.py": "9ad1ff6fd195cca62c1f37d5837894f3865eeee99712f3e8f34904dc5899b144",
+  "pipeline\\features.py": "7b6c90aea8ba061214f43f00dcf95882e3727ff367d38aecc1f369d7fa3797d6",
+  "pipeline\\refinement.py": "aad3dd95f7e7fb8633bd34fdf7f851b2ca42e015000fb0e42ab1cc93fcbe5ccd",
+  "scripts\\refine_model.py": "1f23e616df15e773903b082cc227f954626a14418ca1a8466a1288f8d5f0108d",
+  "artifacts\\parcels.csv": "05320f11d166f9dcb74f02e6d1bbd972008c2c2bf92dfb1851d387746162c5a8",
+  "artifacts\\environment.csv": "f8af46de564816a01d9e71f2442641aa46f21ad213fc8643f7fb1890a43348b4",
+  "artifacts\\raster-coverage.csv": "c8d6529b25f673d77497bb642ef817ccaad18cfcf92260c8e47df674bb933ab0",
+  "artifacts\\features-cloud-20.csv": "2ca5ded7250a23adbfff072d12a6e2d6c6157b566a69f1abd64a815f08ef3908",
+  "artifacts\\features-cloud-40.csv": "a99dc064b198da32ef75276bb6cae560260567fd7951458cf7d97c0a3557ebdb",
+  "artifacts\\features-cloud-60.csv": "f1bb876ba66a387ac0de10789be363561c0da1814a0bec3799fccd6ed65eed6e",
+  "..\\data\\fira\\CSV-files\\ID_area_rendimiento_70_30_Reto_AgroCebada.csv": "ec07b7ede0ae692109d91b3e941b1a353fe7f89410507db9bfbe6d7c112590ef"
+}

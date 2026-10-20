@@ -1,0 +1,56 @@
+/* Staff-only extension of OSBI's Admin layout, Card grid and Button.
+   Custom rules cover NAS typography, SVG feedback and motion; layout utilities
+   remain in the template. No default hidden state or looping animation. */
+body[data-page="staff"] .overview-context{margin-top:16px;font-size:12px;color:var(--nas-muted)}
+body[data-page="staff"] .overview-badge{padding:5px 9px;border:1px solid var(--nas-border);border-radius:6px;color:var(--nas-accent);background:var(--nas-surface);font-weight:500}
+body[data-page="staff"] .overview-section-heading{margin:32px 0 16px}
+body[data-page="staff"] .overview-section-heading h2{font-size:14px;font-weight:550;letter-spacing:-.2px}
+body[data-page="staff"] #overview-scope{font-size:12px;color:var(--nas-muted)}
+body[data-page="staff"] .staff-overview .kpi{padding:24px;min-width:0;position:relative}
+body[data-page="staff"] .staff-overview .kpi:nth-child(2){border-color:var(--nas-accent)}
+body[data-page="staff"] .staff-overview .kpi:nth-child(2) .kpi-number{color:var(--nas-accent)}
+body[data-page="staff"] .staff-overview .kpi-label{margin-bottom:20px;line-height:1.5;min-height:18px}
+body[data-page="staff"] .staff-overview .kpi-number{font-size:clamp(28px,2.5vw,36px);line-height:1.25;margin-bottom:12px;white-space:nowrap;letter-spacing:-1.25px}
+body[data-page="staff"] .staff-overview .kpi-footnote{font-size:12px;line-height:1.6;margin:0}
+body[data-page="staff"] .staff-counter-visual{display:inline-block;font-variant-numeric:tabular-nums}
+body[data-page="staff"] .overview-overline{font-size:10px;letter-spacing:1.4px;font-weight:550;color:var(--nas-muted);margin:0 0 20px}
+body[data-page="staff"] .overview-unit{font-size:11px;color:var(--nas-muted);white-space:nowrap;padding:4px 8px;border:1px solid var(--nas-border);border-radius:5px}
+body[data-page="staff"] .overview-chart-card .card-heading{margin-bottom:20px}
+body[data-page="staff"] .overview-card-link{font-size:12px;font-weight:500;color:var(--nas-accent);text-decoration:none;margin-top:8px;min-height:36px}
+body[data-page="staff"] .overview-card-link:hover{text-decoration:underline;text-underline-offset:4px}
+body[data-page="staff"] .overview-reading{margin-top:24px;padding:20px 0;border-top:1px solid var(--nas-border);color:var(--nas-muted)}
+body[data-page="staff"] .overview-reading>.nas-icon{flex-shrink:0;margin-top:2px;color:var(--nas-accent)}
+body[data-page="staff"] .overview-reading p{font-size:12px;line-height:1.8;margin:0;max-width:75ch}
+body[data-page="staff"] .overview-reading strong{font-weight:550;color:var(--nas-text)}
+body[data-page="staff"] .overview-empty{margin-bottom:24px;background:var(--nas-surface)}
+body[data-page="staff"] .overview-empty h3{font-size:16px;margin:0 0 8px}
+body[data-page="staff"] .overview-empty p{font-size:14px;color:var(--nas-muted);max-width:65ch}
+body[data-page="staff"] #staff-status:not(:empty){font-size:13px;line-height:1.7;color:var(--nas-muted);padding:16px 0}
+body[data-page="staff"] .map-detail{font-size:13px;line-height:1.6;padding:12px 14px;border-radius:6px;background:var(--nas-raised);color:var(--nas-text)}
+body[data-page="staff"] .staff-main :is(a,button,input,summary):focus-visible{outline:2px solid var(--nas-accent);outline-offset:3px}
+body[data-page="staff"] .staff-main .map-button:focus-visible{outline:none;stroke:var(--nas-text);stroke-width:3;filter:drop-shadow(0 0 3px var(--nas-accent))}
+body[data-page="staff"] .staff-main .map-button[aria-pressed="true"]{stroke:var(--nas-text);stroke-width:3}
+body[data-page="staff"] .staff-main :is(.button,.staff-select-trigger,.table-sort,.overview-card-link){transition:background-color .16s ease,border-color .16s ease,color .16s ease,box-shadow .16s ease}
+body[data-page="staff"] .staff-main :is(.button,.table-sort):active{transform:translateY(1px)}
+body[data-page="staff"] .staff-main tbody tr{transition:background-color .16s ease}
+body[data-page="staff"] .staff-main tbody tr:hover{background:var(--nas-raised)}
+body[data-page="staff"] .staff-main .chart rect{transition:filter .15s ease}
+body[data-page="staff"] .staff-main .chart rect:hover{filter:brightness(1.12)}
+body[data-page="staff"] .staff-main .chart-dot:hover{stroke:var(--nas-text);stroke-width:1.5}
+body[data-page="staff"] .staff-main .map-button:hover{stroke:var(--nas-text);stroke-width:2.5}
+@media(max-width:767px){
+  body[data-page="staff"] .staff-overview .page-heading{align-items:flex-start;flex-direction:column;gap:20px}
+  body[data-page="staff"] .staff-overview .kpi{padding:20px 16px}
+  body[data-page="staff"] .staff-overview .kpi-number{font-size:28px}
+  body[data-page="staff"] .staff-overview .kpi-label{margin-bottom:16px;min-height:36px}
+  body[data-page="staff"] .overview-section-heading{margin-top:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  body[data-page="staff"] .staff-main *,body[data-page="staff"] .staff-main *::before,body[data-page="staff"] .staff-main *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  body[data-page="staff"] .staff-main :is(.button,.table-sort):active{transform:none}
+}
+@media print{
+  body[data-page="staff"] [data-staff-motion]{opacity:1!important;transform:none!important}
+  body[data-page="staff"] .staff-counter-visual{display:none}
+  body[data-page="staff"] .kpi-number .sr-only{position:static;width:auto;height:auto;clip:auto;clip-path:none;overflow:visible}
+}

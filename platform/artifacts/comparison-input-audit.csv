@@ -1,0 +1,4 @@
+submission,path,row_count,id_column,yield_column,units,duplicate_id_rows,missing_id_rows,missing_prediction_rows,nonfinite_prediction_rows,whitespace_ids,invalid_id_pattern_rows,official_order_match,nonpositive_predictions,min,max,mean,median,sample_std
+ours,platform/artifacts/predicciones_59.csv,59,ID_parcela,Rendimiento_predicho_t_ha,t/ha (declared by column name),0,0,0,0,0,0,True,0,2.8941,4.914,3.8979779661,4.2359,0.681450903453
+agrocebada_hidden,comparisons/agrocebada_hidden.csv,59,ID,prediction_t_ha,t/ha (declared by column name),0,0,0,0,0,0,True,0,2.93355556045,4.71310209131,3.95780323086,4.33447797818,0.676905685834
+Predicciones_agroceba,comparisons/Predicciones-agroceba.csv,59,ID_POLIGONO,PREDICCION_T_HA,t/ha (declared by column name),0,0,0,0,0,0,True,0,2.80604483,4.70527542,3.91014865068,4.33099378,0.710164614782

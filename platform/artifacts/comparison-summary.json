@@ -1,0 +1,615 @@
+{
+  "seed": 20261014,
+  "bootstrap_resamples": 5000,
+  "checks": {
+    "master_197_unique_ids": true,
+    "master_138_labels_59_hidden": true,
+    "parcel_metadata_197_unique_matches_official_ids": true,
+    "parcel_metadata_areas_targets_partitions_match_official": true,
+    "ours_59_valid_unique_finite_hidden_predictions": true,
+    "agrocebada_hidden_59_valid_unique_finite_hidden_predictions": true,
+    "agrocebada_hidden_areas_match_official": true,
+    "agrocebada_hidden_target_empty_and_partition_correct": true,
+    "agrocebada_hidden_production_matches_area_times_yield": true,
+    "agrocebada_hidden_intervals_ordered_and_nested": true,
+    "Predicciones_agroceba_59_valid_unique_finite_hidden_predictions": true,
+    "parcel_validation_complete_once_per_training_parcel": true,
+    "parcel_validation_actuals_match_official": true,
+    "parcel_validation_predictions_finite": true,
+    "parcel_model_csv_reproduces_reported_metrics": true,
+    "parcel_baseline_csv_reproduces_reported_metrics": true,
+    "parcel_coverage_denominator_reproduced": true,
+    "spatial_validation_complete_once_per_training_parcel": true,
+    "spatial_validation_actuals_match_official": true,
+    "spatial_validation_predictions_finite": true,
+    "spatial_model_csv_reproduces_reported_metrics": true,
+    "spatial_baseline_csv_reproduces_reported_metrics": true,
+    "spatial_coverage_denominator_reproduced": true,
+    "spatial_outer_folds_do_not_share_20km_blocks": true,
+    "final_fit_calibration_disjoint_cover_138_labels": true,
+    "frozen_model_fit_calibration_ids_match_report": true,
+    "frozen_model_reproduces_calibration_metrics": true,
+    "frozen_model_reproduces_submission_within_four_decimal_rounding": true,
+    "proposed_common_folds_276_rows_two_complete_138_parcel_assignments": true
+  },
+  "input_audits": [
+    {
+      "submission": "ours",
+      "path": "platform/artifacts/predicciones_59.csv",
+      "row_count": 59,
+      "id_column": "ID_parcela",
+      "yield_column": "Rendimiento_predicho_t_ha",
+      "units": "t/ha (declared by column name)",
+      "duplicate_id_rows": 0,
+      "missing_id_rows": 0,
+      "missing_prediction_rows": 0,
+      "nonfinite_prediction_rows": 0,
+      "whitespace_ids": 0,
+      "invalid_id_pattern_rows": 0,
+      "missing_official_ids": [],
+      "unexpected_ids": [],
+      "official_order_match": true,
+      "nonpositive_predictions": 0,
+      "min": 2.8941,
+      "max": 4.914,
+      "mean": 3.8979779661016947,
+      "median": 4.2359,
+      "sample_std": 0.6814509034526857,
+      "full_column_names": [
+        "ID_parcela",
+        "Rendimiento_predicho_t_ha"
+      ]
+    },
+    {
+      "submission": "agrocebada_hidden",
+      "path": "comparisons/agrocebada_hidden.csv",
+      "row_count": 59,
+      "id_column": "ID",
+      "yield_column": "prediction_t_ha",
+      "units": "t/ha (declared by column name)",
+      "duplicate_id_rows": 0,
+      "missing_id_rows": 0,
+      "missing_prediction_rows": 0,
+      "nonfinite_prediction_rows": 0,
+      "whitespace_ids": 0,
+      "invalid_id_pattern_rows": 0,
+      "missing_official_ids": [],
+      "unexpected_ids": [],
+      "official_order_match": true,
+      "nonpositive_predictions": 0,
+      "min": 2.93355556045262,
+      "max": 4.713102091307384,
+      "mean": 3.9578032308586737,
+      "median": 4.3344779781767935,
+      "sample_std": 0.6769056858339488,
+      "full_column_names": [
+        "ID",
+        "AREA_HA",
+        "RENDIMIENTO_T_HA",
+        "CONJUNTO",
+        "prediction_t_ha",
+        "prediction_kind",
+        "lower_80",
+        "upper_80",
+        "lower_90",
+        "upper_90",
+        "lower_95",
+        "upper_95",
+        "production_t",
+        "DQ_score"
+      ]
+    },
+    {
+      "submission": "Predicciones_agroceba",
+      "path": "comparisons/Predicciones-agroceba.csv",
+      "row_count": 59,
+      "id_column": "ID_POLIGONO",
+      "yield_column": "PREDICCION_T_HA",
+      "units": "t/ha (declared by column name)",
+      "duplicate_id_rows": 0,
+      "missing_id_rows": 0,
+      "missing_prediction_rows": 0,
+      "nonfinite_prediction_rows": 0,
+      "whitespace_ids": 0,
+      "invalid_id_pattern_rows": 0,
+      "missing_official_ids": [],
+      "unexpected_ids": [],
+      "official_order_match": true,
+      "nonpositive_predictions": 0,
+      "min": 2.80604483,
+      "max": 4.70527542,
+      "mean": 3.910148650677966,
+      "median": 4.33099378,
+      "sample_std": 0.7101646147815882,
+      "full_column_names": [
+        "ID_POLIGONO",
+        "PREDICCION_T_HA"
+      ]
+    }
+  ],
+  "pairwise_prediction_agreement_not_accuracy": [
+    {
+      "a": "ours",
+      "b": "agrocebada_hidden",
+      "n": 59,
+      "mean_signed_difference_a_minus_b_t_ha": -0.05982526475697844,
+      "mean_absolute_difference_t_ha": 0.09954967806337242,
+      "root_mean_squared_difference_t_ha": 0.1215566358348076,
+      "median_absolute_difference_t_ha": 0.09783570797666563,
+      "max_absolute_difference_t_ha": 0.29070979048729173,
+      "max_difference_id": "AGC_030",
+      "pearson_r": 0.9876762542894715,
+      "spearman_rho": 0.9202220923436587
+    },
+    {
+      "a": "ours",
+      "b": "Predicciones_agroceba",
+      "n": 59,
+      "mean_signed_difference_a_minus_b_t_ha": -0.012170684576271169,
+      "mean_absolute_difference_t_ha": 0.1254005527118644,
+      "root_mean_squared_difference_t_ha": 0.164659435604582,
+      "median_absolute_difference_t_ha": 0.09780146999999939,
+      "max_absolute_difference_t_ha": 0.4222551700000001,
+      "max_difference_id": "AGC_183",
+      "pearson_r": 0.9725121849109668,
+      "spearman_rho": 0.8079485680888371
+    },
+    {
+      "a": "agrocebada_hidden",
+      "b": "Predicciones_agroceba",
+      "n": 59,
+      "mean_signed_difference_a_minus_b_t_ha": 0.04765458018070728,
+      "mean_absolute_difference_t_ha": 0.11267184867522556,
+      "root_mean_squared_difference_t_ha": 0.1520948408485317,
+      "median_absolute_difference_t_ha": 0.08049192543661965,
+      "max_absolute_difference_t_ha": 0.5460462208835599,
+      "max_difference_id": "AGC_118",
+      "pearson_r": 0.9790775873225503,
+      "spearman_rho": 0.8218001168907073
+    }
+  ],
+  "largest_disagreements": [
+    {
+      "ID_POLIGONO": "AGC_118",
+      "AREA_HA": 4.42,
+      "Estado": "Hidalgo",
+      "Municipio": "Singuilucan",
+      "longitude": -98.4231462690173,
+      "latitude": 19.947550989573624,
+      "ours": 3.2448,
+      "agrocebada_hidden": 3.40050606088356,
+      "Predicciones_agroceba": 2.85445984,
+      "prediction_range_t_ha": 0.5460462208835599,
+      "prediction_sample_std_t_ha": 0.28129945291033365,
+      "ours_minus_agrocebada_hidden_t_ha": -0.15570606088355987,
+      "ours_minus_Predicciones_agroceba_t_ha": 0.39034016000000005,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": 0.5460462208835599
+    },
+    {
+      "ID_POLIGONO": "AGC_183",
+      "AREA_HA": 7.85,
+      "Estado": "Tlaxcala",
+      "Municipio": "Calpulalpan",
+      "longitude": -98.549834474059,
+      "latitude": 19.574595967880374,
+      "ours": 3.2283,
+      "agrocebada_hidden": 3.04375644771637,
+      "Predicciones_agroceba": 2.80604483,
+      "prediction_range_t_ha": 0.4222551700000001,
+      "prediction_sample_std_t_ha": 0.21168473590008152,
+      "ours_minus_agrocebada_hidden_t_ha": 0.18454355228363006,
+      "ours_minus_Predicciones_agroceba_t_ha": 0.4222551700000001,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": 0.23771161771637006
+    },
+    {
+      "ID_POLIGONO": "AGC_192",
+      "AREA_HA": 2.14,
+      "Estado": "Puebla",
+      "Municipio": "Chignahuapan",
+      "longitude": -98.22748775414487,
+      "latitude": 19.866055547793124,
+      "ours": 4.914,
+      "agrocebada_hidden": 4.713102091307384,
+      "Predicciones_agroceba": 4.51676574,
+      "prediction_range_t_ha": 0.3972342599999994,
+      "prediction_sample_std_t_ha": 0.19862149509368737,
+      "ours_minus_agrocebada_hidden_t_ha": 0.2008979086926157,
+      "ours_minus_Predicciones_agroceba_t_ha": 0.3972342599999994,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": 0.1963363513073837
+    },
+    {
+      "ID_POLIGONO": "AGC_095",
+      "AREA_HA": 1.33,
+      "Estado": "Puebla",
+      "Municipio": "Chignahuapan",
+      "longitude": -98.26136606312328,
+      "latitude": 19.87604692972183,
+      "ours": 4.2359,
+      "agrocebada_hidden": 4.236082600704493,
+      "Predicciones_agroceba": 4.58842504,
+      "prediction_range_t_ha": 0.35252503999999973,
+      "prediction_sample_std_t_ha": 0.2034777349403478,
+      "ours_minus_agrocebada_hidden_t_ha": -0.0001826007044929412,
+      "ours_minus_Predicciones_agroceba_t_ha": -0.35252503999999973,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": -0.3523424392955068
+    },
+    {
+      "ID_POLIGONO": "AGC_082",
+      "AREA_HA": 2.77,
+      "Estado": "Hidalgo",
+      "Municipio": "Almoloya",
+      "longitude": -98.26925629161563,
+      "latitude": 19.80186029126976,
+      "ours": 4.1296,
+      "agrocebada_hidden": 4.408362906847624,
+      "Predicciones_agroceba": 4.47660506,
+      "prediction_range_t_ha": 0.34700505999999987,
+      "prediction_sample_std_t_ha": 0.18383790929630234,
+      "ours_minus_agrocebada_hidden_t_ha": -0.27876290684762406,
+      "ours_minus_Predicciones_agroceba_t_ha": -0.34700505999999987,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": -0.0682421531523758
+    },
+    {
+      "ID_POLIGONO": "AGC_126",
+      "AREA_HA": 5.75,
+      "Estado": "Puebla",
+      "Municipio": "Chignahuapan",
+      "longitude": -98.2437072894638,
+      "latitude": 19.89589304850336,
+      "ours": 4.5416,
+      "agrocebada_hidden": 4.63240539398764,
+      "Predicciones_agroceba": 4.33099378,
+      "prediction_range_t_ha": 0.30141161398764016,
+      "prediction_sample_std_t_ha": 0.15462296106258666,
+      "ours_minus_agrocebada_hidden_t_ha": -0.09080539398764031,
+      "ours_minus_Predicciones_agroceba_t_ha": 0.21060621999999984,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": 0.30141161398764016
+    },
+    {
+      "ID_POLIGONO": "AGC_088",
+      "AREA_HA": 5.91,
+      "Estado": "Puebla",
+      "Municipio": "Chignahuapan",
+      "longitude": -98.23793854701198,
+      "latitude": 19.89402733720297,
+      "ours": 4.5177,
+      "agrocebada_hidden": 4.643858171765418,
+      "Predicciones_agroceba": 4.3469516,
+      "prediction_range_t_ha": 0.296906571765418,
+      "prediction_sample_std_t_ha": 0.14901029761017975,
+      "ours_minus_agrocebada_hidden_t_ha": -0.1261581717654181,
+      "ours_minus_Predicciones_agroceba_t_ha": 0.1707483999999999,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": 0.296906571765418
+    },
+    {
+      "ID_POLIGONO": "AGC_030",
+      "AREA_HA": 13.05,
+      "Estado": "Hidalgo",
+      "Municipio": "Singuilucan",
+      "longitude": -98.41028644080566,
+      "latitude": 19.95828686975342,
+      "ours": 3.0884,
+      "agrocebada_hidden": 3.3791097904872918,
+      "Predicciones_agroceba": 3.12891445,
+      "prediction_range_t_ha": 0.29070979048729173,
+      "prediction_sample_std_t_ha": 0.15745439093354383,
+      "ours_minus_agrocebada_hidden_t_ha": -0.29070979048729173,
+      "ours_minus_Predicciones_agroceba_t_ha": -0.04051444999999987,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": 0.25019534048729186
+    },
+    {
+      "ID_POLIGONO": "AGC_052",
+      "AREA_HA": 6.23,
+      "Estado": "Hidalgo",
+      "Municipio": "Cuautepec de Hinojosa",
+      "longitude": -98.27873116848691,
+      "latitude": 19.92889435306236,
+      "ours": 4.2043,
+      "agrocebada_hidden": 4.431897910733055,
+      "Predicciones_agroceba": 4.48418948,
+      "prediction_range_t_ha": 0.27988948000000047,
+      "prediction_sample_std_t_ha": 0.1488138312350492,
+      "ours_minus_agrocebada_hidden_t_ha": -0.22759791073305546,
+      "ours_minus_Predicciones_agroceba_t_ha": -0.27988948000000047,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": -0.052291569266945004
+    },
+    {
+      "ID_POLIGONO": "AGC_182",
+      "AREA_HA": 4.13,
+      "Estado": "Puebla",
+      "Municipio": "Chignahuapan",
+      "longitude": -98.24406381093718,
+      "latitude": 19.84814965949068,
+      "ours": 4.3455,
+      "agrocebada_hidden": 4.305070333412679,
+      "Predicciones_agroceba": 4.57658783,
+      "prediction_range_t_ha": 0.27151749658732083,
+      "prediction_sample_std_t_ha": 0.14649112263633166,
+      "ours_minus_agrocebada_hidden_t_ha": 0.040429666587320945,
+      "ours_minus_Predicciones_agroceba_t_ha": -0.23108782999999988,
+      "agrocebada_hidden_minus_Predicciones_agroceba_t_ha": -0.27151749658732083
+    }
+  ],
+  "validation_recomputed": {
+    "parcel": {
+      "model": {
+        "n": 138,
+        "mae": 0.4076942120295491,
+        "mse": 0.3150775641128822,
+        "rmse": 0.5613177033667138,
+        "r2": 0.5619206484455855,
+        "bias": 0.000169879113408146
+      },
+      "baseline": {
+        "n": 138,
+        "mae": 0.7244202898550725,
+        "mse": 0.8315565217391303,
+        "rmse": 0.9118972100731148,
+        "r2": -0.15618432829387352,
+        "bias": 0.34999999999999987
+      },
+      "relative_mae_reduction_vs_own_baseline": 0.4372131513446257,
+      "relative_rmse_reduction_vs_own_baseline": 0.3844506846098278,
+      "interval_coverage_bounded_rows_only": 0.927536231884058,
+      "bounded_interval_n": 138,
+      "unbounded_interval_n": 0,
+      "mean_bounded_interval_width_t_ha": 1.7610895553638473,
+      "fixed_oof_parcel_bootstrap_95": {
+        "mae": {
+          "lower_95": 0.3447474917989139,
+          "upper_95": 0.47378079384412347
+        },
+        "rmse": {
+          "lower_95": 0.44351408344089943,
+          "upper_95": 0.6831309236648208
+        },
+        "r2": {
+          "lower_95": 0.37505102207125907,
+          "upper_95": 0.7084505690990797
+        },
+        "bias": {
+          "lower_95": -0.09086890188449441,
+          "upper_95": 0.09807233288980792
+        }
+      },
+      "fold_sizes": {
+        "1": 28,
+        "2": 28,
+        "3": 28,
+        "4": 27,
+        "5": 27
+      }
+    },
+    "spatial": {
+      "model": {
+        "n": 138,
+        "mae": 0.8047891116278646,
+        "mse": 0.9129753725740324,
+        "rmse": 0.9554974477067075,
+        "r2": -0.2693879373114958,
+        "bias": -0.3589494973016638
+      },
+      "baseline": {
+        "n": 138,
+        "mae": 1.3445652173913043,
+        "mse": 2.0291340579710146,
+        "rmse": 1.4244767663851223,
+        "r2": -1.8212790550026203,
+        "bias": -0.2651449275362318
+      },
+      "relative_mae_reduction_vs_own_baseline": 0.40145029692996326,
+      "relative_rmse_reduction_vs_own_baseline": 0.32922918066858897,
+      "interval_coverage_bounded_rows_only": 1.0,
+      "bounded_interval_n": 95,
+      "unbounded_interval_n": 43,
+      "mean_bounded_interval_width_t_ha": 4.4660055261949525,
+      "fixed_oof_parcel_bootstrap_95": {
+        "mae": {
+          "lower_95": 0.7208125338552336,
+          "upper_95": 0.8917477690272777
+        },
+        "rmse": {
+          "lower_95": 0.8709147097418769,
+          "upper_95": 1.0399305180627858
+        },
+        "r2": {
+          "lower_95": -0.5602303931512851,
+          "upper_95": -0.05663917503486756
+        },
+        "bias": {
+          "lower_95": -0.5011056037130337,
+          "upper_95": -0.21152601637801882
+        }
+      },
+      "fold_sizes": {
+        "1": 58,
+        "2": 27,
+        "3": 21,
+        "4": 16,
+        "5": 16
+      },
+      "spatial_blocks_n": 6,
+      "spatial_block_sizes": {
+        "142_42": 14,
+        "143_42": 21,
+        "143_43": 2,
+        "143_44": 16,
+        "144_43": 58,
+        "144_44": 27
+      }
+    }
+  },
+  "final_model_audit": {
+    "fit_n": 110,
+    "calibration_n": 28,
+    "selection": {
+      "name": "random_forest",
+      "cloud": 60,
+      "k": 60,
+      "mae": 0.386266073695496,
+      "rmse": 0.5555230953012239,
+      "r2": 0.5982685636396154,
+      "n": 110,
+      "bias": 0.007156586758905201
+    },
+    "selection_metric_note": "Current source select_model sorts by MAE, then RMSE; selection metrics are internal, not final test error.",
+    "calibration_metrics_status": "recomputed_from_frozen_model_and_official_labels",
+    "calibration_point_metrics_recomputed": {
+      "n": 28,
+      "mae": 0.32974099691887243,
+      "mse": 0.16422830250197937,
+      "rmse": 0.40525091301807004,
+      "r2": 0.6042987041429109,
+      "bias": 0.0050049955492755815
+    }
+  },
+  "proposed_common_folds": {
+    "path": "comparison-common-folds.csv",
+    "seeds": [
+      20261013,
+      20261014
+    ],
+    "algorithm": "sklearn.model_selection.KFold(n_splits=5, shuffle=True, random_state=seed)",
+    "row_order": "Official master CSV order restricted to ENTRENAMIENTO",
+    "purpose": "Shared future validation; peer original folds are unknown",
+    "primary_metric": "MAE (current project selection criterion, not asserted official)",
+    "guardrail_metric": "RMSE; also report R2 and bias"
+  },
+  "peer_metrics_reported_only": [
+    {
+      "submission": "agrocebada_hidden",
+      "scheme": "random_parcel_repeated_evaluations",
+      "n": 1380,
+      "mae": 0.3778,
+      "rmse": 0.5284,
+      "r2": 0.6118,
+      "status": "reported_only",
+      "source": "comparisons/agrocebada_hidden.md",
+      "section": "2. Métricas principales"
+    },
+    {
+      "submission": "agrocebada_hidden",
+      "scheme": "random_parcel_mean_of_10_oof",
+      "n": 138,
+      "mae": 0.3682,
+      "rmse": 0.5196,
+      "r2": 0.6246,
+      "status": "reported_only",
+      "source": "comparisons/agrocebada_hidden.md",
+      "section": "2. Métricas principales"
+    },
+    {
+      "submission": "agrocebada_hidden",
+      "scheme": "spatial_kmeans5",
+      "n": 138,
+      "mae": 0.7277,
+      "rmse": 0.8925,
+      "r2": -0.1076,
+      "status": "reported_only",
+      "source": "comparisons/agrocebada_hidden.md",
+      "section": "3. Comparación con líneas base"
+    },
+    {
+      "submission": "Predicciones_agroceba",
+      "scheme": "random_parcel_nested_selector",
+      "n": 138,
+      "mae": 0.419,
+      "rmse": 0.5519,
+      "r2": 0.5765,
+      "status": "reported_only",
+      "source": "comparisons/Predicciones-agroceba.md",
+      "section": "3.2 Selección de grupo de variables"
+    },
+    {
+      "submission": "Predicciones_agroceba",
+      "scheme": "spatial_chirps_nested_selector",
+      "n": 138,
+      "mae": 0.639,
+      "rmse": 0.7775,
+      "r2": 0.1594,
+      "status": "reported_only",
+      "source": "comparisons/Predicciones-agroceba.md",
+      "section": "3.2 Selección de grupo de variables"
+    }
+  ],
+  "critical_limitations": [
+    "The 59 official prediction parcels have no observed yield; their MAE/RMSE/R2 cannot be computed.",
+    "Pairwise differences and correlations quantify agreement, never accuracy or ensemble weights.",
+    "Peer OOF predictions, fitted code and fold assignments are absent; their Markdown metrics cannot be independently reproduced.",
+    "Different folds, training sizes, seeds, scoring criteria, spatial grouping and repeat aggregation prevent a fair cross-project ranking.",
+    "Bootstrap intervals resample fixed OOF parcel residuals; they omit refitting/model-search uncertainty and ignore spatial dependence.",
+    "Conditional coverage on finite spatial intervals must keep its denominator; unbounded rows cannot be silently omitted in an overall guarantee."
+  ],
+  "sources": [
+    {
+      "path": "data/fira/CSV-files/ID_area_rendimiento_70_30_Reto_AgroCebada.csv",
+      "bytes": 6241,
+      "sha256": "ec07b7ede0ae692109d91b3e941b1a353fe7f89410507db9bfbe6d7c112590ef"
+    },
+    {
+      "path": "platform/artifacts/parcels.csv",
+      "bytes": 24752,
+      "sha256": "05320f11d166f9dcb74f02e6d1bbd972008c2c2bf92dfb1851d387746162c5a8"
+    },
+    {
+      "path": "platform/artifacts/predicciones_59.csv",
+      "bytes": 982,
+      "sha256": "53b1b2fe8f46c66814a12d036826bca80e5a5c4cbdd529a43358cef83ce665ff"
+    },
+    {
+      "path": "comparisons/agrocebada_hidden.csv",
+      "bytes": 11711,
+      "sha256": "e0a2dcb913fa8a0fa7391a3de47cbe9c627da4de03e4c5f15e35992cdd31322a"
+    },
+    {
+      "path": "comparisons/Predicciones-agroceba.csv",
+      "bytes": 1140,
+      "sha256": "e7b6443f1097958fc65d4bd80a1954ed1d144a5422b05bd538fb271c5b37a136"
+    },
+    {
+      "path": "platform/artifacts/metrics.json",
+      "bytes": 18825,
+      "sha256": "edfb2604f227bdd64b37603cd5dee4e7d377a965ddad93d24b97d1cba71ce3be"
+    },
+    {
+      "path": "platform/artifacts/validation-parcel.csv",
+      "bytes": 11939,
+      "sha256": "7f37590a8e3e2ab6c65ae45ad6bd560d26f29fae908779a5d3443c60f3dcb21a"
+    },
+    {
+      "path": "platform/artifacts/validation-spatial.csv",
+      "bytes": 10233,
+      "sha256": "23fb4c124277409efe7aa300e0313993a3c80913f6ae539936eafc5f3ce560d2"
+    },
+    {
+      "path": "platform/artifacts/model.joblib",
+      "bytes": 435398,
+      "sha256": "ac841b7a211fdbf10edf00843aea3d04f3d01c133fcb5e65e429b562ae283c7a"
+    },
+    {
+      "path": "platform/artifacts/features-cloud-60.csv",
+      "bytes": 273526,
+      "sha256": "f1bb876ba66a387ac0de10789be363561c0da1814a0bec3799fccd6ed65eed6e"
+    },
+    {
+      "path": "comparisons/agrocebada_hidden.md",
+      "bytes": 8609,
+      "sha256": "e322dd6f83645253d65d375df7e826990608863065473cba627ad031bb742323"
+    },
+    {
+      "path": "comparisons/Predicciones-agroceba.md",
+      "bytes": 6623,
+      "sha256": "a7e0d85d064ee907176a6b3d19ddce1fb25895796d4ab4398271d9cdf252974b"
+    },
+    {
+      "path": "platform/pipeline/train.py",
+      "bytes": 15050,
+      "sha256": "9ad1ff6fd195cca62c1f37d5837894f3865eeee99712f3e8f34904dc5899b144"
+    },
+    {
+      "path": "platform/scripts/compare_predictions.py",
+      "bytes": 22446,
+      "sha256": "600204f52acf2309d42e511ee5c32e36efc4d8bff8fed0224914b778d71fad7e"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "activated_at": "2026-10-18T05:00:30.439462+00:00",
+  "procedure": "point_extended",
+  "prediction_sha256": "3391c573da2588cbc6eb6c939e66513c8794df8a0b0a45c275bda3705357687b",
+  "backup": "model-refinement-v2/incumbent",
+  "interval": "No interval published for the refitted point predictor"
+}

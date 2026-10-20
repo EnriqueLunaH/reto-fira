@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-10-18T04:58:36.160812+00:00",
+  "selected_procedure": "point_extended",
+  "candidates": {
+    "point_original": {
+      "eligible": false,
+      "gates": {
+        "mean_mae_gain_at_least_001": true,
+        "lower_mae_in_at_least_four_seeds": false,
+        "no_pooled_rmse_increase": true,
+        "no_consistent_deterioration_at_both_spatial_scales": true,
+        "descriptive_paired_parcel_ci_upper_below_zero": true
+      },
+      "mae_gain_t_ha": 0.015770765020223065,
+      "improved_seeds": 3,
+      "delta_mae_ci95_parcel_descriptive": [
+        -0.030188392561166035,
+        -0.001973851129466686
+      ],
+      "delta_mae_ci95_block20_descriptive": [
+        -0.02510115785440573,
+        0.007155124565601884
+      ]
+    },
+    "point_extended": {
+      "eligible": true,
+      "gates": {
+        "mean_mae_gain_at_least_001": true,
+        "lower_mae_in_at_least_four_seeds": true,
+        "no_pooled_rmse_increase": true,
+        "no_consistent_deterioration_at_both_spatial_scales": true,
+        "descriptive_paired_parcel_ci_upper_below_zero": true
+      },
+      "mae_gain_t_ha": 0.017264945502283524,
+      "improved_seeds": 4,
+      "delta_mae_ci95_parcel_descriptive": [
+        -0.0320444843176236,
+        -0.0025553992771057397
+      ],
+      "delta_mae_ci95_block20_descriptive": [
+        -0.02989353424169679,
+        -0.006818377647304672
+      ]
+    }
+  },
+  "production_modified": false,
+  "reference_reproduced_atol": 1e-10,
+  "limits": "Exploratory reused labels. No claim that hidden accuracy improved; bootstrap is descriptive and does not correct CV/model-selection dependence."
+}

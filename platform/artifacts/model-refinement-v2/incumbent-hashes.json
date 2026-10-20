@@ -1,0 +1,12 @@
+{
+  "comparisons-proposal-01.csv": "adee78579e942c6d9d33c0e3e5578aa378deccb6dc46918c5de3e2e1d2597ee9",
+  "comparisons-proposal-02.csv": "c07c896da0a82ac0fe305afbe8747e78631860b20fd8bd7b64e4ed39c3b27432",
+  "comparisons-proposal.csv": "53b1b2fe8f46c66814a12d036826bca80e5a5c4cbdd529a43358cef83ce665ff",
+  "dashboard.json": "697cc1266c7e88cdfacb5a62448c0c9efe7eeac28fdaa263b443af15bbb38590",
+  "metrics.json": "edfb2604f227bdd64b37603cd5dee4e7d377a965ddad93d24b97d1cba71ce3be",
+  "model.joblib": "ac841b7a211fdbf10edf00843aea3d04f3d01c133fcb5e65e429b562ae283c7a",
+  "predicciones_59.csv": "53b1b2fe8f46c66814a12d036826bca80e5a5c4cbdd529a43358cef83ce665ff",
+  "train.py": "9ad1ff6fd195cca62c1f37d5837894f3865eeee99712f3e8f34904dc5899b144",
+  "validation-parcel.csv": "7f37590a8e3e2ab6c65ae45ad6bd560d26f29fae908779a5d3443c60f3dcb21a",
+  "validation-spatial.csv": "23fb4c124277409efe7aa300e0313993a3c80913f6ae539936eafc5f3ce560d2"
+}

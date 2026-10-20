@@ -1,0 +1,98 @@
+{
+  "20": [
+    {
+      "sensor": "Sentinel-2",
+      "threshold": 20,
+      "source_rows": 59040,
+      "season_rows": 9986,
+      "retained_rows": 6437,
+      "usable_main_index": 6437,
+      "clear_zero_usable": 5688,
+      "no_main_index_parcels": 0
+    },
+    {
+      "sensor": "Planet",
+      "threshold": 20,
+      "source_rows": 47804,
+      "season_rows": 26255,
+      "retained_rows": 15852,
+      "usable_main_index": 15852,
+      "clear_zero_usable": 14578,
+      "no_main_index_parcels": 0
+    },
+    {
+      "sensor": "Landsat",
+      "threshold": 20,
+      "source_rows": 48626,
+      "season_rows": 6310,
+      "retained_rows": 3424,
+      "usable_main_index": 3424,
+      "clear_zero_usable": 3263,
+      "no_main_index_parcels": 0
+    }
+  ],
+  "40": [
+    {
+      "sensor": "Sentinel-2",
+      "threshold": 40,
+      "source_rows": 59040,
+      "season_rows": 9986,
+      "retained_rows": 6660,
+      "usable_main_index": 6660,
+      "clear_zero_usable": 5688,
+      "no_main_index_parcels": 0
+    },
+    {
+      "sensor": "Planet",
+      "threshold": 40,
+      "source_rows": 47804,
+      "season_rows": 26255,
+      "retained_rows": 16387,
+      "usable_main_index": 16387,
+      "clear_zero_usable": 14578,
+      "no_main_index_parcels": 0
+    },
+    {
+      "sensor": "Landsat",
+      "threshold": 40,
+      "source_rows": 48626,
+      "season_rows": 6310,
+      "retained_rows": 3526,
+      "usable_main_index": 3526,
+      "clear_zero_usable": 3263,
+      "no_main_index_parcels": 0
+    }
+  ],
+  "60": [
+    {
+      "sensor": "Sentinel-2",
+      "threshold": 60,
+      "source_rows": 59040,
+      "season_rows": 9986,
+      "retained_rows": 6847,
+      "usable_main_index": 6847,
+      "clear_zero_usable": 5688,
+      "no_main_index_parcels": 0
+    },
+    {
+      "sensor": "Planet",
+      "threshold": 60,
+      "source_rows": 47804,
+      "season_rows": 26255,
+      "retained_rows": 16876,
+      "usable_main_index": 16876,
+      "clear_zero_usable": 14578,
+      "no_main_index_parcels": 0
+    },
+    {
+      "sensor": "Landsat",
+      "threshold": 60,
+      "source_rows": 48626,
+      "season_rows": 6310,
+      "retained_rows": 3658,
+      "usable_main_index": 3658,
+      "clear_zero_usable": 3263,
+      "no_main_index_parcels": 0
+    }
+  ]
+}

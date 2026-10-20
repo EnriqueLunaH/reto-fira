@@ -1,0 +1,10 @@
+submission,scheme,predictor,n,mae,mse,rmse,r2,bias,status,source,section
+ours,parcel,model,138,0.40769421203,0.315077564113,0.561317703367,0.561920648446,0.000169879113408,recomputed_from_oof_csv,platform/artifacts/validation-parcel.csv,
+ours,parcel,baseline,138,0.724420289855,0.831556521739,0.911897210073,-0.156184328294,0.35,recomputed_from_oof_csv,platform/artifacts/validation-parcel.csv,
+ours,spatial,model,138,0.804789111628,0.912975372574,0.955497447707,-0.269387937311,-0.358949497302,recomputed_from_oof_csv,platform/artifacts/validation-spatial.csv,
+ours,spatial,baseline,138,1.34456521739,2.02913405797,1.42447676639,-1.821279055,-0.265144927536,recomputed_from_oof_csv,platform/artifacts/validation-spatial.csv,
+agrocebada_hidden,random_parcel_repeated_evaluations,,1380,0.3778,,0.5284,0.6118,,reported_only,comparisons/agrocebada_hidden.md,2. Métricas principales
+agrocebada_hidden,random_parcel_mean_of_10_oof,,138,0.3682,,0.5196,0.6246,,reported_only,comparisons/agrocebada_hidden.md,2. Métricas principales
+agrocebada_hidden,spatial_kmeans5,,138,0.7277,,0.8925,-0.1076,,reported_only,comparisons/agrocebada_hidden.md,3. Comparación con líneas base
+Predicciones_agroceba,random_parcel_nested_selector,,138,0.419,,0.5519,0.5765,,reported_only,comparisons/Predicciones-agroceba.md,3.2 Selección de grupo de variables
+Predicciones_agroceba,spatial_chirps_nested_selector,,138,0.639,,0.7775,0.1594,,reported_only,comparisons/Predicciones-agroceba.md,3.2 Selección de grupo de variables

@@ -1,0 +1,88 @@
+/* NAS editorial presentation. Technical content and model calculations are unchanged. */
+body[data-page="staff"]:has(.methodology-page){position:fixed;inset:0;width:100%}
+.staff-main .methodology-page .page-heading{align-items:flex-start;gap:24px;margin-bottom:28px}
+.staff-main .methodology-page .page-heading h1{font-size:36px;font-weight:500;line-height:1.15;letter-spacing:-1.4px}
+.staff-main .methodology-page .page-heading>div>.muted{font-size:14px;max-width:62ch}
+.methodology-page-context{gap:12px 16px;margin-top:18px;font-size:12px;line-height:1.6;color:var(--nas-muted)}
+.methodology-badge{display:inline-flex;align-items:center;gap:7px;padding:4px 8px;border:1px solid color-mix(in srgb,var(--nas-accent) 20%,var(--nas-border));border-radius:5px;background:var(--nas-accent-soft);color:var(--nas-accent);font-size:10px;letter-spacing:.2px}
+.methodology-badge::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--nas-accent)}
+.methodology-validation-link{gap:10px;margin-top:28px;flex-shrink:0;white-space:nowrap}
+.methodology-page #staff-status{margin:0 0 24px;padding:18px 20px;border:1px solid var(--nas-border);border-radius:8px;background:var(--nas-surface);font-size:13px;color:var(--nas-muted)}
+.methodology-page #staff-status:empty{display:none}
+.methodology-page #staff-status.methodology-load-error{color:var(--nas-danger)}
+.methodology-index{gap:12px;margin:0 0 24px;padding:0}
+.methodology-index a{display:flex;align-items:center;gap:10px;min-height:44px;padding:12px 16px;border:1px solid var(--nas-border);border-radius:6px;background:var(--nas-surface);font-size:12px;line-height:1.6;color:var(--nas-text);text-decoration:none}
+.methodology-index a>span{font-size:10px;font-variant-numeric:tabular-nums;color:var(--nas-faint)}
+.methodology-index .nas-icon{margin-left:auto;color:var(--nas-faint);transform:rotate(90deg)}
+.methodology-index a:hover,.methodology-index a:focus-visible{background:var(--nas-soft);border-color:var(--nas-faint)}
+.methodology-sections{gap:24px}
+.staff-main .methodology-page .methodology-section{margin:0;padding:28px;border:1px solid var(--nas-border);border-radius:10px;background:var(--nas-surface);scroll-margin-top:0}
+.methodology-section-heading{gap:16px;margin-bottom:28px}
+.methodology-section-number{display:grid;place-items:center;flex-shrink:0;width:32px;height:36px;background:var(--nas-soft);border:1px solid var(--nas-border);border-radius:5px;color:var(--nas-muted);font-size:11px;font-variant-numeric:tabular-nums}
+.methodology-overline{margin:0 0 6px;font-size:10px;font-weight:500;line-height:1.6;letter-spacing:1.2px;color:var(--nas-faint)}
+.methodology-section-heading h2{font-size:16px;font-weight:550;line-height:1.5;letter-spacing:-.3px;margin:0}
+.methodology-sources-grid{gap:24px 40px;margin:0}
+.methodology-sources-grid>div{min-width:0}
+.methodology-sources-grid dt{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:500;color:var(--nas-text);line-height:1.6;margin-bottom:8px}
+.methodology-sources-grid .nas-icon{color:var(--nas-faint)}
+.methodology-sources-grid dd{font-size:13px;line-height:1.8;color:var(--nas-muted);margin:0;max-width:58ch}
+.methodology-sources-grid strong{font-weight:500;color:var(--nas-text)}
+.methodology-source-name{overflow-wrap:anywhere}
+.methodology-section-note{gap:10px;align-items:flex-start;border-top:1px solid var(--nas-border);padding-top:18px;margin-top:24px}
+.methodology-section-note .nas-icon{color:var(--nas-faint);margin-top:3px}
+.methodology-section-note p{font-size:12px;line-height:1.8;color:var(--nas-muted);margin:0;max-width:80ch}
+.methodology-formulas{gap:16px;margin:0}
+.methodology-formulas>div{min-width:0;padding:20px;background:var(--nas-bg);border:1px solid var(--nas-border);border-radius:6px}
+.methodology-formulas dt{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:12px;line-height:1.7;font-weight:450;color:var(--nas-muted);margin-bottom:14px}
+.methodology-formulas dt span{font-size:10px;color:var(--nas-faint);white-space:nowrap}
+.methodology-formulas dd{font-size:18px;font-weight:450;line-height:1.7;letter-spacing:-.3px;color:var(--nas-text);margin:0;overflow-wrap:anywhere}
+.methodology-process{gap:24px;margin:0;padding:0}
+.methodology-process li{min-width:0;border-top:1px solid var(--nas-border);padding-top:16px}
+.methodology-process-step{display:block;font-size:10px;line-height:1.6;font-weight:500;letter-spacing:.8px;color:var(--nas-faint);margin-bottom:10px}
+.methodology-process h3,.methodology-model-report h3{font-size:13px;font-weight:550;line-height:1.6;margin:0 0 8px;color:var(--nas-text)}
+.methodology-process p{margin:0;font-size:13px;line-height:1.8;color:var(--nas-muted);max-width:60ch}
+.methodology-model-report{margin-top:28px;padding:20px;border:1px solid var(--nas-border);border-radius:6px;background:var(--nas-soft)}
+.methodology-page #model-note{font-size:13px;line-height:1.9;color:var(--nas-muted);max-width:90ch;margin:0}
+.methodology-limits-lead{gap:12px;align-items:flex-start;max-width:80ch;padding:0 0 24px}
+.methodology-limits-lead .nas-icon{margin-top:4px;color:var(--nas-amber)}
+.methodology-limits-lead p{font-size:14px;line-height:1.8;color:var(--nas-text);margin:0}
+.methodology-limits-lead strong{font-weight:550}
+.methodology-limit-details{gap:24px 40px;border-top:1px solid var(--nas-border);padding-top:20px;margin:0}
+.methodology-limit-details dt{font-size:13px;font-weight:500;line-height:1.7;margin-bottom:8px;color:var(--nas-text)}
+.methodology-limit-details dd{font-size:13px;line-height:1.8;color:var(--nas-muted);max-width:60ch;margin:0}
+.methodology-records{margin-top:24px}
+.methodology-accordion-item{border-color:var(--nas-border);background:var(--nas-surface);border-radius:8px}
+.methodology-accordion-item>h3{margin:0;font-size:13px}
+.methodology-accordion-item [data-accordion-trigger]{padding:18px 20px;font-size:13px;line-height:1.6;font-weight:500;color:var(--nas-text);text-align:left}
+.methodology-accordion-item [data-accordion-icon]{font-size:11px;color:var(--nas-muted)}
+.methodology-accordion-item [data-accordion-panel]{transition-property:height}
+.methodology-accordion-item [data-accordion-panel]>div{padding:0 20px 20px}
+.methodology-accordion-item p{font-size:13px;line-height:1.8;color:var(--nas-muted);margin:0;max-width:90ch}
+.methodology-accordion-item code{font-family:inherit;font-size:12px;color:var(--nas-text);overflow-wrap:anywhere}
+@media(min-width:1024px) and (max-width:1200px){.methodology-formulas dd{font-size:16px}}
+@media(max-width:750px){
+  .staff-main .methodology-page .page-heading{flex-direction:column;align-items:flex-start;gap:20px}
+  .staff-main .methodology-page .page-heading h1{font-size:30px;letter-spacing:-1px}
+  .methodology-validation-link{margin-top:0;font-size:12px}
+  .methodology-page-context{gap:10px 12px;font-size:11px}
+  .methodology-index{gap:10px;margin-bottom:20px}
+  .methodology-index a{padding:12px;font-size:12px}
+  .methodology-sections{gap:20px}
+  .staff-main .methodology-page .methodology-section{padding:20px}
+  .methodology-section-heading{gap:12px;margin-bottom:24px;align-items:flex-start}
+  .methodology-section-number{width:28px;height:34px}
+  .methodology-section-heading h2{font-size:15px}
+  .methodology-overline{font-size:9px;letter-spacing:1px}
+  .methodology-sources-grid{gap:24px}
+  .methodology-formulas dd{font-size:17px}
+  .methodology-process{gap:24px}
+  .methodology-model-report{padding:16px;margin-top:24px}
+  .methodology-limit-details{gap:20px}
+  .methodology-accordion-item [data-accordion-trigger]{padding:16px;font-size:13px}
+  .methodology-accordion-item [data-accordion-panel]>div{padding:0 16px 16px}
+}
+@media(max-width:380px){
+  .staff-main .methodology-page .methodology-section{padding:16px}
+  .methodology-formulas>div{padding:16px}
+  .methodology-formulas dd{font-size:16px}
+}
